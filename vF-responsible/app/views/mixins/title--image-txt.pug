@@ -1,0 +1,22 @@
+mixin title__img__txt(img, alt, txt)
+  tr
+    td(width='100%')
+      table.title(align='center', width='100%')
+        tbody
+          tr
+            td.title--line(width='5%')
+              p
+            td
+              table.title--imgTxt-container(align='center', width='90%')
+                tr
+                  td.title--imgTxt-child(align="center" style="font-weight:bold; font-size:18px;")!= txt
+                  td.title--imgTxt-child(align="center") &nbsp;
+
+                  td.title--imgTxt-child(align="center")
+                    img(src= img width="50"  border="0"  style="-ms-interpolation-mode: bicubic; border: 0 none; display: block; line-height: 100%; max-width: 100%; outline: none; text-decoration: none; width: auto;" alt= alt)
+                 
+
+            td.title--line(width='5%')
+              p  
+  tr
+    td  &nbsp;

@@ -1,0 +1,13 @@
+mixin title(txt)
+  tr
+    td(width='100%')
+      table.title(align='center', width='100%')
+        tbody
+          tr
+            td.title--line(width='20%')
+              p  
+            td.title--txt(align='center', width='60%' )!= txt
+            td.title--line(width='20%')
+              p  
+  tr
+    td  &nbsp;

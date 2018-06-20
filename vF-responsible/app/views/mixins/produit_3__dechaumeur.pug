@@ -1,0 +1,82 @@
+mixin produit__3__dechaumeur(txt)
+  - String.prototype.count=function(c) { var result = 0, i = 0; for(i;i<this.length;i++)if(this[i]==c)result++; return result };
+  // start4products
+  tr
+    td
+      table.product__all(align='center', cellpadding='0', cellspacing='0', border='0', width='98%')
+        tbody
+          tr
+            each produit in txt
+              - var finalUrl = BaseUrl + produit.link + meta
+              - var occurence = finalUrl.count('?');
+              - console.log(occurence, 'occurence', finalUrl, 'finalurl')
+              while (Ocurrence > 1 )
+                - var t=0; 
+                - finalUrl = finalUrl.replace(/\?/g, function (match) {t++; return (t === 2) ? "&" : match; })
+                - Ocurrence--;
+              if (finalUrl.indexOf('redirect') !== -1 &&  finalUrl.indexOf('sort') !== -1)
+                - finalUrl.replace("&sort", "?sort");  
+              td.products__unit.products__unit--big(width='25%', align='center')
+                table.products__body(align='center', cellpadding='0', cellspacing='0', border='0', width='100%')
+                  tbody
+                    tr.products__promo
+                      td
+                        table.products__promo(height='25', align='center', cellpadding='0', cellspacing='0', border='0', width='100%')
+                          tbody
+                            tr
+                              if produit.promo__title == 'none'
+                                td(width='100%', align='center') &nbsp;
+                              else if produit.promo__title == 'big'
+                                td( style='background-color: #fc5d6a; color:white; ' width='100%', align='center')!= produit.promo__value
+                              else
+                                td(width='60%', align='center')!= produit.promo__title 
+                                td(width='40%', align='center')!= produit.promo__value                        
+                    tr
+                      td.products__blank  
+                    tr
+                      td(align='center')
+                        a(href=  finalUrl, target='_blank')
+                          img(alt= produit.alt, src=produit.img, width='100', height='100', border='0', style='display:block')
+                    tr
+                      td.products__blank  
+                    tr
+                      td.products__txt(align='center', width='100%')!= produit.name
+                        br
+                    tr
+                      td(align='center' )
+                        table(width="80%")
+                          tbody
+                            tr
+                              td.products__txt(align='left', width='100%', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+                                | Référence : #{produit.ref}
+                            tr
+                              td
+                                table(width="100%")
+                                  td.products__txt(align='left', width="50%", style=' border-collapse: collapse; mso-line-height-rule: exactly;') 
+                                    | Adaptable :
+                                  td.link--price(align='left', width="40%", style=' border-collapse: collapse; mso-line-height-rule: exactly;') 
+                                    | #{produit.data.prix[0]}
+                                  td.products__txt(align='left',width="10%", style=' border-collapse: collapse; mso-line-height-rule: exactly;') 
+                                    a.link--dechaumeur(href= BaseUrl + produit.data.url[0] + meta) Voir
+                            tr 
+                              td 
+                                table(width="100%")
+                                  td.products__txt(align='left', width="50%", style=' border-collapse: collapse; mso-line-height-rule: exactly;') 
+                                    | Origine :
+                                  td.link--price(align='left', width="40%", style=' border-collapse: collapse; mso-line-height-rule: exactly;') 
+                                    | #{produit.data.prix[1]}
+                                  td.products__txt(align='left', width="10%",style=' border-collapse: collapse; mso-line-height-rule: exactly;') 
+                                    a.link--dechaumeur(href= BaseUrl + produit.data.url[1] + meta) Voir
+
+                            tr
+                              td
+                                table(width="100%")
+                                  td.products__txt(align='left', width="50%",style=' border-collapse: collapse; mso-line-height-rule: exactly;') 
+                                    | Carbure :
+                                  td.link--price(align='left',width="40%", style=' border-collapse: collapse; mso-line-height-rule: exactly;') 
+                                    | #{produit.data.prix[2]}
+                                  td.products__txt(align='left',width="10%", style=' border-collapse: collapse; mso-line-height-rule: exactly;') 
+                                    a.link--dechaumeur(href= BaseUrl + produit.data.url[2] + meta) Voir
+                            tr
+                              td.products__blank 
+  // end4products

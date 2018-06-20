@@ -1,0 +1,469 @@
+extends layout/layout.pug 
+
+block data
+  - var meta =  Data.meta._utmVF;   
+  - var lang = 'be';      
+  
+block style 
+  link(rel='stylesheet', href='css/style.css')
+  style(type='text/css').
+    @media only screen and (max-width: 480px) { 
+    body { 
+    font-size: 16px !important;
+    }   
+    .logo__white,
+    .products__between,
+    .mobile--hide { 
+    display: none!important;
+    } 
+    .menu {
+    display: block;
+    }
+    .menu tr,
+    .menu td,
+    .menu tbody {
+    display: block;
+    }
+    .menu__links {
+    height: 25px!important;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 30px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 30px!important;
+    height: 30px!important;
+    }
+    .menu__border {
+    font-size: 2.5px!important;
+    height: 2.5px!important;
+    line-height: 2.5px!important;
+    }
+    #bodyTable {
+    width: 100%!important;
+    }
+    .products__unit {
+    float: left; 
+    width: 48%; 
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big,.produit__unit--quote {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    .title--line {
+    width: 5%;
+    }
+    .title--txt {
+    width: 90%;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    width: 80%;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;  
+    }
+    .footer__wrapper img { 
+    margin: 0 auto;
+    } 
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    } 
+    .footer__rss td {
+    float: left;  
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 30px!important;  
+    width: auto;  
+    }
+    }
+    .footer__col td { 
+        font-size: 12px!important;
+    }
+  != "<!--[if gte mso 10]>"
+  style.
+    table, p, span, div, table, tr, td, th, a { 
+    mso-style-priority:99;  font-family:"Arial","sans-serif"; 
+    }
+  != "<![endif]-->" 
+block preheader  
+  include ./mixins/preheader.pug
+  +preheader('agrico', "Le vent souffle ce Weekend")
+ 
+   
+block content    
+  include ./mixins/title--simple.pug
+  include ./mixins/title.pug      
+  include ./mixins/produit_3.pug  
+  include ./mixins/produit_2.pug
+  include ./mixins/produit_3__buse.pug 
+  include ./mixins/produit_3__prix.pug  
+  include ./mixins/produit_4.pug  
+  include ./mixins/banner.pug 
+  include ./mixins/bannerNext.pug 
+  include ./mixins/btn.pug     
+  include ./mixins/quote.pug
+  include ./mixins/produit_3__btnOnly.pug      
+  include ./mixins/produit_3__dechaumeur.pug
+  include ./mixins/produit_3__details.pug
+  include ./mixins/produit__quote.pug
+  include ./mixins/link.pug 
+
+  +banner(
+   'solution-azotee-n39-2/p2' ,
+    'https://www.agriconomie.be/fr/media/pub/img/newsletter/banners/S16_2018_banner-solution-azote-be.jpg',
+     'solution azotée campagne 2019 livraison juin Décembre'
+  )
+ 
+  tr  
+    td &nbsp;
+  +bannerNext([
+
+  {
+  'src' : 'https://www.agriconomie.be/fr/media/pub/img/newsletter/banners/S16_2018-remise-engrais.jpg',
+  'link' : 'https://www.agriconomie.be/fr/voucher/BE502?redirect=/engrais/c975',
+  'alt' :'50 euros offerts sur vos engrais avec le code BE502'
+  },
+
+  {
+  'src' : 'https://www.agriconomie.be/fr/media/pub/img/newsletter/banners/S16_2018-frais-de-port-offert.jpg',
+  'link' : 'https://www.agriconomie.be/fr/voucher/BEOFP',
+  'alt' :'frais de port offert sur les produits portant la mention vendu par Agriconomie avec le code BE0FP'
+  }
+
+  ])
+  tr  
+    td &nbsp;
+  tr
+    td
+      table(cellpadding='0', cellspacing='0', border='0', width='100%')
+        tr
+          td(width='15')    &nbsp;
+          td(align='left', style='font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: rgb(52, 58, 70);')
+            b Frais de port offerts
+            |  valables sur tous les produits portant la mention "
+            b vendu par Agriconomie
+            | ".
+            br
+            b 50€ HT offerts
+            |  valables sur toutes les catégories d'engrais exceptées les catégories "Minéraux et oligos" et "Engrais foliaires"
+          td(width='15') &nbsp;
+  tr  
+    td &nbsp;
+  +title('Nos meilleures ventes')   
+  +produit__4([
+  {'name': 'SEL MI-GROS <br> &nbsp;  <br> &nbsp;',
+   'promo__title': "none",
+    'promo__value': 'OFFRE SPÉCIALE' ,
+     'link' : '/sel-mi-gros/p336012',
+      'alt' : 'SEL MI-GROS',
+      'img' : 'https://www.agriconomie.be/media/cache/130x130//af/01/060464566fd08be062e7e31aab0b.jpeg', 
+     'btn' : 'Voir le produit',
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "none", "dec" : "55"},
+     'new': { "entier" : "699", "dec" : "00"}
+     }
+     }, 
+
+  {'name': "Aliments d'allaitement <br /> MILKYPRO Exelium 50 <br/> &nbsp;", 
+   'promo__title': "jusqu'à",   
+    'promo__value': '-5%' , 
+     'link' : 'lactigo-tradi-50/p322690',
+      'alt' : "Aliments d'allaitement MILKYPRO Exelium 50",
+      'img' : 'https://www.agriconomie.be/media/cache/130x130//af/1b/6daacb6d4240813358f588b8e558.jpeg',  
+     'btn' : 'Voir le produit',
+     'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "none", "dec" : "55"},
+     'new': { "entier" : "948", "dec" : "00"}
+     }
+       }, 
+
+         {'name': "Filtration<br>&nbsp; <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-5%' ,
+     'link' : "pieces-agricoles/pieces-standards-de-vehicule/filtration/pc3342",
+      'alt' : "Filtration",
+      'img' : 'https://www.agriconomie.be/fr/media/pub/img/newsletter/2017_S29_LD/filtration.jpg', 
+     'btn' : 'Voir les produits',
+     'cara' : '- Pressol <br> - 450 L <br> - 60 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "none", "dec" : "55"},  
+     'new': { "entier" : "1120", "dec" : "00"}
+     }
+       },
+
+                {'name': "Casquette de protection <br> ventilée Power Cap® <br> &nbsp;",
+   'promo__title': "PROMO",
+    'promo__value': '-65€' ,
+     'link' : "casquette-de-protection-ventilee-power-cap-r-epi/p186638",
+      'alt' : "Casquette de protection ventilée Power Cap®",
+      'img' : 'https://www.agriconomie.be/fr/media/pub/img/newsletter/2017_S20_SPECIAL-2/a3b26d3511dadb35c932ccad2712.jpeg', 
+     'btn' : 'Voir le produit',
+     'cara' : '- Pressol <br> - 450 L <br> - 60 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "none", "dec" : "55"},  
+     'new': { "entier" : "1120", "dec" : "00"}
+     }
+       } 
+ 
+
+  ])
+
+  tr
+    td  &nbsp;
+  tr
+    td
+      p(style='text-align: right;padding-right: 25px; margin: 0;')
+        a(href='https://www.agriconomie.be/fr/promotions?utm_source=grliste&utm_medium=email&utm_campaign=lived-S30-2017', style='text-decoration: underline; color: rgb(0, 0, 0); font-size: 12px; font-weight: bold;  width: 200px; font-family: arial;', target='_blank') Voir plus d'offres
+  tr
+    td   &nbsp;
+
+
+  tr
+    td(align='center', style='font-family: Arial, Helvetica, sans-serif; font-size:19px; color: #4a5669;')
+      b
+        table(cellpadding='0', cellspacing='0', border='0', width='100%')
+          tr
+            td(style='width: 15px;')  
+            td(style='width: 250px;', colspan='2') En savoir plus sur nous
+          tr
+            td(style='width: 15px;')  
+            td(style='width: 100px;')
+              table(border='0', width='40')
+                tr(style='border-top: 3px solid #ffc653;')
+                  td  
+            td(style='')  
+  tr
+    td
+      table.marginSans(cellpadding='0', cellspacing='0', border='0', width='96%', align='center', style='margin-left:2%')
+        tr
+          td
+            table.article(cellpadding='0', cellspacing='0', border='0', width='48%', align='left', bgcolor='#FFFFFF', style='background-color: #FFFFFF;')
+              tr
+                td(bgcolor='#ffffff', style='background-color: #ffffff; font-size:14px;')
+                  table(border='0', cellpadding='0', cellspacing='0', width='100%')
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='25', height='25', src='https://www.agriconomie.be/fr/media/pub/img/newsletter/2017_S20_SPECIAL-2/collaborateur-jaune.png', alt='60 Collabborateurs')
+                      td(style='padding-left: 4px; font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') 60 Collaborateurs
+                    tr
+                      td(colspan='2', style='line-height: 4px;')  
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='25', height='25', src='https://www.agriconomie.be/fr/media/pub/img/newsletter/2017_S20_SPECIAL-2/client-jaune.png', alt='Satisfactions')
+                      td(style='padding-left: 4px; font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') 16 000 Clients satisfaits
+            table.article-hidden(cellpadding='0', cellspacing='0', border='0', width='4%', align='left', bgcolor='#FFFFFF', style='background-color: #FFFFFF;height: auto;')
+              tr
+                td(bgcolor='#ffffff', style='background-color: #ffffff; font-size:10px;')  
+            table.article(cellpadding='0', cellspacing='0', border='0', width='48%', align='left', bgcolor='#FFFFFF', style='background-color: #FFFFFF;')
+              tr
+                td(bgcolor='#ffffff', style='background-color: #ffffff; font-size:14px;')
+                  table(border='0', cellpadding='0', cellspacing='0', width='100%')
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='25', height='25', src='https://www.agriconomie.be/fr/media/pub/img/newsletter/2017_S20_SPECIAL-2/PRODUIT-jaune.png', alt='Produits')
+                      td(style='padding-left: 4px; font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') + de 100 000 références
+                    tr
+                      td(colspan='2', style='line-height: 4px;')  
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='25', height='25', src='https://www.agriconomie.be/fr/media/pub/img/newsletter/2017_S20_SPECIAL-2/partenaire-2-jaune.png', alt='partenaires')
+                      td(style='padding-left: 4px; font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') Sélection des meilleurs partenaires et fournisseurs
+  tr
+    td  
+  tr
+    td(align='center', style='font-family: Arial, Helvetica, sans-serif; font-size:19px; color: #4a5669;')
+      b
+        table(cellpadding='0', cellspacing='0', border='0', width='100%')
+          tr
+            td(style='width: 15px;')  
+            td(style='width: 250px;', colspan='2') Nos engagements
+          tr
+            td(style='width: 15px;')  
+            td(style='width: 100px;')
+              table(border='0', width='40')
+                tr(style='border-top: 3px solid #ffc653;')
+                  td  
+            td(style='')  
+  tr
+    td
+      table.marginSans(cellpadding='0', cellspacing='0', border='0', width='96%', align='center', style='margin-left:2%')
+        tr
+          td
+            table.article(cellpadding='0', cellspacing='0', border='0', width='48%', align='left', bgcolor='#FFFFFF', style='background-color: #FFFFFF;')
+              tr
+                td(bgcolor='#ffffff', style='background-color: #ffffff; font-size:14px;')
+                  table(border='0', cellpadding='0', cellspacing='0', width='100%')
+                    tr
+                      td(colspan='2', style='text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 15px; height: 25px;color: #000;font-weight: bold; ') Vos pièces et outillages
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='15', height='15', alt='ok', src='https://www.agriconomie.be/fr/media/image/newsletters/inl_591f074239ea1.jpeg')
+                      td(style='font-size: 14px;padding-left:5px; font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') Livraison 48h / 72h
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='15', height='15', alt='ok', src='https://www.agriconomie.be/fr/media/image/newsletters/inl_591f074239ea1.jpeg')
+                      td(style='font-size: 14px;padding-left:5px; font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') Satisfait ou remboursé
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='15', height='15', alt='ok', src='https://www.agriconomie.be/fr/media/image/newsletters/inl_591f074239ea1.jpeg')
+                      td(style='font-size: 14px;padding-left:5px; font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') Paiement 100% sécurisé
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='15', height='15', alt='ok', src='https://www.agriconomie.be/fr/media/image/newsletters/inl_591f074239ea1.jpeg')
+                      td(style='font-size: 14px;padding-left:5px; font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') Prix négociés par nos experts
+            table.article-hidden(cellpadding='0', cellspacing='0', border='0', width='4%', align='left', bgcolor='#FFFFFF', style='background-color: #FFFFFF; height: auto;')
+              tr
+                td(bgcolor='#ffffff', style='background-color: #ffffff; font-size:10px;')  
+            table.article(cellpadding='0', cellspacing='0', border='0', width='48%', align='left', bgcolor='#FFFFFF', style='background-color: #FFFFFF;')
+              tr
+                td(bgcolor='#ffffff', style='background-color: #ffffff; font-size:14px;')
+                  table(border='0', cellpadding='0', cellspacing='0', width='100%')
+                    tr
+                      td(colspan='2', style='text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 15px; height: 25px;color: #000;font-weight: bold; ') Vos engrais / semences
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='15', height='15', alt='ok', src='https://www.agriconomie.be/fr/media/image/newsletters/inl_591f074239ea1.jpeg')
+                      td(style='font-size: 14px;padding-left:5px; font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') Prix rendu dans votre exploitation
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='15', height='15', alt='ok', src='https://www.agriconomie.be/fr/media/image/newsletters/inl_591f074239ea1.jpeg')
+                      td(style='font-size: 14px;padding-left:5px; font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') Semences certifiées
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='15', height='15', alt='ok', src='https://www.agriconomie.be/fr/media/image/newsletters/inl_591f074239ea1.jpeg')
+                      td(style='font-size: 14px;padding-left:5px; font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') Sélection des meilleures offres
+                    tr
+                      td(style='width: 15px;height: 25px;')
+                        img(width='15', height='15', alt='ok', src='https://www.agriconomie.be/fr/media/image/newsletters/inl_591f074239ea1.jpeg')
+                      td(style='font-size: 14px;padding-left:5px; font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(52, 58, 70);') Paiement à la livraison
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  tr
+    td &nbsp;
+
+
+block footer__expert
+  include ./mixins/footer__expert.pug 
+  +footer__expert('margaux')
+
+
+block sources 
+  include ./mixins/sources.pug 
+  +sources('agrico') 

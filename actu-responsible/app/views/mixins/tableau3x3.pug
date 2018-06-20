@@ -1,0 +1,16 @@
+mixin tableau3x3(table_assets)
+  tr
+    td(align="center" style="width:100%;")
+      table.tableau__3(align="center" style="width:100%;")
+        tbody
+          tr
+            each row in table_assets
+              - console.log("table_assets" , row.title)
+              td( valign="top" align="center" style="width:50%;")
+                table(valign="top" align="center" style="width:100%;")
+                  tbody
+                    tr
+                      td(height="50" align="center" style='line-height:25px; font-size: 14px; font-weight: bold;').data--elevage!= row.title
+                    for data in row.data
+                      tr
+                        td( height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee; background: #eee; ")!= data

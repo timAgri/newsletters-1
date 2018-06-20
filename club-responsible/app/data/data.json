@@ -1,0 +1,190 @@
+{
+    "Data":
+    {
+        "meta":
+        {
+            "_utmClub": "?utm_source=grliste&utm_medium=email&utm_campaign=club-by-agrico-S14-2018",
+            "_utmVF": "?utm_source=grliste&utm_medium=email&utm_campaign=remboursement-S39-2017",
+            "_utmActu": "?utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018",
+            "_utmTerrenet": "?utm_source=terrenet&utm_medium=email&utm_campaign=atelier-S40-2017",
+            "tracking": "?utm_source=grliste&utm_medium=email&utm_campaign=actu-S42-2017",
+            "owner": "agriconomie"
+        },
+
+        "header":
+        {
+            "type": "margaux",
+            "club":
+            {
+                "num": "n°35",
+                "date": "18 Octobre 2017"
+            }
+        },
+
+        "phraseAccroche": "La sélection de nos experts",
+
+
+        "footer": "margaux",
+        "pub1":
+        {
+            "type": "long",
+
+            "voucherImg1": "https://www.agriconomie.com",
+            "urlLink1": "/query/search?s=commande_partielle",
+
+            "urlImg1": "https://www.agriconomie.com/media/pub/img/newsletter/banners/Slide-12e_01.jpg",
+            "alt1": "-15% sur toutes nos pièces de fenaison",
+
+            "voucherImg2": "https://www.agriconomie.com/",
+            "urlLink2": "a/",
+
+            "urlImg2": "https://unsplash.it/200/300",
+            "alt2": "test2"
+        },
+        "pub2":
+        {
+            "type": "long",
+
+            "voucherImg1": "https://www.agriconomie.com",
+            "urlLink1": "/query/search?s=commande_partielle",
+
+            "urlImg1": "https://www.agriconomie.com/media/pub/img/newsletter/banners/Slide-12e_02.jpg",
+            "alt1": "-15% sur toutes nos pièces de fenaison",
+
+            "voucherImg2": "https://www.agriconomie.com/",
+            "urlLink2": "a/",
+
+            "urlImg2": "https://unsplash.it/200/300",
+            "alt2": "test2"
+        },
+        "titleCenter1": "-15% sur toute la gamme de fenaison",
+        "textCenter1": "<p>Couvrez-vous en oligos dès maintenant pour bénéficier des meilleurs prix Morte saison.<br><br>Notre gamme couvre tous les besoins de vos cultures mis en évidence par vos analyses.<br><br>De plus, si vous cumulez des volumes de commande vous optimisez les coûts logistiques et économisez jusqu'à -16%.<br><br> Si vous souhaitez vous grouper avec des collègues ou amis, nous vous ferons plusieurs factures.</p> ",
+        "textCenter2": "Nouveauté",
+        "textCenter3": "Notre sélection",
+        "textCenter4": "Le 31 août 2017",
+        "btnCenter1":
+        {
+            "txt": "Voir plus de produits",
+            "url": "https://www.agriconomie.com/semences/pc920?utm_source=grliste&utm_medium=email&utm_campaign=remboursement-S40-2017"
+        },
+        "newsClub1":
+        {
+            "txt": "test engrais",
+            "promo": "- 5€/T de remise",
+            "date": "Jusqu’au 24 mars 2017",
+            "btn": "J'en profite",
+            "imgUrl": "https://www.agriconomie.com/media/image/newsletters/inl_58c94c5f70d6c.jpeg",
+            "voucher": "https://www.agriconomie.com",
+            "url": "voucher/DS20?redirect=url/",
+            "alt": "alt"
+        },
+        "newsClub2":
+        {
+            "txt": "test engrrrrais",
+            "promo": "- 5€/T de remise",
+            "date": "Jusqu’au 24 mars 2017",
+            "btn": "J'en profite",
+            "imgUrl": "https://www.agriconomie.com/media/image/newsletters/inl_58c94c5f70d6c.jpeg",
+            "voucher": "https://www.agriconomie.com",
+            "url": "voucher/DS20?redirect=url/",
+            "alt": "alt"
+        },
+        "newsActu":
+        {
+            "titleLeft": "Votre actu des Marchés",
+            "txtLeft1": "<b>Azotés:</b><br />Nos dernières actualités annonçaient de fortes hausse. Aujourd'hui, certains pays se réveillent et proposent d'exporter de la marchandise.<br><br> Le marché mondial est arrivé à un point très élevé qui leur permet de relancer les usines de productions.<br><br> Cette dynamique entrainera de forte disponibilités sur les produits concernés, ce qui lancera une concurrence entre les acteurs.<br><br> On peut donc imaginer que le marché sera plu stable sur les mois à venir. Néanmoins, des pressions pourraient faire remonter le marché.  ",
+            "txtLeft2": "<b>Phosphore:</b><br />Le <a href=''>phosphore</a> suit la même tendance qu'en septembre. La tendance est directement impactée par l'évolution de la parité $/€ qui est aujourd'hui à 1,17<br><br>Le marché du <a href=''>DAP</a> est principalement approvisionné par la Russie et les pays du Magreb. Cependant, c'est la Russie qui fourni le produit en Europe. ",
+            "txtLeft3": "<b>Potasse:</b><br />La hausse en <a href=''>potasse</a> devrait bien avoir lieu dans les semaines venir. On estime l'estime de 2 à 4€/t.",
+            "txtLeft4": "<b>N-P-K:</b><br />Les engrais ternaires sont haussiers. Ils sont directement touchés par la hausse des engrais de commodité (Urée, Ammonitrate, TSP, 18-46, chlorure, etc.). Cette dynamique se poursuivra jusqu’à ce que les prix se stabilisent. ",
+            "NbrStatsAll": 3,
+            "NbrtextLeftALl": 3,
+            "titleRight": "Votre actu des Marchés",
+            "dataRight1":
+            {
+                "product": "Azotes",
+                "evolution": "warning",
+                "txt": "Attention",
+                "voucher": "https://www.agriconomie.com/",
+                "url": "engrais/engrais-azote/pc979"
+            },
+            "dataRight2":
+            {
+                "product": "Phosphore",
+                "evolution": "up",
+                "txt": "A la Hausse",
+                "voucher": "https://www.agriconomie.com/",
+                "url": "engrais/autres-engrais/engrais-phosphate/pc3426"
+            },
+            "dataRight3":
+            {
+                "product": "Potasse",
+                "evolution": "up",
+                "txt": "A la Hausse",
+                "voucher": "https://www.agriconomie.com/",
+                "url": "engrais/autres-engrais/engrais-phosphate/pc3426"
+            },
+            "dataRight4":
+            {
+                "product": "N-P-K",
+                "evolution": "up",
+                "txt": "A la Hausse",
+                "voucher": "https://www.agriconomie.com/",
+                "url": "engrais/autres-engrais/engrais-phosphate/pc3426"
+            }
+        },
+        "titleCenterActu1": "Les préconisations de Margaux",
+
+
+        "newsDoc":
+        {
+            "leftTxt": "<p style='font-size:13px;padding-top: 10px;margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #202020;font-family: Helvetica;text-align: left;'><b>Le carbure c’est quoi ?</b> </p><p style='font-size:13px;padding-top:10px;margin:10px 0;padding:0;color:#202020;font-family:Helvetica;text-align:left'> <b> Le carbure de tungstène »</b>« ou appelé plus familièrement et simplement « carbure » est le résultat d’une combinaison entre le carbone et tungstène, qui permet d’augmenter significativement la résistance d’une pièce. De la poudre de cobalt est également ajoutée pour servir de liant entre les particules de tungstène et cuit à une température supérieur à 1500°C afin de former les plaquettes de carbure. Pour finir la plaquette est brasée sur son support (dents, pointes, grattoirs…).</p><p style='font-size:13px;padding-top:10px;margin:10px 0;padding:0;color:#202020;font-family:Helvetica;text-align:left'>Le carbure de tungstène a une densité de 15,8 g/cm3, à titre de comparaison la plaquette en carbure de tungstène est deux fois plus dense que l’acier, ce qui lui permet d’obtenir une grande résistance à l’usure.</p><p style='font-size:13px;padding-top: 10px;margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #202020;font-family: Helvetica;text-align: left;'><b>Le carbure en chiffre : Comparatif coût de revient carbure / pièce normale </b> </p><p style='font-size:13px;padding-top:10px;margin:10px 0;padding:0;color:#202020;font-family:Helvetica;text-align:left'>Quand on parle de coût de revient sur de la pièce détachée, il ne faut pas seulement considérer le prix d’achat de la pièce, il faut également prendre en compte le prix de la boulonnerie et la main d’œuvre (temps de montage et démontage), ce qui peut représenter un coût non négligeable dans le cas d’un sol très abrasif qui oblige à changer très régulièrement les pièces d’usure de votre matériel.</p>",
+            "rightTitle1": "Quelques chiffres",
+            "rightTxt1": "<p style='text-align:left;margin:10px 0 0 0;padding:0;font-family:Helvetica;font-size:11px'><b style='font-size:16px;color:#f14444'>durée de vie supérieure de 5 à 7 fois /b></p><p style='text-align:justify;margin:10px 0 0 0;padding:0;font-family:Helvetica;font-size:11px'><b style='font-size:16px;color:#f14444'> durée de vie supérieure de 5 à 7</b><br><br>pour pièce au carbure</p><p style='text-align:justify;margin:10px 0 0 0;padding:0;font-family:Helvetica;font-size:11px'><b style='font-size:16px;color:#f14444'>100%</b><br><br>Pour les betteraves</p>",
+            "rightTitle2": "Testimonial client",
+            "rightTxt2": "<p style='text-align:justify;margin:10px 0 0 0;padding:0;font-family:Helvetica;font-size:11px;font-style:italic'>“Sur ma rotative (Kuhn HR4002), je changeais les dents une fois par an avec de l'origine. Depuis que je suis passé au carbure, ça fait 4 ans que je n'ai pas acheté de dents. Le carbure est très peu usé et le rechargement derrière le carbure est encore bien présent. En plus, le fait d'avoir des dents au carbure présente un autre avantage : on ne touche plus au réglage du rouleau pour compenser l'usure des dents. ”</p>",
+            "rightSignature": "Francis G (49)"
+        },
+        "titleUnderline1": "test",
+        "titleBracklet1": "Notre sélection",
+        "titleBracklet3": "Tous nos engrais",
+        "titleBracklet2": "Atelier",
+        "titleBracklet4": "Nos offres qui terminent AUJOURD'HUI??",
+        "titleBracklet5": "Nos offres qui terminent AUJOURD/'HUI",
+        "textRight1": "<a href='https://www.agriconomie.com/pieces-agricoles/travail-du-sol/charrue/pc2979?navigationByBrand=1&utm_source=terrenet&utm_medium=email&utm_campaign=tous-produits-S35-2017' style='text-decoration:underline; color:black;'>+ Voir plus de marques</a>",
+        "textRight3": "<a href='https://www.agriconomie.com/engrais/pc975?utm_medium=email&utm_campaign=tous-produits-S35-2017' style='text-decoration:underline; color:black;'>+ Voir plus d'engrais</a>",
+        "textRight2": "<a href='https://www.agriconomie.com/semences/cereales-a-paille/pc946?utm_source=terrenet&utm_medium=email&utm_campaign=tous-produits-S35-2017' style='text-decoration:underline; color:black;'> + Voir toutes les céréales à paille</a>",
+        "textRight4": "<a href='https://www.agriconomie.com/promotions?navigationByBrand=1&utm_source=terrenet&utm_medium=email&utm_campaign=tous-produits-S35-2017' style='text-decoration:underline; color:black;'> + Voir toutes nos offres</a>"
+
+    },
+    "DoubleImg1":
+    {
+
+        "link1": "url",
+        "link2": "url",
+        "img1": "https://www.agriconomie.com/media/pub/img/newsletter/banners/Slide-12e_01.jpg",
+        "alt1": "url",
+        "img2": "https://www.agriconomie.com/media/pub/img/newsletter/banners/Slide-12e_01.jpg",
+        "alt2": "url2"
+    },
+    "DoubleImg2":
+    {
+
+        "link1": "url",
+        "link2": "url",
+        "img1": "https://www.agriconomie.com/media/pub/img/newsletter/banners/Slide-12e_01.jpg",
+        "alt1": "url",
+        "img2": "https://www.agriconomie.com/media/pub/img/newsletter/banners/Slide-12e_01.jpg",
+        "alt2": "url2"
+    },
+    "DoubleImg3":
+    {
+
+        "link1": "url",
+        "link2": "url",
+        "img1": "https://www.agriconomie.com/media/pub/img/newsletter/banners/Slide-12e_01.jpg",
+        "alt1": "url",
+        "img2": "https://www.agriconomie.com/media/pub/img/newsletter/banners/Slide-12e_01.jpg",
+        "alt2": "url2"
+    }
+
+}

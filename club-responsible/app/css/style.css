@@ -1,0 +1,182 @@
+/* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+body {
+  margin: 0;
+  padding: 0;
+  background: #eeeeee;
+  color: #999999;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 125%; }
+
+table {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+  /* margin: 0;
+        padding: 0;*/ }
+
+img {
+  border: 0 none;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none;
+  display: block;
+  -ms-interpolation-mode: bicubic; }
+
+a {
+  text-decoration: none;
+  color: black; }
+  a img {
+    border: 0 none; }
+
+.imageFix {
+  display: block; }
+
+table,
+td {
+  border-collapse: collapse; }
+
+td {
+  mso-line-height-rule: exactly; }
+
+/*main tab*/
+#bodyTable {
+  /*margin: 0 auto;*/
+  width: 650px; }
+
+/*header*/
+.headerNL__phraseAccroche {
+  font-size: 9px;
+  color: #999999; }
+
+.headerNL__linkOnline {
+  font-size: 9px;
+  color: #999999; }
+
+.headerNL____blank {
+  height: 5px;
+  line-height: 5px;
+  font-size: 5px; }
+
+/*logo*/
+.logo {
+  background: white;
+  border-bottom: 1px solid lightgrey; }
+
+.deviceWith {
+  max-width: 100%; }
+
+.club__title {
+  text-align: center;
+  margin: 10px 0px;
+  padding: 0px;
+  line-height: 25px;
+  color: #23272e;
+  font-family: Helvetica;
+  font-size: 26px;
+  font-weight: bold; }
+  .club__title--orange {
+    color: #f9bf46; }
+
+.club__subtitle {
+  text-align: center;
+  font-weight: bold;
+  color: #23272e;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.club__promo_description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  color: #343a46;
+  border: 1px solid #eeeeee; }
+  .club__promo_description a {
+    text-decoration: none; }
+  .club__promo_description--title {
+    font-size: 20px;
+    font-weight: bold; }
+  .club__promo_description--btn {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #52c47d;
+    border: 1px solid #52c47d;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold; }
+
+.club__info {
+  background: #24292f;
+  color: white;
+  line-height: 25px; }
+  .club__info--wrapper-number {
+    color: #f9bf46; }
+  .club__info--blank {
+    height: 5px;
+    line-height: 5px; }
+
+.club----content {
+  width: 100%;
+  display: block; }
+
+/*.tableContent*/
+.tableContent {
+  width: 100%;
+  background: white; }
+  .tableContent__body {
+    background: white; }
+
+/*tableReassurances*/
+.tableReassurances {
+  width: 100%;
+  background: white; }
+
+/*footer*/
+.footer {
+  background: #343a46;
+  color: #fff;
+  font-size: 11px;
+  line-height: 16px; }
+  .footer__blank {
+    background: #343a46;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px; }
+
+/*aventage*/
+.avantages {
+  background-color: #fafafa;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6; }
+  .avantages_space {
+    width: 3%; }
+  .avantages_content {
+    width: 27.33%; }
+    .avantages_content--title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #f9bf46; }
+  .avantages_title {
+    font-size: 18px;
+    color: #23272e;
+    font-weight: bold; }
+
+/*link*/
+.link--orange {
+  color: #ffca4a;
+  text-decoration: none; }
+
+.separator {
+  font-size: 1px;
+  line-height: 1px;
+  background: #fff; }
+
+.ShowInMobile {
+  display: none; }
+
+.hideInMobile {
+  display: table-cell; }

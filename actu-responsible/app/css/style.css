@@ -1,0 +1,241 @@
+/* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+body {
+  Margin: 0;
+  padding: 0;
+  background: #eeeeee;
+  color: black;
+  font-size: 14px;
+  line-height: 125%; }
+
+table {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+  /* margin: 0;
+        padding: 0;*/ }
+
+img {
+  border: 0 none;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none;
+  display: block;
+  -ms-interpolation-mode: bicubic; }
+
+a {
+  text-decoration: none; }
+
+a img {
+  border: 0 none; }
+
+.imageFix {
+  display: block; }
+
+table,
+td {
+  border-collapse: collapse; }
+
+td {
+  mso-line-height-rule: exactly; }
+
+/*main tab*/
+#bodyTable {
+  max-width: 650px; }
+
+/*header*/
+.headerNL____phraseAccroche {
+  color: #999999 !important;
+  font-size: 9px !important; }
+
+.headerNL__linkOnline {
+  font-size: 9px;
+  color: #999999; }
+
+.headerNL__blank {
+  height: 5px;
+  line-height: 5px;
+  font-size: 5px; }
+
+.deviceWith {
+  max-width: 100%; }
+
+/*logo*/
+.logo {
+  /*background: white;*/
+  display: block;
+  width: 100% !important;
+  height: auto !important; }
+  .logoM {
+    display: none; }
+
+/*mmenu*/
+.menu__border {
+  background-color: #343a46;
+  width: 100%;
+  height: 5px;
+  line-height: 5px;
+  font-size: 5px; }
+
+.menu__links {
+  background: #4a5669;
+  height: 50px;
+  color: #fff; }
+
+.menu__link {
+  background: #4a5669;
+  height: 50px;
+  color: #fff; }
+  .menu__link--promo {
+    background: #fc5d6a; }
+  .menu__link--a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none; }
+
+/*.tableContent*/
+.tableContent {
+  width: 100%;
+  background: white; }
+  .tableContent__body {
+    background: white; }
+
+/*tableReassurances*/
+.tableReassurances {
+  width: 100%;
+  background: white; }
+
+.data {
+  line-height: 40px;
+  height: 40px; }
+  .data--elevage {
+    background: #61b6e0; }
+  .data--engrais {
+    background: #ffca4a; }
+  .data__title {
+    color: black;
+    line-height: 40px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold; }
+    .data__title--elevage {
+      background: #61b6e0;
+      color: #fff; }
+    .data__title--engrais {
+      color: black;
+      background: #ffca4a; }
+  .data__blank {
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px; }
+  .data_txt--title {
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: bold; }
+  .data_txt {
+    line-height: 20px;
+    font-size: 12px; }
+
+/*footer*/
+.footer {
+  background: #343a46;
+  color: #fff;
+  font-size: 11px;
+  line-height: 16px; }
+  .footer__blank {
+    background: #343a46;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px; }
+
+/*actu*/
+.actu__stats {
+  height: 60px;
+  border: 1px solid #eeeeee; }
+  .actu__stats-description {
+    font-size: 12px !important; }
+
+/*link*/
+.link--orange {
+  color: #ffca4a;
+  text-decoration: none; }
+
+.separator {
+  font-size: 1px;
+  line-height: 1px;
+  background: #454b57; }
+
+.products__promo--none tr {
+  border-bottom: none; }
+
+.products__promo--big td {
+  background: #fc5d6a;
+  color: #fff;
+  font-weight: bold; }
+
+.products__promo tr {
+  border-bottom: 1px solid #eeeeee; }
+  .products__promo tr td:first-child {
+    background: #fc5d6a;
+    color: #fff;
+    font-weight: bold; }
+  .products__promo tr td:last-child {
+    color: #fc5d6a;
+    background: #fff;
+    font-weight: bold; }
+
+.products__unit {
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  box-sizing: border-box; }
+
+.products__blank {
+  height: 10px;
+  line-height: 10px; }
+
+.products__txt {
+  font-size: 12px;
+  color: #787878;
+  font-weight: bold; }
+
+.products__price {
+  text-align: center; }
+  .products__price--reduc {
+    font-variant: bold;
+    background: red;
+    text-align: center;
+    font-size: 15px;
+    background-color: #fc5d6a;
+    color: white; }
+  .products__price--old {
+    font-size: 15px;
+    color: #787878; }
+    .products__price--old sup {
+      font-size: 10px; }
+  .products__price--new {
+    font-size: 25px;
+    color: #fc5d6a; }
+    .products__price--new sup {
+      font-size: 14px; }
+
+/*title*/
+.title {
+  color: #4a5669; }
+  .title--line p {
+    display: block;
+    height: 5px;
+    font-size: 5px;
+    line-height: 5px;
+    background-color: #ffc70c; }
+  .title--txt {
+    font-size: 16px;
+    background-color: white;
+    padding: 5px;
+    font-weight: bold; }
+
+.link__actu {
+  text-decoration: underline;
+  color: #ffca4a;
+  font-weight: bold; }

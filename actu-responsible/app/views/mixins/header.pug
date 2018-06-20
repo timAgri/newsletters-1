@@ -1,0 +1,16 @@
+mixin header(expert) 
+  - console.log("lang", lang)
+  if lang == "be"
+      - var prefixImg = "-be";
+  if lang == "fr"
+      - var prefixImg = "";
+  if expert == "margaux"
+    img.logo(width='100%', height='auto', alt= baseline, src='https://www.agriconomie.com/media/pub/img/newsletter/header/margaux' + prefixImg + '.png', border='0')
+    != "<!--[if !mso]> <!---->"
+    img.logoM(width='100%', height='auto', alt= baseline, src='https://www.agriconomie.com/media/pub/img/newsletter/header/margauxMobile'+prefixImg +'.png', border='0')
+    != "<!-- <![endif]-->"
+  if expert == "bertrand"
+    img.logo(width='100%', height='auto', alt= baseline, src='https://www.agriconomie.com/media/pub/img/newsletter/header/bertrand.png', border='0')
+    != "<!--[if !mso]> <!---->"
+    img.logoM(width='100%', height='auto', alt= baseline, src='https://www.agriconomie.com/media/pub/img/newsletter/header/bertrandMobile.png', border='0')
+    != "<!-- <![endif]-->"

@@ -1,0 +1,376 @@
+extends layout/layout.pug
+
+block utm
+  - var meta =  Data.meta._utmActu;
+  - var type = 'engrais'; 
+
+block style
+  link(rel='stylesheet', href='css/style.css')
+  style.
+    @media only screen and (max-width: 480px) {
+    .logo__white,
+    .products__between,
+    .mobile--hide {
+    display: none!important;
+    }
+    #bodyTable{
+    width: 100%;
+    }
+    .menu__links {
+    height: auto;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 35px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 35px!important;
+    height: 35px!important;
+    }
+    body {
+    font-size: 16px !important;
+    }
+    .logo {
+    display: none !important;
+    }
+    .logoM {
+    display: block !important;
+    max-width: 100%;
+    width: 100%!important;
+    height: 
+    }
+    .actu__wrapper td {
+    display: table;
+    width: 100%;
+    }
+    .actu__stats-img {
+    width: auto;
+    vertical-align: middle;
+    display: block;
+    }
+    .actu__stats-img img {
+    margin: 15px 0;
+    display: inline-block;
+    }
+    .actu__stats-description {
+    height: 50px;
+    line-height: 25px;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;
+    }
+    .footer__wrapper img {
+    margin: 0 auto;
+    }
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    }
+    .footer__rss td {
+    float: left;
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 40px!important;
+    width: auto;
+    }
+    .products__unit {
+    float: left;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    }
+    * {
+    font-family: Helvetica, Arial, sans-serif;
+    }
+    .footer__col td{
+    font-size: 12px!important;
+    }
+
+
+block style
+  link(rel='stylesheet', href='css/style.css')
+  style.
+    @media only screen and (max-width: 480px) {
+    .logo__white,
+    .products__between,
+    .mobile--hide {
+    display: none!important;
+    }
+    #bodyTable{
+    width: 100%;
+    }
+    .menu__links {
+    height: auto;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 35px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 35px!important;
+    height: 35px!important;
+    }
+    body {
+    font-size: 16px !important;
+    }
+    .logo {
+    display: none !important;
+    }
+    .logoM {
+    display: block !important;
+    width: 100%;
+    }
+    .actu__wrapper td {
+    display: table;
+    width: 100%;
+    }
+    .actu__stats-img {
+    width: auto;
+    vertical-align: middle;
+    display: block;
+    }
+    .actu__stats-img img {
+    margin: 15px 0;
+    display: inline-block;
+    }
+    .actu__stats-description {
+    height: 50px;
+    line-height: 25px;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;
+    }
+    .footer__wrapper img {
+    margin: 0 auto;
+    }
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    }
+    .footer__rss td {
+    float: left;
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 40px!important;
+    width: auto;
+    }
+    .products__unit {
+    float: left;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    }
+    * {
+    font-family: Helvetica, Arial, sans-serif;
+    }
+    .footer__col td{
+    font-size: 12px!important;
+    }
+
+block phraseAccroche
+  | test
+
+block header
+  include mixins/header.pug
+  +header(Data.header.type)
+
+block data
+  include mixins/elemMarche.pug
+  +elemMarche('Azotés :', "Campagne en cours : <a class='link__actu' href='https://www.agriconomie.com/solution-azotee-n39-2/p2?utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018'>La solution azotée</a> est plus accessible aujourd'hui avec la baisse de l'euro. Le prix s'est amélioré de 2€/t pour des livraisons au printemps. Nouvelle Campagne : Comme annoncé la semaine dernière, le prix de l'azote liquide pour la nouvelle campagne a perdu près de 6€/t en fin de semaine. <br><br> En <a class='link__actu' href='https://www.agriconomie.com/uree/p287?utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018'> urée</a>, le prix risque fortement de monter puisque la Chine ne devrait pas exporter (ce qui va diminuer l'offre) et le Brésil passera aux achats fin Mars, début Avril, ce qui devrait orienter le marché à la hausse. ")
+  +elemMarche('Potasse :', "Les prix augmentent légèrement cette semaine. Des hausses pourraient avoir lieu dans les semaines à venir avec des tensions sur la disponibilité du produit.")
+  +elemMarche('Phosphore :', "Le prix du <a class='link__actu' href='https://www.agriconomie.com/18-46-0/p7?utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018'>DAP</a> venant du Maroc est en hausse puisque le prix de l'acide a augmenté de 110$/t la semaine dernière. Cette hausse est d'environ 15€/t. Cependant, la parité permet de maintenir le prix au même niveau que la semaine passée. ")
+
+block stat
+  include mixins/elemStat.pug
+  +elemStat('Azotés',
+   'À la baisse' ,
+     'https://www.agriconomie.com/media/pub/img/newsletter/icons/baisse.jpeg',
+        'https://www.agriconomie.com/engrais/engrais-azote/pc979' + meta,
+    'À la baisse')
+  +elemStat('Potasse',
+    'À la hausse' , 
+     'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
+         'https://www.agriconomie.com/engrais/autres-engrais/engrais-potassique/pc3428' + meta,
+     'À la hausse')
+  +elemStat('Phosphore',
+   'À la hausse' , 
+   'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
+   'https://www.agriconomie.com/engrais/autres-engrais/engrais-phosphate/pc3426' + meta,
+    'À la Hausse')
+
+block preco
+
+  tr
+    td.data__blank
+  tr
+    td(align='center')
+      | Nous avons mis en place 
+      a.link__actu(href!="https://www.agriconomie.com/elevage/batiments/tapis---matelas/pc3455" + meta ) une livraison rapide 
+      | afin de vous couvrir au meilleur moment suivant votre programme de fertilisation.
+
+  tr
+    td.data__blank &nbsp;
+  tr
+    td(align='center')
+      | L'un de nos fournisseur souhaitait nous remercier et nous a proposer 
+      a.link__actu(href!="https://www.agriconomie.com/query/search?c=&s=complexe_equilibre&utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018") une remise sur l'ensemble de ses produits de 2€/T
+      |.  Nous avons décidé de l'impacter directement sur votre prix d'achat.
+      
+  tr
+    td.data__blank
+  tr
+    td(align='center')
+      | Venez vite découvrir nos nouveaux engrais NP : 
+      a.link__actu(href!="https://www.agriconomie.com/14-48-0/p226274" + meta) le 14-48 liquide
+      |  et 
+      a.link__actu(href!="https://www.agriconomie.com/micro-10-45/p323041" + meta) le micro 10-45
+  tr
+    td.data__blank
+  tr
+    td(align='center')
+      | Les prix pour la solution azotée en nouvelle campagne sont disponibles. Venez les découvrir en 
+      a.link__actu(href!="https://www.agriconomie.com/solution-azotee-n39-2/p2" + meta) cliquant ici
+      | .
+  tr
+    td.data__blank
+
+block produits
+  include parts/product__space.pug
+  include mixins/produit_3.pug
+  +produit__3([
+  {'name': 'Solution azotée N39 <br> Liquide <br> &nbsp;',
+   'promo__title': 'none',
+    'promo__value': '-10%' ,
+     'link' : 'https://www.agriconomie.com/solution-azotee-n39-2/p2' + meta
+     , 'alt' : 'Solution azotée N39 - Liquide',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/solution-azotee.jpg', 
+     'btn' : 'Voir le produit'  },
+
+  {'name': "14-48-0 <br> Liquide <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-10€/T' ,
+     'link' : 'https://www.agriconomie.com/14-48-0/p226274' + meta,
+    'alt' : "14-48-0 - Liquide",
+     'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/solution-azotee-14-48.jpg',
+     'btn' : 'Voir le produit'  },
+
+  {'name': 'Micro 10-45 Fertigo Pro <br> Microgranulé <br> &nbsp;',
+   'promo__title': 'none',
+    'promo__value': '-25%' ,
+    'link' : 'https://www.agriconomie.com/micro-10-45/p323041' + meta,
+     'alt' : 'Micro 10-45 Fertigo Pro - Microgranulé',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/micro-10-45-fertigo-pro-microgranule.jpg',
+     'btn' : 'Voir le produit'  }
+  ])
+  include parts/product__space.pug
+  +produit__3([
+  {'name': 'complexe equilibre <br> &nbsp; <br> &nbsp;',
+   'promo__title': "PROMO",
+    'promo__value': '-2€/T' ,
+     'link' : 'https://www.agriconomie.com/query/search?c=&s=complexe_equilibre&utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018',
+      'alt' : 'complexe équilibré',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/npk.jpg', 
+     'btn' : 'Voir les produits'  },
+
+  {'name': "NATEC <br> &nbsp; <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-10%' ,
+     'link' : 'https://www.agriconomie.com/natec-r26/p331145' + meta,
+    'alt' : "NATEC R26 - Granulé",
+     'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/natect-r-26-granule.jpg',
+     'btn' : 'Voir le produit'  },
+
+  {'name': 'azoté soufré <br> &nbsp; <br> &nbsp;',
+   'promo__title': "Jusqu'à",
+    'promo__value': '-5€' ,
+    'link' : 'https://www.agriconomie.com/engrais/engrais-azote/azote-soufre/pc981' + meta,
+     'alt' : 'Azoté soufré',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/azote-soufre.jpg',
+     'btn' : 'Voir le produit'  }
+  ])
+
+block footer
+  include mixins/footer__expert.pug
+  +footer__expert(Data.footer)

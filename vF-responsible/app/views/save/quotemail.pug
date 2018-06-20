@@ -1,0 +1,312 @@
+extends layout/layout.pug 
+
+block data
+  - var meta =  Data.meta._utmWeekend;   
+  - var lang = 'fr';  
+  
+block style 
+  link(rel='stylesheet', href='css/style.css')
+  style(type='text/css').
+    @media only screen and (max-width: 480px) { 
+    body { 
+    font-size: 16px !important;
+    }   
+    .logo__white,
+    .products__between,
+    .mobile--hide { 
+    display: none!important; 
+    } 
+    .menu {
+    display: block;
+    } 
+    .menu tr,
+    .menu td,
+    .menu tbody {
+    display: block;
+    }
+    .menu__links {
+    height: 25px!important;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 30px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 30px!important;
+    height: 30px!important;
+    }
+    .menu__border {
+    font-size: 2.5px!important;
+    height: 2.5px!important;
+    line-height: 2.5px!important;
+    }
+    #bodyTable {
+    width: 100%!important;
+    }
+    .products__unit {
+    float: left; 
+    width: 48%; 
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big,.produit__unit--quote {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    .title--line {
+    width: 5%;
+    }
+    .title--txt {
+    width: 90%;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    width: 80%;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;  
+    }
+    .footer__wrapper img { 
+    margin: 0 auto;
+    } 
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    } 
+    .footer__rss td {
+    float: left;  
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 30px!important;  
+    width: auto;  
+    }
+    .bigOffert__col{
+    display:block;
+    width:100%;
+    }
+    .quote__semence {
+    display: block;
+    width: 100%!important;
+    max-width: 100%!important;
+    text-align: left;
+    }
+    .quote__semence {
+        margin: 5px auto;
+    }
+
+    .quote__semence td {
+        width: 90%!important;
+        margin: 0 auto;
+        display: block;
+    }
+    }
+    .footer__col td { 
+        font-size: 12px!important;
+    }
+
+  != "<!--[if gte mso 10]>"
+  style.
+    table, p, span, div, table, tr, td, th, a { 
+    mso-style-priority:99;  font-family:"Arial","sans-serif"; 
+    }
+  != "<![endif]-->" 
+block preheader  
+  include ./mixins/preheader.pug
+  +preheader('agrico', "Le vent souffle ce Weekend")
+ 
+   
+block content    
+  include ./mixins/title--simple.pug
+  include ./mixins/title.pug      
+  include ./mixins/produit_3.pug  
+  include ./mixins/produit_2.pug
+  include ./mixins/produit_3__buse.pug 
+  include ./mixins/produit_3__prix.pug 
+  include ./mixins/produit_3__btnOnly.pug 
+  include ./mixins/produit_4.pug  
+  include ./mixins/banner.pug 
+  include ./mixins/bannerNext.pug 
+  include ./mixins/btn.pug      
+  include ./mixins/quote.pug
+  include ./mixins/produit_3__imgBtn.pug      
+  include ./mixins/produit_3__dechaumeur.pug
+  include ./mixins/produit_3__details.pug
+  include ./mixins/produit__quote.pug
+  include ./mixins/link.pug
+
+
+  tr
+    td &nbsp;
+
+  tr
+    td &nbsp;
+
+  +title("Comment bien <br> préparer sa moisson")
+ 
+ 
+
+
+  tr
+    td &nbsp;
+
+  +produit__quote([
+
+
+  {'name': "Compresseur <br> bicylindre <br> &nbsp;",
+   'promo__title': "none",
+  'quote': "Pour souffler de l’air : Nombreuses promotions sur nos compresseurs et accessoires pneumatique Pour ne pas tomber à sec et augmenter votre productivité : Cuve mobile à carburant Kingspan de 200 à 900 litres !!",
+     'author' : {
+     "name" : "Arthur",
+     "label" : "Expert piece"
+     },
+    'promo__value': '-14%' ,
+     'link' : 'atelier/materiel-d-atelier/compresseur-et-accessoires/compresseur-bicylindre/pc5068',
+      'alt' : 'Compresseur bicylindre',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/5c/71/854864ac8c504350d627a832dec7.jpg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }
+ 
+
+  ])
+
+  tr
+    td &nbsp;
+
+  +produit__quote([
+
+
+  {'name': "Casquette de protection<br> ventilée POWER CAP <br> &nbsp;",
+   'promo__title': "none",
+        'author' : {
+     "name" : "Arthur",
+     "label" : "Expert piece"
+     },
+  'quote': 'La casquette ventilée Power Cap – L’accessoire indispensable pour souffler votre moissonneuse batteuse – Essayez la 15 jours, satisfait ou remboursé',
+    'promo__value': '-14%' ,
+     'link' : 'casquette-de-protection-ventilee-power-cap-r-epi/p186638',
+      'alt' : 'Casquette de protection ventilée POWER CAP',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130//20/2d/fefa51edb3bc3fc5ac0f67a9719b.jpeg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }
+ 
+
+  ])
+
+
+  tr
+    td &nbsp;
+
+  +produit__quote([
+
+
+  {'name': "Cuve de stockage <br> mobile TRUCKMASTER <br> &nbsp;",
+   'promo__title': "none",
+  'quote': 'Pour ne pas tomber à sec et augmenter votre productivité : Cuve mobile à carburant Kingspan de 200 à 900 litres !!',
+     'author' : {
+     "name" : "Arthur",
+     "label" : "Expert piece"
+     },
+    'promo__value': '-14%' ,
+     'link' : 'cuve-de-stockage-mobile-truckmaster---pompe-50-l-min-12-v-333298/p333298?variant=416922',
+      'alt' : 'Cuve de stockage mobile TRUCKMASTER - pompe 50 l/min 12 V',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/0b/51/6777b2e62023eea2e6f8aa01e0db.jpg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }
+ 
+
+  ])
+
+
+  tr
+    td &nbsp;
+
+  +produit__quote([
+
+
+  {'name': "Filtre pour habitacle de <br> moissonneuse-batteuse <br> &nbsp;",
+   'promo__title': "none",
+     'author' : {
+     "name" : "Arthur",
+     "label" : "Expert piece"
+     },
+  'quote': 'Nouveau tarif sur les filtres habitacles poussières et les filtres à charbon actif – Profitez en et protégez-vous !!!',
+    'promo__value': '-14%' ,
+     'link' : 'pieces-agricoles/moissonneuse---ensileuse/filtration/filtre-habitacle/pc6217',
+      'alt' : 'Filtre pour habitacle de moissonneuse-batteuse et ensileuse',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/hifi/SC_17203_CAG.jpg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }
+ 
+
+  ])
+
+
+
+
+
+  tr
+    td &nbsp;
+
+
+
+block footer__expert
+  include ./mixins/footer__expert.pug 
+  +footer__expert('arthur')
+
+
+block sources 
+  include ./mixins/sources.pug 
+  +sources('agrico') 

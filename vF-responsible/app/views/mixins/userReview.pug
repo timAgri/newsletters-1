@@ -1,0 +1,76 @@
+include ../mixins/title.pug
+mixin userReview(txt)
+  tr
+    td(align='center', style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; background: #fafafa; ')
+      table(width='95%', style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+        tr
+          td(style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly;')  
+        tr
+          td
+            table
+              +title('Ils nous ont fait confiance')
+              tr
+                td(style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly;  ')
+                  table(width='100%', align='center', style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+                    tr
+                      td.quote__semence(width='32%', align='center', style='border-collapse: collapse; border: 1px solid #eee; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; background: #fff;')
+                        table(width='95%', style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+                          tr
+                            td  
+                          tr
+                            td(style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; font-weight: bold; mso-line-height-rule: exactly;') François N. (04) 
+                            td(style='border-collapse: collapse; color: #4a5669; font-family: Helvetica, Arial, sans-serif;  font-weight: bold; mso-line-height-rule: exactly; font-size: 22px;')
+                              | 5 
+                              img( style="display:inline-block;" width='20', height='20', src='https://www.agriconomie.com/media/pub/img/newsletter/icons/star-on.png', alt='Étoile')
+                          tr
+                            td(style='border-collapse: collapse; color: #c7c7c7; font-family: Helvetica, Arial, sans-serif; font-size: 10px; mso-line-height-rule: exactly;')
+                              | Publié le 15/02/2017
+                          tr
+                            td(style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly;')  
+                          tr
+                            td(colspan='2', width='100%', style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; font-size: 12px; width: 100%; ') « Site sympatique pour acheter ses semences et engrais »
+                          tr
+                            td  
+                      td.quote__semence(width='2%', align='center', style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; background: #fff;')
+                      td.quote__semence(width='32%', align='center', style='border-collapse: collapse; border: 1px solid #eee; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; background: #fff;')
+                        table(width='95%', style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+                          tr
+                            td  &nbsp;
+                          tr
+                            td(style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; font-weight: bold; mso-line-height-rule: exactly; ') Daniel L. (83)
+                            td(style='border-collapse: collapse; color: #4a5669; font-family: Helvetica, Arial, sans-serif; font-weight: bold; mso-line-height-rule: exactly; font-size: 22px;')
+                              | 5 
+                              img( style="display:inline-block;" width='20', height='20', src='https://www.agriconomie.com/media/pub/img/newsletter/icons/star-on.png', alt='étoile')
+                          tr
+                            td(style='border-collapse: collapse; color: #c7c7c7; font-family: Helvetica, Arial, sans-serif; font-size: 10px; mso-line-height-rule: exactly;')
+                              | Publié le 25/11/2017
+                          tr
+                            td(style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly;')  
+                          tr
+                            td(colspan='2', style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; font-size: 12px;')
+                              | « Bonne qualité des semences »
+                              br
+                          tr
+                            td  
+                      td.quote__semence(width='2%', align='center', style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly;')
+                      td.quote__semence(width='32%', align='center', style='border-collapse: collapse; border: 1px solid #eee; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; background: #fff;')
+                        table(width='95%', style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+                          tr
+                            td  &nbsp;
+                          tr
+                            td(style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; font-weight: bold; mso-line-height-rule: exactly;') Patrick R. (06) 
+                            td(style='border-collapse: collapse; color: #4a5669; font-family: Helvetica, Arial, sans-serif;  font-weight: bold; mso-line-height-rule: exactly; font-size: 22px;')
+                              | 5 
+                              img( style="display:inline-block;" width='20', height='20', src='https://www.agriconomie.com/media/pub/img/newsletter/icons/star-on.png', alt='étoile')
+                          tr
+                            td(style='border-collapse: collapse; color: #c7c7c7; font-family: Helvetica, Arial, sans-serif; font-size: 10px; mso-line-height-rule: exactly;')
+                              | Publié le 16/02/2017
+                          tr
+                            td(style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly;')  
+                          tr
+                            td(colspan='2', style='border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; mso-line-height-rule: exactly; font-size: 12px;')
+                              | « Très grande variété de semences, c’est appréciable »
+                          tr
+                            td  &nbsp;
+                    tr
+                      td  &nbsp;

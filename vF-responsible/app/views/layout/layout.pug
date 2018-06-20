@@ -1,0 +1,211 @@
+block data
+if lang == "fr"
+  - var BaseUrl = "https://www.agriconomie.com/";
+  - var baseline = "Agriconomie, le site partenaire des agriculteurs français"
+  - var headerUrl = "vf-baseline-fr.jpg"
+else
+  - var BaseUrl = "https://www.agriconomie.be/fr/";
+  - var baseline = "Agriconomie, le site partenaire des agriculteurs Belges"
+  - var headerUrl = "vf-baseline-be.jpg"
+
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml', xmlns:v='urn:schemas-microsoft-com:vml', xmlns:o='urn:schemas-microsoft-com:office:office', xmlns:w='urn:schemas-microsoft-com:office:word')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= baseline
+    block style
+  body
+    table#bodyTable(cellpadding='0', width='650', cellspacing='0', border='0', align='center')
+      tbody
+        tr
+          td
+            table.headerNL(cellpadding='0', cellspacing='0', width='100%', border='0', align='center')
+              tbody
+                block preheader 
+        tr
+          td
+            table.logo(cellpadding='0', cellspacing='0', width='100%', border='0', align='center')
+              tbody
+                tr
+                  td.logo__white(width='33.33%')
+                  td(width='33.33%')
+                    table.logo__img(cellpadding='0', cellspacing='0', border='0', align='center')
+                      tbody
+                        tr
+                          td
+                            a(href= BaseUrl + meta)
+                              img.deviceWith(alt= baseline, src='https://www.agriconomie.com/media/pub/img/newsletter/header/' + headerUrl , height='72', border='0', style='display: block;')
+                  td.logo__white(width='33.33%')
+        tr
+          td.separator(height='1')
+        tr
+          td
+            table.menu(cellpadding='0', cellspacing='0', width='100%', border='0', align='center')
+              tbody 
+                tr
+                  td.menu__border(height='5')  
+                tr
+                  td
+                    table.menu__links(cellpadding='0', cellspacing='0', width='100%', border='0')
+                      tbody
+                        tr
+                          td.menu__link.menu__link--home(align='center')
+                            a.menu__link--a(href= BaseUrl + meta)
+                              img(alt='Accueil', src='https://www.agriconomie.com/media/pub/img/newsletter/header/icon-home.jpg', width='27', height='27', border='0')
+                          td.menu__link(align='center')
+                            a.menu__link--a(href= BaseUrl + 'engrais/pc975' + meta) ENGRAIS
+                          if lang == "fr"
+                            td.menu__link(align='center')
+                              a.menu__link--a(href= BaseUrl + 'phyto/pc2641' + meta) PHYTOS
+                          td.menu__link(align='center')
+                            a.menu__link--a(href= BaseUrl +'semences/pc920' + meta) SEMENCES
+                          td.menu__link(align='center')
+                            a.menu__link--a(href= BaseUrl +'pieces-agricoles/pc2876' + meta) PIÈCES
+                          td.menu__link(align='center')
+                            a.menu__link--a(href=BaseUrl + 'atelier/pc619' + meta) ATELIER
+                          if lang == "fr"
+                            td.menu__link(align='center')
+                              a.menu__link--a(href= BaseUrl + 'elevage/pc392' + meta) ÉLEVAGE
+                          if lang == "be"
+                            td.menu__link(align='center')
+                              a.menu__link--a(href= BaseUrl + 'nutrition/pc7283' + meta) NUTRITION                            
+                            td.menu__link(align='center')
+                              a.menu__link--a(href= BaseUrl + 'bio/pc2856' + meta) BIO
+                          td.menu__link.menu__link--promo(align='center')
+                            a.menu__link--a(href= BaseUrl + 'promotions' + meta) PROMOS
+                tr
+                  td.menu__border(height='5')  
+        tr
+          td
+            table.tableContent(cellpadding='0', cellspacing='0', border='0', width='100%')
+              tbody
+                tr
+                  td(align='center', width='95%')
+                    table.tableContent__body(width='100%', cellpadding='0', cellspacing='0', border='0')
+                      tbody
+                        block content
+        tr
+          td
+            table.tableReassurances(cellpadding='0', cellspacing='0', border='0', width='100%')
+              tbody
+                tr
+                  td(width='95%')
+                    table.tableReassurances__body(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+                      tbody
+                        tr
+                          td(align='center', ;='', valign='center', width='25%')
+                            a(href= BaseUrl +  meta, target='_blank')
+                              img.deviceWith(alt='Transparence', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/prix-transparent-responsive.jpg', width='130', height='41', border='0', style='display: block;')
+                          td(align='center', ;='', valign='center', width='25%')
+                            a(href= BaseUrl  + meta, target='_blank')
+                              img.deviceWith(alt='Meilleur site', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/prix-fevad-responsive.jpg', width='130', height='41', border='0', style='display: block;')
+                          td(align='center', ;='', valign='center', width='25%')
+                            a(href= BaseUrl +  meta, target='_blank')
+                              img.deviceWith(alt='Économies', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/argent-economise-responsive.jpg', width='130', height='41', border='0', style='display: block;')
+                          td(align='center', ;='', valign='center', width='25%')
+                            a(href=BaseUrl  + meta, target='_blank')
+                              img.deviceWith(alt='Sécurité', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/paiement-securise-responsive.jpg', width='130', height='41', border='0', style='display: block;')
+        
+
+
+
+        tr
+          td.footer__blank  
+        tr
+          td
+            table.footer.footer--up(cellpadding='0', cellspacing='0', border='0', width='100%')
+              tbody
+                tr
+                  td
+                    table.footer__wrapper(align='center', cellspacing='0', border='0', width='95%')
+                      tbody
+                        tr
+                          td(valign='top', width='47%', align='center')
+                            table.footer__col(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+                              tbody
+                              block footer__expert
+                          td(width='6%')
+                          td(width='47%', align='left')
+                            table.footer__col(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+                              tbody
+                                tr
+                                  td(align='left')
+                                    | Nos experts sont disponibles 
+                                    span.link--orange 7j/7
+                                    |  de 
+                                    span.link--orange 8h à 20h
+                                    br
+                                    | - Par téléphone : 
+                                    if lang == "fr" 
+                                      span.link--orange 03 52 99 00 00
+                                    if lang == "be" 
+                                      span.link--orange 019 86 05 55
+                                    br
+                                    | - Par mail sur 
+                                    a.link--orange(href= BaseUrl + "contact"+ meta) contact@agriconomie.com 
+                                    br
+                                    br
+                                    if lang == "fr"
+                                      |  Notre service après-vente est joignable
+                                      br
+                                      | - Par téléphone : 
+                                      span.link--orange  03 52 99 00 02
+                tr
+                  td  
+        tr
+          td.separator(height='1')
+        tr.footer__blank
+          td.footer__blank  
+        tr
+          td
+            table.footer.footer--down(cellpadding='0', cellspacing='0', border='0', width='100%', align='center')
+              tbody
+                tr(width='100%')
+                  td
+                    table.footer__wrapper(align='center', cellpadding='0', cellspacing='0', border='0', width='95%')
+                      tbody
+                        tr
+                          td(width='45%', align='center')
+                            table.footer__col(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+                              tbody
+                                tr
+                                  td(align='center')
+                                    img(width='60', src='https://www.agriconomie.com/media/image/newsletters/inl_58580e0193932.png', alt='FEVAD', style='width:60px;')
+                                    br
+                                    | Meilleur site e-commerce 2016
+                                  p(style='text-align:center;')
+                          td(width='10%')
+                          td(width='45%', align='center', valign='center')
+                            table.footer__col(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+                              tbody
+                                tr
+                                  td(align='center')
+                                    table.footer__rss(align='center', cellpadding='0', cellspacing='0', border='0', width='100%')
+                                      tbody
+                                        tr
+                                          td(width='25%', align='center')
+                                            a(style='text-decoration:none', href='https://twitter.com/agriconomie', target='_blank')
+                                              img(height='30', width='30', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/twitter.png', alt='Twitter')
+                                          td(width='25%', align='center')
+                                            a(style='text-decoration:none', href='https://www.facebook.com/Agriconomie/', target='_blank')
+                                              img(height='30', width='30', alt='Facebook', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/facebook.png')
+                                          td(width='25%', align='center')
+                                            a(style='text-decoration:none', href='https://fr.linkedin.com/company/agriconomie-france', target='_blank')
+                                              img(height='30', width='30', alt='LinkedIn', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/linkedin.png')
+                                          td(width='25%', align='center')
+                                            a(style='text-decoration:none', href='https://www.youtube.com/channel/UCo0QMlZUcF-WBP3C9koTLJw', target='_blank')
+                                              img(height='30', width='30', alt='Youtube', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/youtube.png')
+                                tr
+                                  td   
+                                tr
+                                  td(align='center')
+                                    table(align='center', cellpadding='0', cellspacing='0', border='0')
+                                      tbody
+                                        tr
+                                          td(width='12.5%')  
+                                          td(width='75%', align='center') Rejoignez notre communauté et suivez notre expertise
+                                          td(width='12.5%')  
+                tr
+                  td  &nbsp;
+        block sources

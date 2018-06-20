@@ -1,0 +1,5 @@
+mixin banner(link, src, alt)
+  tr
+    td(width='100%', align='center')
+      a(href!= BaseUrl + link + meta)
+        img.full--img(src=src, alt=alt)

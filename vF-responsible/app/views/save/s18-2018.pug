@@ -1,0 +1,441 @@
+extends layout/layout.pug 
+
+block data
+  - var meta =  Data.meta._utmVF;   
+  - var lang = 'fr';
+  
+block style 
+  link(rel='stylesheet', href='css/style.css')
+  style(type='text/css').
+    @media only screen and (max-width: 480px) { 
+    body { 
+    font-size: 16px !important;
+    }   
+    .logo__white,
+    .products__between,
+    .mobile--hide { 
+    display: none!important; 
+    } 
+    .menu {
+    display: block;
+    }
+    .menu tr,
+    .menu td,
+    .menu tbody {
+    display: block;
+    }
+    .menu__links {
+    height: 25px!important;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 30px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 30px!important;
+    height: 30px!important;
+    }
+    .menu__border {
+    font-size: 2.5px!important;
+    height: 2.5px!important;
+    line-height: 2.5px!important;
+    }
+    #bodyTable {
+    width: 100%!important;
+    }
+    .products__unit {
+    float: left; 
+    width: 48%; 
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big,.produit__unit--quote {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    .title--line {
+    width: 5%;
+    }
+    .title--txt {
+    width: 90%;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    width: 80%;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;  
+    }
+    .footer__wrapper img { 
+    margin: 0 auto;
+    } 
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    } 
+    .footer__rss td {
+    float: left;  
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 30px!important;  
+    width: auto;  
+    }
+    .bigOffert__col{
+    display:block;
+    width:100%;
+    }
+    .quote__semence {
+    display: block;
+    width: 100%!important;
+    max-width: 100%!important;
+    text-align: left;
+    }
+    .quote__semence {
+        margin: 5px auto;
+    }
+
+    .quote__semence td {
+        width: 90%!important;
+        margin: 0 auto;
+        display: block;
+    }
+    }
+    .footer__col td { 
+        font-size: 12px!important;
+    }
+
+  != "<!--[if gte mso 10]>"
+  style.
+    table, p, span, div, table, tr, td, th, a { 
+    mso-style-priority:99;  font-family:"Arial","sans-serif"; 
+    }
+  != "<![endif]-->" 
+block preheader  
+  include ./mixins/preheader.pug
+  +preheader('agrico', "Le vent souffle ce Weekend")
+ 
+   
+block content    
+  include ./mixins/title--simple.pug
+  include ./mixins/title.pug      
+  include ./mixins/produit_3.pug  
+  include ./mixins/produit_2.pug
+  include ./mixins/produit_3__buse.pug 
+  include ./mixins/produit_3__prix.pug  
+  include ./mixins/produit_4.pug  
+  include ./mixins/banner.pug 
+  include ./mixins/bannerNext.pug 
+  include ./mixins/btn.pug     
+  include ./mixins/quote.pug
+  include ./mixins/produit_3__btnOnly.pug      
+  include ./mixins/produit_3__dechaumeur.pug
+  include ./mixins/produit_3__details.pug
+  include ./mixins/produit__quote.pug
+  include ./mixins/link.pug
+  //- tr
+  //-   td &nbsp;
+  //- tr
+  //-   td
+  //-     table.bigOffert(width="100%" align="center" border='0', cellspacing='0', cellpadding='0')
+  //-       tr
+  //-         td.bigOffert__col(width="50%" align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; border-top: 2px solid #eee; border-bottom: 2px solid #eee;") 
+  //-           table(width="100%" align="center "  border='0', cellspacing='0', cellpadding='0' )
+  //-             tr
+  //-               td &nbsp;
+  //-             tr
+  //-               td(width="100%" align="center" valign="middle")
+  //-                 a(href="https://www.agriconomie.be/fr/phacelie-1/p195007?utm_source=grliste&utm_medium=email&utm_campaign=weekend-be-S16-2018")
+  //-                   img(width="150" height="150" src="https://www.agriconomie.be/media/cache/130x130/b6/32/90433ffba00c9856323de326bc24.jpeg", alt="Phacélie - Stala")
+  //-             tr
+  //-               td &nbsp;
+  //-             tr
+  //-               td(align="center" style="font-size: 16px;") Phacélie - Stala
+  //-             tr
+  //-               td &nbsp;
+  //-         td.bigOffert__col(width="50%" align="center")
+  //-           table(width="100%" align="center" style="background: rgb(252, 93, 106); " border='0', cellspacing='0', cellpadding='0' )
+  //-             tr
+  //-               td &nbsp;
+  //-             tr
+  //-               td(style="text-align:center; color:#fff; font-size:30px; font-weight:bold;" valign="top")  Jusqu'à -14%
+  //-             tr
+  //-               td &nbsp;
+  //-             tr
+  //-               td
+  //-                 table(width="100%" align="center" style="background: rgb(52, 58, 70);" , border='0', cellspacing='0', cellpadding='0' )
+  //-                   tr
+  //-                     td &nbsp;
+  //-                   tr
+  //-                     td(style="text-align:center; color:#fff; font-size:20px;") Dose de semis 8 à 10 kg/Ha
+  //-                   tr
+  //-                     td &nbsp;
+  //-                   tr
+  //-                     td
+  //-                       table(width="80%" align="center" style="background:#fff;", border='0', cellspacing='0', cellpadding='0'  )
+  //-                         tr
+  //-                           td &nbsp;
+  //-                         tr
+  //-                           td(align="center")
+  //-                             strike(style="font-size: 20px; font-weight:bold; color:rgb(204, 204, 204);") 3,35€
+  //-                             | &nbsp;     
+  //-                             span(style="font-size: 37px; color:rgb(252, 93, 106); font-weight: bold;") 2,88€
+  //-                             span(style="font-size: 18px; color:rgb(252, 93, 106); font-weight: bold;")  /kg HT
+  //-                         tr
+  //-                           td &nbsp;
+  //-                   tr
+  //-                     td &nbsp;
+
+  //-                   tr
+  //-                     td.products__btn(align='center', width='100%', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+  //-                       table(border='0', cellspacing='0', cellpadding='0', align='center', width='60%', style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+  //-                         tr
+  //-                           td(align='center', width='100%', style=' border-collapse: collapse; mso-line-height-rule: exactly;')
+  //-                             != "<!--[if mso]>"
+  //-                             v:roundrect(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:w='urn:schemas-microsoft-com:office:word', href="https://www.agriconomie.be/fr/phacelie-1/p195007?utm_source=grliste&utm_medium=email&utm_campaign=weekend-be-S16-2018", style='height:40px;v-text-anchor:middle;width:200px;', arcsize='5%', strokecolor='#52c47d', fillcolor='#52c47d')
+  //-                               w:anchorlock
+  //-                                 center(style='color:#fff;font-family:Helvetica, Arial,sans-serif;font-size:14px;') J'en profite
+  //-                             != "<![endif]-->"
+  //-                             a(href="https://www.agriconomie.be/fr/phacelie-1/p195007?utm_source=grliste&utm_medium=email&utm_campaign=weekend-be-S16-2018", style=' font-family:Arial,Helvetica,sans-serif;background-color: #52c47d; border: 1px solid #52c47d; border-radius: 3px; color: #fff; display: inline-block; font-family: sans-serif; font-size: 20px; line-height: 40px; text-align: center; text-decoration: none; width: 95%; -webkit-text-size-adjust: none; mso-hide: all; font-weight: bold;') J'en profite
+  //-                   tr
+  //-                     td &nbsp;
+  tr 
+    td &nbsp;
+  +produit__3([
+  {'name': "Solution azotée N39 <br> Liquide <br> &nbsp;",
+   'promo__title': "Jusqu'à",
+    'promo__value': '-14%' ,
+     'link' : 'solution-azotee-n39-2/p2',
+      'alt' : 'Solution azotée N39 - Liquide',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130//7c/ca/466bbd39518fe7f21da7e1fc049b.jpeg', 
+     'btn' : "Voir les prix",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }, 
+
+  {'name': "10-4-0 <br> Bouchon <br/> &nbsp;", 
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : '10-4-0-1/p254204',
+      'alt' : "10-4-0 - Bouchon",
+      'img' : 'https://www.agriconomie.com/media/cache/240x230/d2/9c/29b31ccce22d1f5ce3d1d711cb7f.jpeg',  
+     'btn' : "Voir les prix",
+     'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "85"},
+     'new': { "entier" : "1", "dec" : "59"}
+     }
+       }, 
+
+  {'name': "Urée 46 Granulé <br> Granulé <br> &nbsp;",
+   'promo__title': "Jusqu'à",
+    'promo__value': '-14%' ,
+     'link' : 'uree/p287',
+      'alt' : 'Urée 46 Granulé - Granulé',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130//07/4d/ec5b8618c79c86d9522fc5368922.jpeg', 
+     'btn' : "Voir les prix",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }
+ 
+
+  ])
+
+
+  tr
+    td &nbsp;
+  +produit__3([
+    {'name': "L'équipement <br> du moissonneur <br> &nbsp;",
+   'promo__title': "Jusqu'à",
+    'promo__value': '-20%' ,
+     'link' : 'pieces-agricoles/moissonneuse---ensileuse/l-equipement-du-moissonneur/pc7595',
+      'alt' : "L'équipement du moissonneur",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130//20/2d/fefa51edb3bc3fc5ac0f67a9719b.jpeg', 
+     'btn' : "Voir les produit",
+     'cara' : '- Pressol <br> - 450 L <br> - 60 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "51"},  
+     'new': { "entier" : "1", "dec" : "30"}
+     }
+       },
+
+         {'name': "Carton 24 <br> graisse 400g <br/> &nbsp;", 
+   'promo__title': "Jusqu'à",
+    'promo__value': '-14%' ,
+     'link' : 'carton-de-24-graisse-a-usage-multiple-400g-pompe-a-graisse-offerte/p307112',
+      'alt' : "Carton 24 graisse 400g",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/5c/97/e13ff9a59162d1754da5dc5941d6.jpeg',  
+     'btn' : "Voir le produit",
+     'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "85"},
+     'new': { "entier" : "1", "dec" : "59"}
+     }
+       }, 
+
+  {'name': "Sachets <br>et Big Bag <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'radis-chinois-structurator/p195071',
+      'alt' : 'Big Bag agricole, stockage récoltes et semences',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/58987dca24256.jpg', 
+     'btn' : "Voir les produits",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }
+ 
+
+  ])
+  tr
+    td &nbsp;
+
+  +banner(" semences/pc920 ", "https://www.agriconomie.com/media/pub/img/newsletter/banners/S17_2018_cipan.jpg", "jusqu'à -14% cipan -fourragères")
+
+
+
+  tr
+    td &nbsp;
+  +produit__4([
+
+    {'name': "Set de 2 phares <br> travail LED 1000 Lumen <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : "set-phares-travail-1000-lumen-286194/p286194",
+      'alt' : "Set de 2 phares travail LED 1000 Lumen",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/7b/2b/439dc89716c2b48616cb781e5ace.jpeg', 
+     'btn' : "Voir le produit",
+     'cara' : '- Pressol <br> - 450 L <br> - 60 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "51"},  
+     'new': { "entier" : "1", "dec" : "30"}
+     }
+       },
+
+         {'name': "Matrix 430 TEEJET <br> avec antenne <br/> &nbsp;", 
+   'promo__title': "Jusqu'à",
+    'promo__value': '-14%' ,
+     'link' : 'matrix-430-teejet-avec-antenne-322298/p322298',
+      'alt' : "Matrix 430 TEEJET avec antenne",
+      'img' : 'https://www.agriconomie.com/media/cache/240x230/af/5d/69253c089d4507bdcf09446a4e4e.jpg',  
+     'btn' : "Voir les prix",
+     'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "85"},
+     'new': { "entier" : "1", "dec" : "59"}
+     }
+       }, 
+
+  {'name': "Dent d'andaineur <br>et de faneuse <br> &nbsp;", 
+   'promo__title': "Jusqu'à",
+    'promo__value': '-14%' ,
+     'link' : 'pieces-agricoles/fenaison/dent-andaineur---faneuse/pc3223',
+      'alt' : "Dent d'andaineur / faneuse",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/agrioutil/188447.jpg', 
+     'btn' : "Voir les prix",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }
+
+  ])
+  tr
+    td &nbsp;
+  +produit__3([
+    {'name': "L'équipement <br> du moissonneur <br> &nbsp;",
+   'promo__title': "Jusqu'à",
+    'promo__value': '-20%' ,
+     'link' : 'pieces-agricoles/moissonneuse---ensileuse/l-equipement-du-moissonneur/pc7595',
+      'alt' : "L'équipement du moissonneur",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130//20/2d/fefa51edb3bc3fc5ac0f67a9719b.jpeg', 
+     'btn' : "Voir les produit",
+     'cara' : '- Pressol <br> - 450 L <br> - 60 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "51"},  
+     'new': { "entier" : "1", "dec" : "30"}
+     }
+       },
+
+         {'name': "Filtres pour <br> tracteur agricole <br/> &nbsp;", 
+   'promo__title': "big",
+    'promo__value': '5 filtres achetés le 6ème offert' ,
+     'link' : 'carton-de-24-graisse-a-usage-multiple-400g-pompe-a-graisse-offerte/p307112',
+      'alt' : "Filtres pour tracteur agricole",
+      'img' : 'https://www.agriconomie.com/media/cache/100x100/hifi/SH_60362.jpg?5aeb49104fcb2',  
+     'btn' : "Voir le produit",
+     'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "85"},
+     'new': { "entier" : "1", "dec" : "59"}
+     }
+       }, 
+
+  {'name': "MILKYPRO  <br> Exelium 50 <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'lactigo-tradi-50/p322690',
+      'alt' : 'MILKYPRO Exelium 50',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130//c8/6d/4f7ee08abaf191e7855e10d191b1.jpeg', 
+     'btn' : "Voir les produits",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }
+ 
+
+  ])
+
+
+
+block footer__expert
+  include ./mixins/footer__expert.pug 
+  +footer__expert('margaux')
+
+
+block sources 
+  include ./mixins/sources.pug 
+  +sources('agrico') 

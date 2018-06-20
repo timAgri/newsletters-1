@@ -1,0 +1,327 @@
+extends layout/layout.pug
+ 
+block utm 
+  - var meta =  Data.meta._utmActuFr;   
+  - var type = 'engrais';     
+  - var lang = 'be';       
+     
+ 
+block style
+  link(rel='stylesheet', href='css/style.css') 
+  style.
+    * {
+    font-family: Helvetica, Arial, sans-serif;
+    }
+    .footer__col td{
+    font-size: 12px!important;
+    }
+    .mobile--show{
+    display: none;
+    }
+    @media only screen and (max-width: 480px) {
+    .logo__white,
+    .products__between,
+    .mobile--hide {
+    display: none!important;
+    }
+    .mobile--show {
+    display: block;
+    }
+    #bodyTable{
+    width: 100%; 
+    }
+    .menu__links {
+    height: auto; 
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 35px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 35px!important;
+    height: 35px!important;
+    }
+    body {
+    font-size: 16px !important;
+    }
+    .logo {
+    display: none !important;
+    }
+    .logoM {
+    display: block !important;
+    max-width: 100%;
+    width: 100%!important;
+    height: 
+    }
+    .actu__wrapper td {
+    display: table;
+    width: 100%;
+    }
+    .actu__stats-img {
+    width: auto;
+    vertical-align: middle;
+    display: block;
+    }
+    .actu__stats-img img {
+    margin: 15px 0;
+    display: inline-block;
+    }
+    .actu__stats-description {
+    height: 50px;
+    line-height: 25px;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;
+    }
+    .footer__wrapper img {
+    margin: 0 auto;
+    }
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    }
+    .footer__rss td {
+    float: left;
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 40px!important;
+    width: auto;
+    }
+    .products__unit {
+    float: left;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    }
+
+
+block phraseAccroche
+  | Nouvelle campagne disponible
+
+block header
+  include mixins/header.pug
+  +header('margaux')
+
+block data
+  include mixins/elemMarche.pug
+  +elemMarche('Azotés :', "Les prix en Urée ont été annoncés pour des livraison pendant l’été et il semblerait que la hausse en 2 mois soit de plus de 40€/t. Les acteurs ne prennent aucun risque et ne s’engagent pas sur des prix. Cette hausse a été très brutale et nous attendons toujours une tendance de prix. <br><br> En solution azotée le marché est haussier entraîné par l'urée, la parité ainsi que l’offre et la demande. <br><br> Le cours de l’ammonitrate est également haussier. Les volumes disponibles seront faibles. ")
+  +elemMarche('Phosphore et Potasse :', "Les premiers prix en DAP ont été publiés pour des livraisons cet été avec une hausse de 10 à 20€/t en fonction du départ. <br><br> La hausse du TSP se poursuit avec une influence forte de la parité euro dollar. La faible disponibilité du produit pourra également avoir un rôle et entraîner une hausse.")
+
+block stat
+  include mixins/elemStat.pug
+  +elemStat('Azotés',
+   'À la hausse' ,
+     'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
+        'engrais/engrais-azote/pc979' + meta,
+    'À la Hausse')
+  +elemStat('Potasse',
+    'À la hausse' , 
+     'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
+         'engrais/autres-engrais/engrais-potassique/pc3428' + meta,
+     'À la hausse')
+  +elemStat('Phosphore',
+   'À la hausse' , 
+   'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
+   'engrais/autres-engrais/engrais-phosphate/pc3426' + meta,
+    'À la Hausse')
+
+
+block preco
+  include mixins/title.pug
+  tr
+    td.data__blank
+
+  tr
+    td L’optimisation des traitements est un levier important dans l’atteinte des objectifs culturaux.
+  tr
+    td.data__blank
+  tr
+    td Pour ce faire,  ECO PH est un engrais foliaire spécifique 3 en 1.
+  tr
+    td.data__blank
+  tr
+    td Polyvalent, il va s’adapter aux eaux dures à pH élevé, et permettre d’optimiser la qualité de traitement, et ce même dans des conditions extrêmes de pH et de dureté.
+  tr
+    td.data__blank
+  tr
+    td ECO PH est LA solution clef pour optimiser en toute tranquillité pH + Dureté + Hygroscopie. Ces caractéristiques en font un partenaire synergique pour vos traitement. 
+  tr
+    td.data__blank
+  tr
+    td Dose conseillée à partir de 1 %
+  tr
+    td.data__blank
+  +title('Les préconisations de Margaux')
+  tr
+    td 
+      |- Venez découvrir nos semences et nos mélanges de couverts ainsi que nos offres spéciales colza 
+      a.link__actu(href!="https://www.agriconomie.com/melange-colza-fix-quatro-gflv/p282904" + meta) fix trio GLF 
+      | et  
+      a.link__actu(href!="https://www.agriconomie.com/melange-colza-fix-trio-glf/p282902" + meta ) fix quatro GLFV
+  tr
+    td.data__blank
+  tr
+    td 
+      | - Il n'est pas trop tard pour venir couvrir vos besoins en 
+      a.link__actu(href!="https://www.agriconomie.com/search?hierarchicalMenu%5Bcategories.lvl0%5D=Engrais&query=engrais%20organique&page=2&configure%5BhitsPerPage%5D=24&" + meta ) engrais organiques 
+      | pour apporter de l’humus et éléments fertilisants.
+  tr
+    td.data__blank
+  tr
+    td 
+      |- Suite aux nombreuses précipitations des derniers jours, apportez de 
+      a.link__actu(href!="https://www.agriconomie.com/soufre-n/p265436" + meta ) l'azote et du soufre
+      | , ou un engrais complet 
+      a.link__actu(href!="https://www.agriconomie.com/agri-forcenpk/p333370" + meta ) NPK
+      |  par voie foliaire pour complémenter les besoins de vos cultures.
+
+
+block produits
+  include parts/product__space.pug
+  include mixins/produit_3.pug
+  include mixins/produit_4.pug
+  include mixins/title.pug
+  include mixins/banner.pug
+
+  tr
+    td &nbsp;
+  +title("Notre sélection de produit")
+  tr
+    td &nbsp;
+
+  +produit__4([ 
+
+
+            {'name': "Gamme <br> chaux vive engrais <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': ' -10%' ,
+     'link' : 'search?hierarchicalMenu%5Bcategories.lvl0%5D=Engrais&query=chaux+vive+engrais&',
+    'alt' : "Gamme chaux vive engrais ", 
+     'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/chaux.jpg',
+     'btn' : 'Voir les produits'  },
+
+
+       {'name': "9-23-0 +25SO3 <br> Bulk granulé <br> &nbsp;",
+   'promo__title': "PROMO",
+    'promo__value': '-2€/T' ,
+     'link' : '9-23-0-25so3/p340869',
+    'alt' : "9-23-0 +25SO3 - Bulk granulé", 
+     'img' : 'https://www.agriconomie.com/media/cache/130x130//4f/5e/2f434099978c9dd4be25194dcd5e.jpeg',
+     'btn' : 'voir les prix'  },
+
+
+  {'name': "TSP 45 <br> Granulé <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': ' -10%' ,
+     'link' : 'tsp-45/p289',
+    'alt' : "TSP 45 - Granulé", 
+     'img' : 'https://www.agriconomie.com/media/cache/130x130/28/cb/9476e5486a08f900b98cde528f6c.jpg',
+     'btn' : 'Voir les prix'  },
+
+       {'name': "Chlorure de potasse <br> Granulé <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': ' -10%' ,
+     'link' : 'chlorure-de-potasse/p6',
+    'alt' : "Chlorure de potasse - Granulé", 
+     'img' : 'https://www.agriconomie.com/media/cache/130x130/28/d6/d75d736a07986d8ec1b7b1294b01.jpg',
+     'btn' : 'Voir les prix'  }
+
+
+
+
+  ])
+
+
+
+  tr
+    td &nbsp;
+
+  +produit__4([ 
+  {'name': "Soufre - thiosulfate <br> d'ammonium - Liquide <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-5%' ,
+     'link' : 'soufre-thiosulfate-d-ammonium/p265452',
+     'alt' : "Soufre - thiosulfate d'ammonium - Liquide",
+     'img' : 'https://www.agriconomie.com/media/cache/130x130/f1/11/e4a46a620ba41aa8711848c66f24.jpg',
+     'btn' : 'Voir les prix'  }, 
+
+
+
+       {'name': "Bicarbonate de  <br> Potassium Cristal <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-6€/T' ,
+     'link' : "bicarbonate-de-potassium/p340180",
+     'alt' : "Bicarbonate de Potassium - Cristal",
+     'img' : 'https://www.agriconomie.com/media/cache/130x130//74/16/1de9114f36a339d4e443910f6091.jpeg',
+     'btn' : 'Voir les prix'  }, 
+
+
+       {'name': " 26-0-0 +20SO3 <br> Bulk granulé <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-6€/T' ,
+     'link' : '26-0-0-20so3/p340871',
+    'alt' : "26-0-0 +20SO3 - Bulk granulé", 
+     'img' : 'https://www.agriconomie.com/media/cache/130x130//e0/8e/d9b7b4e3f1c8e964df89d5b87515.jpeg',
+     'btn' : 'Voir les prix'  },
+
+            {'name': " Compost (fientes / lisier) <br> 1.8-2.2-1.6 - Criblé <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-6€/T' ,
+     'link' : 'compost-1-8-2-2-1-6/p211305',
+    'alt' : "Compost (fientes / lisier) 1.8-2.2-1.6 - Criblé", 
+     'img' : 'https://www.agriconomie.com/media/cache/130x130/6d/54/5d84afa2b78f27e1afbc905ce94f.jpg',
+     'btn' : 'Voir les prix'  }
+
+
+
+  ]) 
+
+
+  tr
+    td &nbsp;
+
+
+block footer
+  include mixins/footer__expert.pug
+  +footer__expert('margaux')

@@ -1,0 +1,94 @@
+mixin footer__expert(expert)
+  case expert
+    when 'arthur'
+      tr
+        td(align='right')
+          a(href!=  baseUrl  + 'nos-experts' + meta, target='_blank')
+            img(alt='arthur', src='https://www.agriconomie.com/media/pub//img/newsletter/experts/arthur.png', width='80', height='80', border='0', style='display: block;')
+        td(width='15')  
+        td(align='left')
+          | "Je suis à votre disposition pour toute demande d'informations sur la gamme pièces."
+          br
+          br
+          a.link--orange(href!=  baseUrl  + 'publi/nos-experts' + meta)  Arthur
+          | , Expert Pièces
+    when 'margaux'
+      tr
+        td(align='right')
+          a(href!=  baseUrl + "publi/nos-experts" + meta, target='_blank')
+            img(alt='margaux', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/margaux.png', width='80', height='80', border='0', style='display: block;')
+        td(width='15')  
+        td(align='left')
+          | "Je suis à votre disposition pour toute demande d'informations sur la gamme intrants."
+          br
+          br
+          a.link--orange(href!=  baseUrl  + 'publi/nos-experts' + meta)  Margaux
+          | , Experte intrants
+    when 'bertrand'
+      tr
+        td(align='right')
+          a(href!=  baseUrl  + 'publi/nos-experts' + meta, target='_blank')
+            img(alt='bertrand', src='https://www.agriconomie.com/media/pub/img/newsletter/experts/bertrand.png', width='80', height='80', border='0', style='display: block;')
+        td(width='15')  
+        td(align='left')
+          | "Je suis à votre disposition pour toute demande d'informations sur la gamme élevage."
+          br
+          br
+          a.link--orange(href!=  baseUrl  + 'publi/nos-experts' + meta)  Bertrand
+          | , Expert élevage
+    when 'none'
+      tr
+        td(valign='top', width='47%', align='center')
+          table.footer__col(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+            tbody
+              tr
+                td(align='center')
+                  table.footer__rss(align='center', cellpadding='0', cellspacing='0', border='0', width='100%')
+                    tbody
+                      tr
+                        td(width='25%', align='center')
+                          a(style='text-decoration:none', href='https://twitter.com/agriconomie', target='_blank')
+                            img(height='30', width='30', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/twitter.png', alt='Twitter')
+                        td(width='25%', align='center')
+                          a(style='text-decoration:none', href='https://www.facebook.com/Agriconomie/', target='_blank')
+                            img(height='30', width='30', alt='Facebook', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/facebook.png')
+                        td(width='25%', align='center')
+                          a(style='text-decoration:none', href='https://fr.linkedin.com/company/agriconomie-france', target='_blank')
+                            img(height='30', width='30', alt='LinkedIn', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/linkedin.png')
+                        td(width='25%', align='center')
+                          a(style='text-decoration:none', href='https://www.youtube.com/channel/UCo0QMlZUcF-WBP3C9koTLJw', target='_blank')
+                            img(height='30', width='30', alt='Youtube', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/youtube.png')
+              tr
+                td   
+              tr
+                td(align='center')
+                  table(align='center', cellpadding='0', cellspacing='0', border='0')
+                    tbody
+                      tr
+                        td(width='12.5%')  
+                        td(width='75%', align='center') Rejoignez notre communauté et suivez notre expertise
+                        td(width='12.5%')  
+        td(width='6%')
+        td(width='47%', align='left')
+          table.footer__col(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+            tbody
+              tr
+                td(align='left')
+                  | Nos experts sont disponibles 
+                  span.link--orange 7j/7
+                  |  de 
+                  span.link--orange 8h à 20h
+                  br
+                  |  - Par téléphone : 
+                  span.link--orange 03 52 99 00 00
+                  br
+                  |  - Par mail sur 
+                  span.link--orange contact@agriconomie.com 
+                  br
+                  br
+                  |  Notre service après-vente est joignable
+                  br
+                  |  - Par téléphone : 
+                  span.link--orange 03 52 99 00 02
+tr
+td  

@@ -1,0 +1,425 @@
+extends layout/layout.pug 
+
+block data
+  - var meta =  Data.meta._utmVF;   
+  - var lang = 'fr';      
+  
+block style 
+  link(rel='stylesheet', href='css/style.css')
+  style(type='text/css').
+    @media only screen and (max-width: 480px) { 
+    body { 
+    font-size: 16px !important;
+    }   
+    .logo__white,
+    .products__between,
+    .mobile--hide { 
+    display: none!important;
+    } 
+    .menu {
+    display: block;
+    }
+    .menu tr,
+    .menu td,
+    .menu tbody {
+    display: block;
+    }
+    .menu__links {
+    height: 25px!important;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 30px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 30px!important;
+    height: 30px!important;
+    }
+    .menu__border {
+    font-size: 2.5px!important;
+    height: 2.5px!important;
+    line-height: 2.5px!important;
+    }
+    #bodyTable {
+    width: 100%!important;
+    }
+    .products__unit {
+    float: left; 
+    width: 48%; 
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big,.produit__unit--quote {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    .title--line {
+    width: 5%;
+    }
+    .title--txt {
+    width: 90%;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    width: 80%;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;  
+    }
+    .footer__wrapper img { 
+    margin: 0 auto;
+    } 
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    } 
+    .footer__rss td {
+    float: left;  
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 30px!important;  
+    width: auto;  
+    }
+    .bigOffert__col{
+    display:block;
+    width:100%;
+    }
+    }
+    .footer__col td { 
+        font-size: 12px!important;
+    }
+  != "<!--[if gte mso 10]>"
+  style.
+    table, p, span, div, table, tr, td, th, a { 
+    mso-style-priority:99;  font-family:"Arial","sans-serif"; 
+    }
+  != "<![endif]-->" 
+block preheader  
+  include ./mixins/preheader.pug
+  +preheader('agrico', "Le vent souffle ce Weekend")
+ 
+   
+block content    
+  include ./mixins/title--simple.pug
+  include ./mixins/title.pug      
+  include ./mixins/produit_3.pug  
+  include ./mixins/produit_2.pug
+  include ./mixins/produit_3__buse.pug 
+  include ./mixins/produit_3__prix.pug  
+  include ./mixins/produit_4.pug  
+  include ./mixins/banner.pug 
+  include ./mixins/bannerNext.pug 
+  include ./mixins/btn.pug     
+  include ./mixins/quote.pug
+  include ./mixins/produit_3__btnOnly.pug      
+  include ./mixins/produit_3__dechaumeur.pug
+  include ./mixins/produit_3__details.pug
+  include ./mixins/produit__quote.pug
+  include ./mixins/link.pug
+  tr
+    td &nbsp;
+  tr
+    td
+      table.bigOffert(width="100%" align="center" border='0', cellspacing='0', cellpadding='0')
+        tr
+          td.bigOffert__col(width="50%" align="center" style="border-collapse: collapse; mso-line-height-rule: exactly; border-top: 2px solid #eee; border-bottom: 2px solid #eee;") 
+            table(width="100%" align="center "  border='0', cellspacing='0', cellpadding='0' )
+              tr
+                td &nbsp;
+              tr
+                td(width="100%" align="center" valign="middle")
+                  a(href="https://www.agriconomie.be/fr/phacelie-1/p195007?utm_source=grliste&utm_medium=email&utm_campaign=weekend-be-S16-2018")
+                    img(width="150" height="150" src="https://www.agriconomie.be/media/cache/130x130/b6/32/90433ffba00c9856323de326bc24.jpeg", alt="Phacélie - Stala")
+              tr
+                td &nbsp;
+              tr
+                td(align="center" style="font-size: 16px;") Phacélie - Stala
+              tr
+                td &nbsp;
+          td.bigOffert__col(width="50%" align="center")
+            table(width="100%" align="center" style="background: rgb(252, 93, 106); " border='0', cellspacing='0', cellpadding='0' )
+              tr
+                td &nbsp;
+              tr
+                td(style="text-align:center; color:#fff; font-size:30px; font-weight:bold;" valign="top")  Jusqu'à -14%
+              tr
+                td &nbsp;
+              tr
+                td
+                  table(width="100%" align="center" style="background: rgb(52, 58, 70);" , border='0', cellspacing='0', cellpadding='0' )
+                    tr
+                      td &nbsp;
+                    tr
+                      td(style="text-align:center; color:#fff; font-size:20px;") Dose de semis 8 à 10 kg/Ha
+                    tr
+                      td &nbsp;
+                    tr
+                      td
+                        table(width="80%" align="center" style="background:#fff;", border='0', cellspacing='0', cellpadding='0'  )
+                          tr
+                            td &nbsp;
+                          tr
+                            td(align="center")
+                              strike(style="font-size: 20px; font-weight:bold; color:rgb(204, 204, 204);") 3,35€
+                              | &nbsp;     
+                              span(style="font-size: 37px; color:rgb(252, 93, 106); font-weight: bold;") 2,88€
+                              span(style="font-size: 18px; color:rgb(252, 93, 106); font-weight: bold;")  /kg HT
+                          tr
+                            td &nbsp;
+                    tr
+                      td &nbsp;
+
+                    tr
+                      td.products__btn(align='center', width='100%', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+                        table(border='0', cellspacing='0', cellpadding='0', align='center', width='60%', style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+                          tr
+                            td(align='center', width='100%', style=' border-collapse: collapse; mso-line-height-rule: exactly;')
+                              != "<!--[if mso]>"
+                              v:roundrect(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:w='urn:schemas-microsoft-com:office:word', href="https://www.agriconomie.be/fr/phacelie-1/p195007?utm_source=grliste&utm_medium=email&utm_campaign=weekend-be-S16-2018", style='height:40px;v-text-anchor:middle;width:200px;', arcsize='5%', strokecolor='#52c47d', fillcolor='#52c47d')
+                                w:anchorlock
+                                  center(style='color:#fff;font-family:Helvetica, Arial,sans-serif;font-size:14px;') J'en profite
+                              != "<![endif]-->"
+                              a(href="https://www.agriconomie.be/fr/phacelie-1/p195007?utm_source=grliste&utm_medium=email&utm_campaign=weekend-be-S16-2018", style=' font-family:Arial,Helvetica,sans-serif;background-color: #52c47d; border: 1px solid #52c47d; border-radius: 3px; color: #fff; display: inline-block; font-family: sans-serif; font-size: 20px; line-height: 40px; text-align: center; text-decoration: none; width: 95%; -webkit-text-size-adjust: none; mso-hide: all; font-weight: bold;') J'en profite
+                    tr
+                      td &nbsp;
+  tr  
+    td &nbsp;
+  +produit__3__prix([
+  {'name': "Vesce commune printemps <br> Marianne <br> &nbsp;",
+   'promo__title': "Jusqu'à",
+    'promo__value': '-14%' ,
+     'link' : 'vesce-commune-printemps/p195017',
+      'alt' : 'Vesce commune printemps - Marianne',
+      'img' : 'https://www.agriconomie.be/media/cache/130x130/18/12/de242dd144bdbd666b8cb0fda2fe.jpg', 
+     'btn' : "J'en profite",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }, 
+
+  {'name': "Moutarde blanche <br> antinematode - Forum <br/> &nbsp;", 
+   'promo__title': "Jusqu'à",
+    'promo__value': '-14%' ,
+     'link' : 'moutarde-blanche-antinematode/p195029',
+      'alt' : "Moutarde blanche antinematode - Forum",
+      'img' : 'https://www.agriconomie.be/media/cache/130x130/93/c6/c98f7852d2a8c46cd49e707cb66e.jpeg',  
+     'btn' : "J'en profite",
+     'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "85"},
+     'new': { "entier" : "1", "dec" : "59"}
+     }
+       }, 
+
+         {'name': "Avoine rude <br> diploide - Iapar <br> &nbsp;",
+   'promo__title': "Jusqu'à",
+    'promo__value': '-14%' ,
+     'link' : "avoine-diploide/p195032",
+      'alt' : "Avoine rude diploide - Iapar",
+      'img' : 'https://www.agriconomie.be/media/cache/130x130//0d/f0/7fba78d973a6ee77288aa89141d7.jpeg', 
+     'btn' : "J'en profite",
+     'cara' : '- Pressol <br> - 450 L <br> - 60 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "51"},  
+     'new': { "entier" : "1", "dec" : "30"}
+     }
+       }
+ 
+
+  ])
+
+  tr
+    td &nbsp; 
+
+  tr
+    td(width="100%" )
+      table(border='0', cellspacing='0', cellpadding='0' width="95%" align="center")
+        tr
+          td(align="right")
+            +link("semences/pc920", "Voir plus de semences")
+
+  tr
+    td &nbsp; 
+
+
+  +produit__3([
+  {'name': " Gamme<br> Effaroucheur<br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'atelier/hygiene-et-nettoyage/anti-nuisibles/effaroucheur/pc5428',
+      'alt' : 'Effaroucheur et filet de protection contre oiseau',
+      'img' : 'https://www.agriconomie.be/media/cache/130x130//f4/2c/f5d954008f11a403c67e269b8668.jpeg', 
+     'btn' : "Voir les produits",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }, 
+
+  {'name': "Citerne de transport <br> engrais 8000 L <br/> &nbsp;", 
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'citerne-de-transport-engrais-8000-l-280514/p280514',
+      'alt' : "Citerne de transport engrais 8000 L",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/aa/b1/9710d6ce01f8540363517d31ed16.jpg',  
+     'btn' : "Voir le produit",
+     'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "85"},
+     'new': { "entier" : "1", "dec" : "59"}
+     }
+       }, 
+
+         {'name': "Pompe hydraulique <br> pour tracteur <br> &nbsp;",
+   'promo__title': "PROMO",
+    'promo__value': '-8%' ,
+     'link' : "pieces-agricoles/tracteur/hydraulique/pompe-hydraulique/pc5862",
+      'alt' : "Pompe hydraulique pour tracteur",
+      'img' : 'https://www.agriconomie.be/media/cache/130x130/ae/69/645757bde6795517be0777d9cfae.jpg', 
+     'btn' : "Voir les produits",
+     'cara' : '- Pressol <br> - 450 L <br> - 60 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "51"},  
+     'new': { "entier" : "1", "dec" : "30"}
+     }
+       }
+ 
+
+  ])
+
+
+  tr
+    td &nbsp; 
+
+
+
+  +produit__3([
+  {'name': "Manchons de traite<br> economique <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'elevage/traite/manchons/pc2338?properties%5BGamme%5D=Eco',
+      'alt' : 'Manchons de traite origine et adaptable catégorie economique',
+      'img' : 'https://www.agriconomie.be/media/cache/130x130/74/55/35807448583d1aad00c7a97312cf.jpg', 
+     'btn' : "Voir les produits",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }, 
+
+  {'name': "Solution azotée N39 <br> Liquide <br/> &nbsp;", 
+   'promo__title': "PROMO",
+    'promo__value': '-2€' ,
+     'link' : 'moutarde-blanche-antinematode/p195029',
+      'alt' : "Solution azotée N39 - Liquide",
+      'img' : 'https://www.agriconomie.be/media/cache/240x230//7c/ca/466bbd39518fe7f21da7e1fc049b.jpeg',  
+     'btn' : "Voir les prix",
+     'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "85"},
+     'new': { "entier" : "1", "dec" : "59"}
+     }
+       }, 
+
+         {'name': "Urée 46 Granulé <br> Granulé<br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : "uree/p287",
+      'alt' : "Urée 46 Granulé - Granulé",
+      'img' : 'https://www.agriconomie.be/media/cache/240x230//07/4d/ec5b8618c79c86d9522fc5368922.jpeg', 
+     'btn' : "Voir les prix",
+     'cara' : '- Pressol <br> - 450 L <br> - 60 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "51"},  
+     'new': { "entier" : "1", "dec" : "30"}
+     }
+       }
+ 
+
+  ])
+
+
+  tr 
+    td &nbsp;
+
+  +title("et bien plus encore")
+
+
+
+  tr
+    td(border='0', cellspacing='0', cellpadding='0' width="100%" align="center")
+      table(border='0', cellspacing='0', cellpadding='0' width="95%" align="center")
+        tr
+          td(align="left")
+            +link("couteau-autochargeuse-et-de-presse/pc3244", "Couteau d'autochargeuse")
+          td(align="left")
+            +link("semences/pc920", "Voir plus de semences")
+          td(align="left")
+            +link("nutrition/veaux-et-genisses/aliments-d-allaitement-2/pc7430", "Milkypro")
+        tr
+          td(align="left")
+            +link("pieces-agricoles/travail-du-sol/charrue/pc2979", "Pièce de charrue")
+          td(align="left")
+            +link("semences/pc920", "Voir plus de semences")
+          td(align="left")
+            +link("elevage/hygiene/hygiene-des-trayons/pc3456", "Produit de trempage pour les trayons")
+        tr
+          td(align="left")
+            +link("pieces-agricoles/fenaison/dent-andaineur---faneuse/pc3223", "Dent d'andaineur / faneuse")
+          td(align="left")
+            +link("semences/pc920", "Voir plus de semences")
+          td(align="left")
+            +link("semences/semences-bio/pc7502", "Semences BIO")
+  
+
+
+  tr
+    td &nbsp;
+
+
+
+block footer__expert
+  include ./mixins/footer__expert.pug 
+  +footer__expert('margaux')
+
+
+block sources 
+  include ./mixins/sources.pug 
+  +sources('agrico') 

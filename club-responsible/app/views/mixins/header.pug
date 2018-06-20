@@ -1,0 +1,11 @@
+mixin header(expert)
+  if expert == "margaux"
+    img.logo(width='100%', height='auto', alt='Agriconomie tout pour votre agriculture en un clic', src='https://www.agriconomie.com/media/pub/img/newsletter/header/margaux.png', border='0')
+    != "<!--[if !mso]> <!---->"
+    img.logoM(width='100%', height='auto', alt='Agriconomie tout pour votre agriculture en un clic', src='https://www.agriconomie.com/media/pub/img/newsletter/header/margauxMobile.png', border='0')
+    != "<!-- <![endif]-->"
+  if expert == "bertrand"
+    img.logo(width='100%', height='auto', alt='Agriconomie tout pour votre agriculture en un clic', src='https://www.agriconomie.com/media/pub/img/newsletter/header/bertrand.png', border='0')
+    != "<!--[if !mso]> <!---->"
+    img.logoM(width='100%', height='auto', alt='Agriconomie tout pour votre agriculture en un clic', src='https://www.agriconomie.com/media/pub/img/newsletter/header/bertrandMobile.png', border='0')
+    != "<!-- <![endif]-->"

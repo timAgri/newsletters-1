@@ -1,0 +1,382 @@
+extends layout/layout.pug 
+
+block data
+  - var meta =  Data.meta._utmVF; 
+  - var lang = 'fr';    
+  
+block style
+  link(rel='stylesheet', href='css/style.css')
+  style(type='text/css').
+    @media only screen and (max-width: 480px) { 
+    body {
+    font-size: 16px !important;
+    }   
+    .logo__white,
+    .products__between,
+    .mobile--hide { 
+    display: none!important;
+    }
+    .menu {
+    display: block;
+    }
+    .menu tr,
+    .menu td,
+    .menu tbody {
+    display: block;
+    }
+    .menu__links {
+    height: 25px!important;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 30px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 30px!important;
+    height: 30px!important;
+    }
+    .menu__border {
+    font-size: 2.5px!important;
+    height: 2.5px!important;
+    line-height: 2.5px!important;
+    }
+    #bodyTable {
+    width: 100%!important;
+    }
+    .products__unit {
+    float: left; 
+    width: 48%; 
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    .title--line {
+    width: 5%;
+    }
+    .title--txt {
+    width: 90%;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    width: 80%;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;  
+    }
+    .footer__wrapper img { 
+    margin: 0 auto;
+    } 
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    } 
+    .footer__rss td {
+    float: left;  
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 30px!important;  
+    width: auto; 
+    } 
+    }
+ 
+    * {
+        font-family: Helvetica, Arial, sans-serif;
+    }
+    
+
+    .footer__col td { 
+        font-size: 12px!important;
+    }
+block preheader 
+  include ./mixins/preheader.pug
+  +preheader('agrico', "Le vent souffle ce Weekend")
+
+  
+block content    
+  include ./mixins/title--simple.pug
+  include ./mixins/title.pug      
+  include ./mixins/produit_3.pug  
+  include ./mixins/produit_2.pug
+  include ./mixins/produit_3__buse.pug 
+  include ./mixins/produit_3__prix.pug  
+  include ./mixins/produit_4.pug  
+  include ./mixins/banner.pug 
+  include ./mixins/bannerNext.pug 
+  include ./mixins/btn.pug     
+  include ./mixins/quote.pug      
+  include ./parts/product__space
+  include ./mixins/produit_3__dechaumeur.pug
+
+  //- +title('Bio – tous nos produits sont certifiés')
+ 
+ 
+  
+  include ./parts/product__space
+
+  +produit__3__dechaumeur([       
+ 
+              {
+                "name": "Ailette gauche pour Terrano  <br> FG - FX et Tiger AS - LT - MT  <br> &nbsp;",
+                "link": "search?hierarchicalMenu%5Bcategories.lvl0%5D=Pi%C3%A8ces+agricoles&query=34060856",
+                "promo__title": "none",
+                "promo__value": "-7%",
+                "alt": "Fol'N 28Plus  Urée retardé foliaire",
+                "img": "https://www.agriconomie.com/media/cache/130x130//4c/5b/917027a170ad01a77c9b5411b259.jpeg",  
+                "ref" : "34060856",
+                "data" : {  
+                "prix" : ["8€45 HT", " ","46€15 HT"],
+                "url": ["ailette-de-dechaumeur-gauche-horsch-adaptable-bellota-34060856/p199234", " ", "aileron-droit-185-mm-carbure-pour-dechaumeur-horsch-34060857-adaptable-313037/p313037"  ] 
+                }  
+ 
+        },    
+     
+     
+        {
+                "name": "Ailette droite pour Terrano  <br> FG - FX et Tiger AS - LT - MT <br> &nbsp;",
+                "link": "search?hierarchicalMenu%5Bcategories.lvl0%5D=Pi%C3%A8ces+agricoles&query=34060857", 
+                "promo__title": "none", 
+                "promo__value": "-15€/T", 
+                "alt": "24-0-0 42SO3 Azoté Soufré", 
+                "img": "https://www.agriconomie.com/media/cache/130x130//59/fd/b43b610d6cd8df622d2cc344272e.jpeg",
+                "ref" : "34060857",
+                "data" : { 
+                "prix" : ["8€45 HT", " ","46€15 HT"],
+                "url": ["ailette-de-dechaumeur-droit-horsch-adaptable-bellota-34060857/p199233", " ", "aileron-droit-185-mm-carbure-pour-dechaumeur-horsch-34060857-adaptable-313037/p313037" ]
+                } 
+    
+        }, 
+ 
+        {
+                "name": "Disque Joker 3 trous 460x6  <br> (RT < 2008, CT < 2009) <br> &nbsp;",
+                "link": "search?hierarchicalMenu%5Bcategories.lvl0%5D=Pi%C3%A8ces+agricoles&query=23246106",
+                "promo__title": "none", 
+                "promo__value": "-6€/T",
+                "alt": "Disque Joker 3 trous 460x6 (RT jusqu'en 2008, CT jusqu'en 2009)",
+                "img": "https://www.agriconomie.com/media/cache/240x230/agrioutil/var_246983.jpg", 
+                "btn": "Voir les prix",
+                "ref" : "23246106",
+                "data" : {
+                "prix" : ["25€90 HT", " "," "],
+                "url": ["disque-cr-460x6-ea97-3-t-23246106-adaptable-horsch/p203041", " ", " " ]
+                }
+        }
+       
+
+
+  ])
+  include ./parts/product__space
+
+  +produit__3__dechaumeur([       
+ 
+              {
+                "name": "Disque Joker 5 trous 460x6  <br> (RT >= 2009, CT >= 2010) <br> &nbsp;",
+                "link": "disque-crenele-5-trous-pour-joker-horsch-28071304-adaptable/p333120",
+                "promo__title": "none",
+                "promo__value": "-7%",
+                "alt": "Disque Joker 5 trous 460x6 (RT (à partir de 2009, CT à partir de 2010)",
+                "img": "https://www.agriconomie.com/media/cache/130x130//3e/37/2aabcbdf8675258dede02d7154a9.jpeg",  
+                "ref" : "28071304",
+                "data" : {  
+                "prix" : ["29€95 HT", " "," "],
+                "url": ["disque-crenele-5-trous-pour-joker-horsch-28071304-adaptable/p333120", " ", " "  ] 
+                }  
+ 
+        },    
+     
+     
+        {
+                "name": "Disque Joker 5 trous 520x6 <br> (RT >= 2009, CT >= 2010) <br> &nbsp;",
+                "link": "search?hierarchicalMenu%5Bcategories.lvl0%5D=Pi%C3%A8ces+agricoles&query=28071305", 
+                "promo__title": "none", 
+                "promo__value": "-15€/T", 
+                "alt": "Disque Joker 5 trous 520x6 (RT (à partir de 2009, CT à partir de 2010)", 
+                "img": "https://www.agriconomie.com/media/cache/130x130//a8/3f/257d22a1205749bff9431a3c2ee5.jpeg",
+                "ref" : "28071305",
+                "data" : { 
+                "prix" : ["26€20 HT", " "," "],
+                "url": ["disque-crenele-5-trous-pour-joker-horsch-28071305-adaptable/p333121", " ", " " ]
+                } 
+    
+        }, 
+ 
+        {
+                "name": " Soc carbure plaquette 70 + rechargement pour déchaumeur HORSCH adaptable  <br> &nbsp;",
+                "link": "search?hierarchicalMenu%5Bcategories.lvl0%5D=Pi%C3%A8ces+agricoles&query=23246106",
+                "promo__title": "none", 
+                "promo__value": "-6€/T",
+                "alt": "Soc carbure plaquette 70 + rechargement pour déchaumeur HORSCH adaptable",
+                "img": "https://www.agriconomie.com/media/cache/130x130/7b/38/65d13c9f4355c327775477619397.jpg", 
+                "ref" : " ",
+                "data" : {
+                "prix" : ["53€42 HT ", " "," "],
+                "url": [" ", " ", " " ]
+                }
+        }
+       
+
+
+  ])
+  include ./parts/product__space
+
+  +produit__3__dechaumeur([       
+ 
+              {
+                "name": "Pointe Smaragd <br> &nbsp;",
+                "link": "search?hierarchicalMenu%5Bcategories.lvl0%5D=Pi%C3%A8ces+agricoles&query=3374388",
+                "promo__title": "none",
+                "promo__value": "-7%",
+                "alt": "Pointe Smaragd",
+                "img": "https://www.agriconomie.com/media/cache/130x130/agrioutil/L_001-5241740_1.jpg",  
+                "ref" : "3374388",
+                "data" : {  
+                "prix" : ["5€92 HT", "12€20 HT","66€94 HT"],
+                "url": ["pointe-de-soc-pour-lemken-3374388/p199178", "pointe-pour-dechaumeur-smaragd-lemken-3374388-adaptable/p333129", "socs-de-cultivateurs-lemken-smarag-3374388-adaptable-carbure-1/p185165"  ] 
+                }  
+ 
+        },    
+     
+     
+        {
+                "name": "Aileron gauche Smaragd  <br> &nbsp;",
+                "link": "search?hierarchicalMenu%5Bcategories.lvl0%5D=Pi%C3%A8ces+agricoles&query=3374421", 
+                "promo__title": "none", 
+                "promo__value": "-15€/T", 
+                "alt": "Aileron gauche Smaragd", 
+                "img": "https://www.agriconomie.com/media/cache/130x130/agrioutil/L_001-5242720_1.jpg",
+                "ref" : "3374421",
+                "data" : { 
+                "prix" : ["6€80 HT", "20€95 HT","62€36 HT"],
+                "url": ["soc-a-aile-gauche-coude-pour-lemken-3374421/p199212", "aileron-long-gauche-pour-dechaumeur-smaragd-lemken-3374421-origine/p333130", "aileron-gauche-366-mm-pour-dechaumeur-lemken-smaragd-adaptable-313034/p313034" ]
+                } 
+    
+        }, 
+ 
+        {
+                "name": " Aileron droit Smaragd <br> &nbsp;",
+                "link": "search?hierarchicalMenu%5Bcategories.lvl0%5D=Pi%C3%A8ces+agricoles&query=3374420",
+                "promo__title": "none", 
+                "promo__value": "-6€/T",
+                "alt": " Aileron droit Smaragd",
+                "img": "https://www.agriconomie.com/media/cache/240x230/agrioutil/L_001-5242715_1.jpg", 
+                "ref" : "3374420",
+                "data" : {
+                "prix" : ["6€80 HT", "20€95 HT","62€36 HT "],
+                "url": ["soc-a-aile-droite-coude-pour-lemken-3374420/p199211", "aileron-long-droit-pour-dechaumeur-smaragd-lemken-3374420-origine/p333131", "aileron-droit-366-mm-pour-dechaumeur-lemken-3374420-adaptable-313031/p313031" ]
+                }
+        }
+       
+
+
+  ])
+  include ./parts/product__space
+
+  +produit__3__dechaumeur([        
+  
+              { 
+                "name": "Disque Heliodor 6 trous 465x5 <br> (>= de juin 2007) <br> &nbsp;",
+                "link": "search?hierarchicalMenu%5Bcategories.lvl0%5D=Pi%C3%A8ces+agricoles&query=3490471",
+                "promo__title": "none",
+                "promo__value": "-7%", 
+                "alt": "Pointe Smaragd",
+                "img": "https://www.agriconomie.com/media/cache/130x130//c6/fc/18c2ae67c5cabbcb5281c232bf1a.jpeg",  
+                "ref" : "3490471",
+                "data" : {  
+                "prix" : ["25€90 HT", "37€90 HT","66€94 HT"],
+                "url": ["disque-crenele-465x5-mm-6-trous-pour-lemken-heliodor-3490471-adaptable/p333124", "disque-crenele-6-trous-465x5-pour-heliodor-lemken-3490471-origine/p333132", " "  ]  
+                }  
+ 
+        },     
+     
+     
+        {
+                "name": "Disque Rubin 6 trous 620x6 <br> (jusqu'en mai 2007) <br> &nbsp;",
+                "link": "search?hierarchicalMenu%5Bcategories.lvl0%5D=Pi%C3%A8ces+agricoles&query=3490466", 
+                "promo__title": "none", 
+                "promo__value": "-15€/T", 
+                "alt": "Disque Rubin 6 trous 620x6 (>= mai 2007)", 
+                "img": "https://www.agriconomie.com/media/cache/130x130//a7/f3/58124cc57891e5275c611c1def28.jpeg",
+                "ref" : "3490466",
+                "data" : { 
+                "prix" : ["36€90 HT", "52€90 HT","62€36 HT"],
+                "url": ["disque-lemken-3490466-adaptable/p209899", "https://www.agriconomie.com/disque-crenele-6-trous-620x6-pour-rubin-lemken-3490466-origine/p333133", " " ]
+                } 
+    
+        }, 
+ 
+        {
+                "name": "Disque Rubin 5 trous 620x6 <br>(à partir de juin 2007) <br> &nbsp;",
+                "link": "search?hierarchicalMenu%5Bcategories.lvl0%5D=Pi%C3%A8ces+agricoles&query=3490467",
+                "promo__title": "none", 
+                "promo__value": "-6€/T",
+                "alt": "Disque Rubin 5 trous 620x6 (>= de juin 2007)",
+                "img": "https://www.agriconomie.com/media/cache/130x130//04/36/d9e2e1c82149cb8e46ce11cdea56.jpeg", 
+                "ref" : "3490467",
+                "data" : {
+                "prix" : ["46€48 HT", "52€90 HT"," "],
+                "url": ["disque-dechaumeur-lemken-rubin-3490467-ad/p209896", " https://www.agriconomie.com/disque-crenele-5-trous-620x6-pour-rubin-lemken-3490467-origine/p333134", " " ]
+                }
+        }
+       
+
+
+  ])
+
+
+  //-   +produit__quote([  
+  //- { 'name': "Anti-calcaire Advance <br> KARCHER RM 110 <br> &nbsp;",
+  //-  'promo__title': "none",
+  //-   'promo__value': '-65€' ,
+  //-   'link' : 'anti-calcaire-advance-1-rm-110-karcher-309358/p309358',
+  //-    'alt' : "Anti-calcaire Advance KARCHER RM 110",
+  //- 'img' : 'https://www.agriconomie.com/media/cache/130x130/a2/49/d4266f5bffdea54e097d1e97db0d.jpg',
+  //-    'btn' : 'Voir le produit' , 
+  //-    'quote'  :"Anti calcaire à utiliser  pour tous les nettoyages à l'eau chaude pour éviter le dépôt de tartre." 
+  //- }])
+ 
+
+  include ./parts/product__space.pug
+
+block footer__expert
+  include ./mixins/footer__expert.pug 
+  +footer__expert('arthur')
+
+
+block sources 
+  include ./mixins/sources.pug 
+  +sources('agrico') 

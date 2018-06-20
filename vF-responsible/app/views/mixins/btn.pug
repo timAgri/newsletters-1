@@ -1,0 +1,13 @@
+mixin btn(link, txt)
+  tr
+    td.products__btn(align='center', width='100%', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+      table(border='0', cellspacing='0', cellpadding='0', align='center', width='100%', style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+        tbody
+          tr
+            td(align='center', width='100%', style=' border-collapse: collapse; mso-line-height-rule: exactly;')
+              != "<!--[if mso]>"
+              v:roundrect(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:w='urn:schemas-microsoft-com:office:word', href= BaseUrl + link + meta, style='height:30px;v-text-anchor:middle;width:200px;', arcsize='5%', strokecolor='#52c47d', fillcolor='#52c47d')
+                w:anchorlock
+                    center(style='color:#fff;font-family:Helvetica, Arial,sans-serif;font-size:14px;')!= txt 
+              != "<![endif]-->"
+              a(href= BaseUrl + link + meta, style=' font-family:Arial,Helvetica,sans-serif;background-color: #52c47d; border: 1px solid #52c47d; border-radius: 3px; color: #fff; display: inline-block; font-family: sans-serif; font-size: 14px; line-height: 30px; text-align: center; text-decoration: none; width: 95%; -webkit-text-size-adjust: none; mso-hide: all; font-weight: bold;')!= txt 

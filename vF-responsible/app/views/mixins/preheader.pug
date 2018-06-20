@@ -1,0 +1,23 @@
+mixin preheader(source, phraseAccroche)
+  - console.log(phraseAccroche, 'phraseaccroche')
+  case source
+    when 'agrico'
+      tr
+        td.headerNL__blank
+      tr
+        td.headerNL__linkOnline( align="center" style='color:#999999;')!= phraseAccroche
+      tr
+        td.headerNL__linkOnline(align='center')
+          a(href='#HTML_BROWSE_HREF#', style='color:#999999;') Visualiser ce message en ligne
+      tr
+       td.headerNL__blank
+    when 'terrenet'
+      tr
+        td.nodevice(width='598', align='center', style='font-family:Helvetica, Arial, sans-serif; font-size:9px;color:#999999')
+          | Des offres à ne pas rater sur nos engrais
+          br
+          | Pour rester informé, veuillez ajouter notre adresse d’envoi contact@mail.regie-agricole.com à votre carnet d'adresses
+          br
+          a(href='&&&', style='color:#999999') Visualiser ce message en ligne
+      tr
+        td

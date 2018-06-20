@@ -1,0 +1,17 @@
+mixin title__img(img, alt)
+  tr
+    td(width='100%')
+      table.title(align='center', width='100%')
+        tbody
+          tr
+            td.title--line(width='20%')
+              p
+            td
+              table(align='center', width='60%')
+                tr
+                  td(align="center")
+                    img(src= img width="130" height="130" border="0"  style="-ms-interpolation-mode: bicubic; border: 0 none; display: block; line-height: 100%; max-width: 100; outline: none; text-decoration: none; width: auto;" alt= alt)
+            td.title--line(width='20%')
+              p  
+  tr
+    td  &nbsp;

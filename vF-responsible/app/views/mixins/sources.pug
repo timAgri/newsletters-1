@@ -1,0 +1,33 @@
+mixin sources(source)
+  case source
+    when 'agrico'
+      tr
+        td  &nbsp;
+      tr
+        td(style='font-family: Helvetica, Arial, sans-serif; font-size: 9px; line-height: 14px; color: rgb(153, 153, 153);', align='center')
+          | Agriconomie.com - 11 route nationale 4, 51320 Coole
+      tr
+        td(style='font-family: Helvetica, Arial, sans-serif; font-size: 9px; line-height: 14px; color: rgb(153, 153, 153);', align='center')  RCS CHALONS-EN-CHAMPAGNE : B 799 365 176
+      tr
+        td(width='70%', style='font-family: Helvetica, Arial, sans-serif; font-size: 9px; line-height: 14px; color: rgb(153, 153, 153);', align='center')
+          | Vous recevez cet email car vous êtes inscrit sur notre liste de diffusion. Suivez ce 
+          a(href='#UNSUBSCRIBE_HREF#', target='_blank', style='color: rgb(153, 153, 153);') lien
+          |  pour vous désinscrire de cette liste de diffusion. Conformément à la loi Informatique et Liberté du 6 janvier 1978, vous disposez d’un droit de suppression des données vous concernant.
+      tr
+        td(width='70%', style='font-family: Helvetica, Arial, sans-serif; font-size: 9px; line-height: 14px; color: rgb(153, 153, 153);', align='center')
+          a(href='https://www.agriconomie.com/conditions-generales-utilisation' + meta, target='_blank', style='color: rgb(153, 153, 153);') CGU
+          |  - 
+          a(href='https://www.agriconomie.com/conditions-generales-vente' + meta, target='_blank', style='color: rgb(153, 153, 153);') CGV
+          |  - 
+          a(href='https://www.agriconomie.com/mentions-legales' + meta, target='_blank', style='color: rgb(153, 153, 153);') Mentions légales
+    when 'terrenet'
+      tr
+        td(align='center', style=' font-family:Helvetica, Arial, sans-serif;font-size:9px;color:#999999;')
+          | RCS CHALONS-EN-CHAMPAGNE : B 799 365 176
+          br
+          | Cet email est destiné à votre entreprise et est conforme à la législation en vigueur et aux
+          | délibérations de la CNIL des 22 et 30 mars 2005 sur la prospection par courrier électronique dans le cadre professionnel.
+          | Conformément à l'article 34 de la loi 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, vous disposez d'un droit d'accès, de rectification des données nominatives vous concernant. Si vous ne souhaitez plus recevoir d'e-
+          | mailing de notre part, 
+          a(href='&&&')  suivez ce lien 
+

@@ -1,0 +1,224 @@
+{
+    "Data": 
+    {
+        "meta":
+        {
+            "_utmClub": "?utm_source=grliste&utm_medium=email&utm_campaign=club-by-agrico-S39-2017",
+            "_utmVF": "?utm_source=grliste&utm_medium=email&utm_campaign=remboursement-S39-2017",
+            "_utmActuBe": "?utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-be-S24-2018",
+            "_utmActuFr": "?utm_source=grliste&utm_medium=email&utm_campaign=actu-engrais-be-S25-2018",
+            "_utmTerrenet": "?utm_source=terrenet&utm_medium=email&utm_campaign=atelier-S20-2018",
+            "tracking": "?utm_source=grliste&utm_medium=email&utm_campaign=actu-S42-2017",
+            "owner": "agriconomie" 
+        },
+
+        "header":
+        {
+            "type": "margaux",
+            "club":
+            {
+                "num": "n°35",
+                "date": "18 Octobre 2017"
+            }
+        },
+
+        "phraseAccroche": "La sélection de nos experts",
+
+
+        "footer": "margaux",
+
+
+
+        "produits":
+        {
+
+            "seauRuminant":
+            {
+                "name": "Seau RUMINANT <br> &nbsp; <br> &nbsp;",
+                "promo__title": "PROMO",
+                "promo__value": "-15%",
+                "link": "'https://www.agriconomie.com/s-ruminant/p318550' + meta",
+                "alt": "Seau RUMINANT",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/seau-ruminant.jpg",
+                "btn": "Voir le produit"
+            },
+            "seauNaturB":
+            {
+                "name": "Seau NATUR B <br> &nbsp; <br> &nbsp;",
+                "promo__title": "PROMO",
+                "promo__value": "-15%",
+                "link": "'https://www.agriconomie.com/s-natur-b/p318565' + meta",
+                "alt": "Seau NATUR B",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/Seau-natur-ba.jpg",
+                "btn": "Voir le produit"
+            },
+            "blocRuminant":
+            {
+                "name": "Bloc RUMINANT (12 kg) <br> &nbsp; <br> &nbsp;",
+                "promo__title": "PROMO",
+                "promo__value": "-10%",
+                "link": "'https://www.agriconomie.com/b-ruminant/p318556' + meta",
+                "alt": "Bloc RUMINANT (12 kg)",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/bloc_ruminant_2.jpg",
+                "btn": "Voir le produit"
+            },
+
+            "repoSanteSemoule":
+            {
+                "name": "8-23 REPRO SANTE  <br> Semoule <br> &nbsp;",
+                "promo__title": "none",
+                "promo__value": "-2€/T",
+                "link": "'https://www.agriconomie.com/8-23-repro-sante-semoule-sac/p318118' + meta",
+                "alt": "8-23 REPRO SANTE Semoule",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/8-23-repro-sante-semoule.jpg",
+                "btn": "Voir le produit"
+            },
+            "rationMixteColzaSemoule":
+            {
+                "name": "3-28 pour ration Mixte/Colza  <br> Semoule <br> &nbsp;",
+                "promo__title": "none",
+                "promo__value": "-10€/T",
+                "link": "https://www.agriconomie.com/3-28-mixte-colza-semoule-sac-25kg-palette-de-1000-kg/p318097?variant=395785&utm_source=grliste&utm_medium=email&utm_campaign=actu-engrais-S06-2018",
+                "alt": "3-28 pour ration Mixte/Colza Semoule",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/3-28-pour-ration-mixte-colza-semoule.jpg",
+                "btn": "Voir le produit"
+            },
+            "bovinViandeSemoule":
+            {
+                "name": "7-24 BOVIN VIANDE  <br> Semoule <br> &nbsp;",
+                "promo__title": "none",
+                "promo__value": "LIVRAISON RAPIDE",
+                "link": "https://www.agriconomie.com/7-24-bovin-viande-semoule-sac/p318106?variant=395758&utm_source=grliste&utm_medium=email&utm_campaign=actu-engrais-S06-2018",
+                "alt": "7-24 BOVIN VIANDE Semoule",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/7-24-bovin-viande-semoule.jpg",
+                "btn": "Voir le produit"
+            },
+            "filsEnrubannage":
+
+            {
+                "name": "Fils Enrubannage  <br> &nbsp; <br> &nbsp;",
+                "promo__title": "Jusqu'à ",
+                "promo__value": "-4%",
+                "link": "agriwrap-eco-film-d-enrubannage-haute-qualite-25um-blanc-ou-vert-naturel/p331243?variant=413676&utm_source=grliste&utm_medium=email&utm_campaign=vf-S07-2018",
+                "alt": "Fils Enrubannage",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/fils_enrubannage.jpg",
+                "btn": "Voir le produit"
+            },
+
+            "manchonTraite":
+            {
+                "name": "Manchons de traite <br> &nbsp; <br> &nbsp;",
+                "promo__title": "PROMO",
+                "promo__value": "-10%",
+                "link": "elevage/traite/manchons/pc2338${meta}",
+                "alt": "Manchons de traite",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/manchons-de-traite.jpg",
+                "btn": "Voir les produits"
+
+            },
+
+            "gammeCloure":
+
+            {
+                "name": "Gamme de<br> clôture  <br> &nbsp;",
+                "promo__title": "Jusqu'à",
+                "promo__value": "-10%",
+                "link": "'elevage/clotures/pc1513' + meta",
+                "alt": "Gamme de clôture",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/gamme-cloture.jpg",
+                "btn": "Voir les produits"
+            },
+
+
+            "ats":
+
+            {
+                "name": "Soufre thiosulfate<br> d'ammonium  <br> &nbsp;",
+                "promo__title": "none",
+                "promo__value": "-10%",
+                "link": "soufre-thiosulfate-d-ammonium/p265452",
+                "alt": "Soufre - thiosulfate d'ammonium - Liquide",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/soufre-thiosulfate-ammonium.jpg",
+                "btn": "Voir les prix"
+            },
+
+
+            "solutionAzoteeN39":
+
+            {
+                "name": "Solution azotée N39<br> &nbsp;  <br> &nbsp;",
+                "promo__title": "none",
+                "promo__value": "-10%",
+                "link": "solution-azotee-n39-2/p2",
+                "alt": "Solution azotée N39 - Liquide",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/solution-azotee_2.jpg",
+                "btn": "Voir les prix"
+            },
+
+
+            "folN28Plus":
+            
+            {
+                "name": "FOL'N 28 Plus<br> &nbsp;  <br> &nbsp;",
+                "promo__title": "none",
+                "promo__value": "-10%",
+                "link": "helio-n-28sr/p331210",
+                "alt": "FOL'N 28 Plus - Liquide",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/fol-n-28-plus.jpg",
+                "btn": "Voir les prix"
+            },
+
+
+
+            "uree46":
+            
+            {
+                "name": "Urée 46<br> &nbsp;  <br> &nbsp;",
+                "promo__title": "none",
+                "promo__value": "-10%",
+                "link": "uree/p287",
+                "alt": "Urée 46 - Granulé",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/uree_46_2.jpg",
+                "btn": "Voir les prix"
+            },
+
+
+             "ammo27":
+            
+            {
+                "name": "Ammonitrate 27-0-0<br> &nbsp;  <br> &nbsp;",
+                "promo__title": "none",
+                "promo__value": "-10%",
+                "link": "ammonitrate-27-0-0/p149908",
+                "alt": "Ammonitrate 27-0-0 - Granulé",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/ammonitrate-27.jpg",
+                "btn": "Voir les prix"
+            },
+
+            "azoteSoufre":
+            
+              {"name": "azoté soufré <br> &nbsp; <br> &nbsp;",
+                "promo__title": "Jusqu'à",
+                "promo__value": "-5€" ,
+                "link" : "engrais/engrais-azote/azote-soufre/pc981" ,
+                 "alt" : "Azoté soufré",
+                  "img" : "https://www.agriconomie.com/media/pub/img/newsletter/products/azote-soufre.jpg",
+                 "btn" : "Voir le produit"  },
+
+
+            "dap18_46":
+         {
+                "name": "18-46-00 <br> &nbsp;  <br> &nbsp;",
+                "promo__title": "none",
+                "promo__value": "-10%",
+                "link": "18-46-0/p7",
+                "alt": "DAP 18-46-00",
+                "img": "https://www.agriconomie.com/media/pub/img/newsletter/products/dap-18-46-0.jpg",
+                "btn": "Voir les prix"
+            }
+
+
+        }
+
+    }
+}

@@ -1,0 +1,15 @@
+- String.prototype.count=function(c) { var result = 0, i = 0; for(i;i<this.length;i++)if(this[i]==c)result++; return result };
+mixin banner(link, src, alt)
+  - var finalUrl = baseUrl + link + meta
+  - var occurence = finalUrl.count('?');
+  - console.log(occurence, 'occurence', finalUrl, 'finalurl')
+  while (Ocurrence > 1 )
+    - var t=0; 
+    - finalUrl = finalUrl.replace(/\?/g, function (match) {t++; return (t === 2) ? "&" : match; })
+    - Ocurrence--;
+  if (finalUrl.indexOf('redirect') !== -1 &&  finalUrl.indexOf('sort') !== -1)
+  - finalUrl.replace("&sort", "?sort");
+  tr
+    td(width='650', align='center' tyle="width: 100%; max-width: 650px; " )
+      a(href= finalUrl)
+        img.full--img(src=src, alt=alt , width='650' style="width: 100%; max-width: 650px; " )

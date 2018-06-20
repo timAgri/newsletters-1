@@ -1,0 +1,329 @@
+extends layout/layout.pug
+
+block style
+  link(rel='stylesheet', href='css/style.css')
+  style.
+    @media only screen and (max-width: 480px) {
+    .logo__white,
+    .products__between,
+    .mobile--hide {
+    display: none!important;
+    }
+    #bodyTable{
+    width: 100%;
+    }
+    .menu__links {
+    height: auto;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 35px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 35px!important;
+    height: 35px!important;
+    }
+    body {
+    font-size: 16px !important;
+    }
+    .logo {
+    display: none !important;
+    }
+    .logoM {
+    display: block !important;
+    max-width: 100%;
+    }
+    .actu__wrapper td {
+    display: table;
+    width: 100%;
+    }
+    .actu__stats-img {
+    width: auto;
+    vertical-align: middle;
+    display: block;
+    }
+    .actu__stats-img img {
+    margin: 15px 0;
+    display: inline-block;
+    }
+    .actu__stats-description {
+    height: 50px;
+    line-height: 25px;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;
+    }
+    .footer__wrapper img {
+    margin: 0 auto;
+    }
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    }
+    .footer__rss td {
+    float: left;
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 40px!important;
+    width: auto;
+    }
+    .products__unit {
+    float: left;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    }
+    * {
+    font-family: Helvetica, Arial, sans-serif;
+    }
+    .footer__col td{
+    font-size: 12px!important;
+    }
+
+block phraseAccroche
+  | test
+
+block data
+  include mixins/elemMarche.pug
+  +elemMarche('Soja  :', "Le marché est tendu en ce début de semaine. Une légère baisse a eu lieu puisque les dynamiques haussières ont été trop brutales. La parité, le risque climatique ainsi que les arbitrages entre les huiles et les tourteaux apportent de l'instabilité sur les tendances de prix.")
+  +elemMarche('Colza :', "Le colza est également dans une dynamique incertaine puisque le soja (en Argentine) n’affiche pas de dynamique et qu’il aura probablement une influence le prix du tourteau.")
+  +elemMarche('Blé / Maïs :', "En céréales, la parité, les couvertures des fonds d’investissements et le weather market influencent le marché à la hausse. Il faudra attendre un peu avant de confirmer cette tendance haussière.")
+
+block stat
+  include mixins/elemStat.pug
+  +elemStat('Tourteau de soja',
+   'Incertain' ,
+     'https://www.agriconomie.com/media/pub/img/newsletter/icons/attention.jpg',
+        'https://www.agriconomie.com/nutrition/matiere-premieres-et-additifs/tourteaux/pc7313' + meta,
+    'Incertain')
+  +elemStat('Tourteau de colza',
+    'Stable' , 
+
+     'https://www.agriconomie.com/media/pub/img/newsletter/icons/stable.jpeg',
+         'https://www.agriconomie.com/tourteau-colza/p255288' + meta,
+     'Stable')
+  +elemStat('Céréales',
+   'Hausse' , 
+   'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
+   'https://www.agriconomie.com/engrais/engrais-azote/pc979' + meta,
+    'Hausse')
+
+block preco
+
+  tr
+    td.data__blank
+  tr
+    td(align='center')
+      a.link__actu(href!="https://www.agriconomie.com/elevage/batiments/tapis---matelas/pc3455" + meta ) Profitez de notre offre
+      | sur les matelas et tapis en caoutchouc.
+  tr
+    td.data__blank &nbsp;
+  tr
+    td(align='center')
+      | Le marché est stable. Profitez en pour vous couvrir en profitant de notre 
+      a.link__actu(href!="https://www.agriconomie.com/nutrition/matiere-premieres-et-additifs/tourteaux/pc7313" + meta) remise sur 4 camions.
+  tr
+    td.data__blank
+  tr
+    td(align='center')
+      | L’offre sur les seaux à lécher est toujours d'actualité. 
+      a.link__actu(href!="https://www.agriconomie.com/nutrition/nutrition-bovins/seaux-et-blocs-a-lecher/pc7355" + meta) Venez en profiter dès maintenant.
+  tr
+    td.data__blank
+  tr
+    td.data_txt(align='left')
+      b.data_txt--title Viser un BACA autour de 250 à 300 pour favoriser l’ingestion des vaches
+      br
+      br
+      | La Balance Alimentaire Cation Anion permet de mesurer l’acidité et l’alcanalité d’un aliment et d’une ration. Elle 
+      | correspond à la différence entre les apports de sels cationiques et anioniques, c’est-à-dire la différence entre les 
+      | apports de Potassium (K), Sodium (Na) et les apports de Chlore (Cl), Souffre (S). BACA = (Na + K) – (CL + S)
+      br
+      br
+      |Au niveau de la vache laitière, lors de l’ingestion d’une ration avec un BACA de  250 à 300 meq  / kg MS, le pH du 
+      |contenu ruminal va augmenter et se stabiliser. Cela permet de sécuriser des rations acidogènes, contenant beaucoup de 
+      |maïs ou de céréales aplaties par exemple.
+      br
+      br
+      |ous les fourrages ont un BACA différent, mais en pratique en début de lactation on préférera les fourrages riches en potassium comme la luzerne, les pommes de terre et le tourteau de soja. On, peut également ajouter du bicarbonate de sodium pour augmenter la BACA, c’est le champion par excellence car un kilo de bicarbonate de sodium possède un BACA de  11 750 meq / kg MS. 150 à 200 grammes par jour par vache suffisent donc à optimiser au mieux les rations des vaches laitières.    
+  tr
+     td  &nbsp;
+  tr
+    td.data__blank
+  tr
+    td(align="center" style="width:100%;")
+      table.tableau__2(align="center" style="width:100%;")
+        tbody
+          tr
+            td( valign="top" align="center" style="width:50%;")
+              table(valign="top" align="center" style="width:100%;")
+                tbody
+                  tr
+                    td(height="50" align="center" style='line-height:25px; font-size: 14px; font-weight: bold;').data--elevage Aliments
+                  tr
+                    td( height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee; background: #eee; ") Bicarbonate de sodium
+                  tr
+                    td( height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee;") Foin de luzerne
+                  tr
+                    td( height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee; background: #eee;") Herbe pâturée
+                  tr
+                    td( height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee;") Ensilage d’herbe
+                  tr
+                    td( height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee;background: #eee;") Mélasse de canne
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee;") Corn gluten feed
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee;background: #eee;") Paille
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee;") Ensilage de maïs
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee;background: #eee;") Chlorure de sodium (sel)
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee;") Blé
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee; background: #eee;") Pulpes surpressées
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee;") Tourteau de colza
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee;background: #eee;") Drêches de brasserie
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-left: 1px solid #eee; border-right: 1px solid #eee;") Chlorure de magnésium
+
+            td(valign="top" align="center" style="width:50%;")
+              table(valign="top" align="center" style="width:100%;")
+                tbody
+                  tr
+                    td(height="50" align="center" style='line-height:25px; font-size: 14px; font-weight: bold;').data--elevage BACA (meq  kg MS)
+                  tr
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-right: 1px solid #eee; background: #eee;") 11 750
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;") 400 - 500
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-right: 1px solid #eee; background: #eee;") 400-450
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee;  border-right: 1px solid #eee;") 350-400
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee;  border-right: 1px solid #eee; background: #eee;") 380
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-right: 1px solid #eee; ") 205
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee;  border-right: 1px solid #eee; background: #eee;") 200
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;") 120-140
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-right: 1px solid #eee; background: #eee;") 55
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;") -15
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee;  border-right: 1px solid #eee; background: #eee;") -20
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;") -60
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-right: 1px solid #eee; background: #eee;") -110
+                  tr
+                    td(height="24" align="center" style="line-height: 12px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;") -9800
+  tr
+     td  &nbsp;
+  tr
+     td &nbsp;
+
+block produits
+  include parts/product__space.pug
+  include mixins/produit_3.pug
+  +produit__3([
+  {'name': 'Bicarbonate de Sodium <br> &nbsp; <br> &nbsp;',
+   'promo__title': 'none',
+    'promo__value': '-10%' ,
+     'link' : 'https://www.agriconomie.com/bicarbonate-de-sodium/p315127' + meta
+     , 'alt' : 'Bicarbonate de Sodium',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/bicarbonate-de-sodium.jpg', 
+     'btn' : 'Voir le produit'  },
+
+  {'name': "Tourteau de colza <br> &nbsp; <br> &nbsp;",
+   'promo__title': "Jusqu'à",
+    'promo__value': '-10€/T' ,
+     'link' : 'https://www.agriconomie.com/tourteau-colza/p255288' + meta,
+    'alt' : "Tourteau de colza",
+     'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/tourteau-de-colza.jpg',
+     'btn' : 'Voir les produits'  },
+
+  {'name': 'Seau RUMINANT  <br> &nbsp; <br> &nbsp;',
+   'promo__title': 'PROMO',
+    'promo__value': '-25%' ,
+    'link' : 'https://www.agriconomie.com/s-ruminant/p318550' + meta,
+     'alt' : 'Seau RUMINANT',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/seau-ruminant.jpg',
+     'btn' : 'Voir le produit'  }
+  ])
+  include parts/product__space.pug
+  +produit__3([
+  {'name': 'Gamme de <br> clôture <br> &nbsp;',
+   'promo__title': "Jusqu'à",
+    'promo__value': '-10%' ,
+     'link' : 'https://www.agriconomie.com/elevage/clotures/fils--rubans-et-barbeles/pc2095' + meta
+     , 'alt' : 'Fils, rubans et barbelés',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/gamme-cloture.jpg', 
+     'btn' : 'Voir les produits'  },
+
+  {'name': "Gamme de <br> Manchons <br> &nbsp;",
+   'promo__title': "PROMO",
+    'promo__value': '-10%' ,
+     'link' : 'https://www.agriconomie.com/elevage/traite/manchons/pc2338' + meta,
+    'alt' : "TGamme de Manchons",
+     'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/manchons-de-traite.jpg',
+     'btn' : 'Voir les produits'  },
+
+  {'name': 'Batteries - Electrificateurs <br> &nbsp; <br> &nbsp;',
+   'promo__title': "Jusqu'à",
+    'promo__value': '-5%' ,
+    'link' : 'https://www.agriconomie.com/elevage/clotures/batteries---electrificateurs/pc2065' + meta,
+     'alt' : 'Batteries - Electrificateurs',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/gamme-batteries-electrificateurs.jpg',
+     'btn' : 'Voir le produit'  }
+  ])
+
+block footer
+  include mixins/footer__expert.pug
+  +footer__expert('bertrand')

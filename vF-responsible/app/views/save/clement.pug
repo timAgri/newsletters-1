@@ -1,0 +1,332 @@
+extends layout/layout.pug 
+
+block data
+  - var meta =  Data.meta._utmVF;   
+  - var lang = 'fr';      
+  
+block style 
+  link(rel='stylesheet', href='css/style.css')
+  style(type='text/css').
+    @media only screen and (max-width: 480px) { 
+    body { 
+    font-size: 16px !important;
+    }   
+    .logo__white,
+    .products__between,
+    .mobile--hide { 
+    display: none!important;
+    } 
+    .menu {
+    display: block;
+    }
+    .menu tr,
+    .menu td,
+    .menu tbody {
+    display: block;
+    }
+    .menu__links {
+    height: 25px!important;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 30px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 30px!important;
+    height: 30px!important;
+    }
+    .menu__border {
+    font-size: 2.5px!important;
+    height: 2.5px!important;
+    line-height: 2.5px!important;
+    }
+    #bodyTable {
+    width: 100%!important;
+    }
+    .products__unit {
+    float: left; 
+    width: 48%; 
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big,.produit__unit--quote {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    .title--line {
+    width: 5%;
+    }
+    .title--txt {
+    width: 90%;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    width: 80%;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;  
+    }
+    .footer__wrapper img { 
+    margin: 0 auto;
+    } 
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    } 
+    .footer__rss td {
+    float: left;  
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 30px!important;  
+    width: auto;  
+    }
+    .bigOffert__col{
+    display:block;
+    width:100%;
+    }
+
+
+    .footer__clement-col, .footer__clement-award--item{
+
+        display:block;
+    width:100%;
+
+    }
+
+    .footer__clement-award--item{
+    text-align: center;
+
+    }
+
+    .footer__clement-award--item img{
+    display:block;
+    margin: 0 auto;
+    }
+
+
+
+    .footer__clement-rss--item img{
+
+    margin: 0 auto;
+    }
+
+    }
+    .footer__col td { 
+        font-size: 12px!important;
+    }
+  != "<!--[if gte mso 10]>"
+  style.
+    table, p, span, div, table, tr, td, th, a { 
+    mso-style-priority:99;  font-family:"Arial","sans-serif"; 
+    }
+  != "<![endif]-->" 
+block preheader  
+  include ./mixins/preheader.pug
+  +preheader('agrico', "Le vent souffle ce Weekend")
+ 
+   
+block content    
+  include ./mixins/title--simple.pug
+  include ./mixins/title.pug      
+  include ./mixins/produit_3.pug  
+  include ./mixins/produit_2.pug
+  include ./mixins/produit_3__buse.pug 
+  include ./mixins/produit_3__prix.pug  
+  include ./mixins/produit_4.pug  
+  include ./mixins/banner.pug 
+  include ./mixins/bannerNext.pug 
+  include ./mixins/btn.pug     
+  include ./mixins/quote.pug
+  include ./mixins/produit_3__btnOnly.pug      
+  include ./mixins/produit_3__dechaumeur.pug
+  include ./mixins/produit_3__details.pug
+  include ./mixins/produit__quote.pug
+  include ./mixins/link.pug
+  tr
+    td &nbsp;
+
+  tr
+    td
+      table(align="center" width="90%")
+
+
+        tr
+          td Cher prenom, nom,
+        tr
+          td &nbsp;
+        tr
+          td Je suis Clément, l'un des 3 co-fondateurs d'Agriconomie. Tout d'abord, j'aimerais vous remercier d'avoir passé commande sur notre site.
+        tr
+          td &nbsp; 
+        tr
+          td En tant que fils d'agriculteur, j'ai décidé en 2014 de créer cette société afin d'aider les agriculteurs à trouver plus facilement leurs produits et pour créer une plus grande transparence sur le prix des appros.
+        tr
+          td &nbsp;
+        tr
+          td Nous nous sommes donné la mission d'accompagner quotidiennement nos clients en leur permettant de mieux gérer leur entreprise, gagner un temps considérable et faire des économies.
+        tr
+          td &nbsp;
+        tr
+          td Pour cela, nos équipes sélectionnent avec le plus grand soin les meilleurs fournisseurs afin de vous permettre de commander des produits de qualité au meilleur prix.
+        tr
+          td &nbsp;
+        tr
+          td En tant que jeune entreprise, nous sommes déterminés à nous assurer que le service que nous fournissons soit parfait ! C'est pourquoi si vous avez le moindre souci, veuillez me le faire savoir immédiatement par e-mail et je ferai tout ce qui est nécessaire pour le résoudre.
+        tr
+          td &nbsp;
+        tr
+          td Je vous remercie de votre fidélité et vous souhaite une saison réussie !
+
+        tr
+          td  &nbsp;
+
+        tr
+          td Clément Le Fournis
+
+
+
+  tr
+    td &nbsp;
+
+  tr
+    td.footer__clement(width="100%")
+      table(width="100%" valgin="top")
+        tr
+          td.footer__clement-col(width="68%"  valign="top")
+            table(width="98%" align="center")
+              tr
+                td(width="100%" align="center") 
+                  table(align="left" )
+                    tr
+                      td()
+                        img(src="http://via.placeholder.com/100x100" alt="test")
+                      td( width="15") &nbsp;
+                      td()
+                        table()
+                          tr
+                            td 
+                              | CLÉMENT 
+                              span( style="color : orange; font-weight: bold;" ) LE FOURNIS
+                          tr
+                            td Co-fondateur - COO
+                          tr
+                            td &nbsp;
+                          tr
+                            td
+                              table
+                                tr
+                                  td
+                                    img(src="http://via.placeholder.com/10x10" alt="test")
+                                  td &nbsp;
+                                  td www.agriconomie.com
+
+          td.footer__clement-col(width="32%" )
+            table(width="100%" align="center")
+
+              tr
+                td(width="100%" align="center")
+                  table(width="100%")
+                    tr
+                      td
+                        table(width="100%" bgcolor="orange")
+                          tr
+                            td
+                              table(width="95%" align="center")
+                                  tr
+                                    td(height="2" style="font-size: 2px; line-height:2px;") &nbsp;
+                                  tr
+                                    td(style="color: white; font-weight:bold; font-size: 10px; ") MEILLEUR SITE E-COMMERCE
+                                  tr
+                                    td(height="2" style="font-size: 2px; line-height:2px;") &nbsp;
+                    tr
+                      td(height="5" style="line-height: 10px; font-size : 10px; ") &nbsp;
+                    tr
+                      td
+                        table.footer__clement-award(width="100%")
+                          tr
+                            td.footer__clement-award--item(valign="top")
+                               img(src="http://via.placeholder.com/45x45" alt="test")
+                            td.footer__clement-award--item(width="25") &nbsp;
+                            td.footer__clement-award--item(width="100%")
+                              table(width="100%")
+                                tr
+                                  td( style="font-size:9px; line-height: 12px;" valign="top") 
+                                    | 
+                                    b Agriconomie 
+                                    | à reçu le prix du 
+                                    b meilleur espoir 
+                                    | du e-comerce 2016 ! Et c'est grace à vous !
+
+                    tr
+                      td(height="2" style="font-size: 2px; line-height:2px;") &nbsp;
+                    tr
+                      td
+                        table.footer__clement-rss(width="100%")
+                          tr
+                            td(width="25%").footer__clement-rss--item
+                              img(src="http://via.placeholder.com/30x30" alt="test")
+                            td(width="25%").footer__clement-rss--item
+                              img(src="http://via.placeholder.com/30x30" alt="test")
+                            td(width="25%").footer__clement-rss--item
+                              img(src="http://via.placeholder.com/30x30" alt="test")
+                            td(width="25%").footer__clement-rss--item
+                              img(src="http://via.placeholder.com/30x30" alt="test")
+  tr
+    td &nbsp;
+  
+  tr
+    td(align="right")
+      img(src="http://via.placeholder.com/150x50" alt="test")
+  tr
+    td(width="100%" height="6" bgcolor="black")
+  tr
+    td(width="100%" height="2" bgcolor="orange")
+
+
+
+
+
+
+
+
+block footer__expert
+  include ./mixins/footer__expert.pug 
+  +footer__expert('margaux')
+
+
+block sources 
+  include ./mixins/sources.pug 
+  +sources('agrico') 

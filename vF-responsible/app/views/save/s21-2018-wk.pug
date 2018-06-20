@@ -1,0 +1,353 @@
+extends layout/layout.pug 
+
+block data
+  - var meta =  Data.meta._utmVF;   
+  - var lang = 'fr';
+  
+block style 
+  link(rel='stylesheet', href='css/style.css')
+  style(type='text/css').
+    @media only screen and (max-width: 480px) { 
+    body { 
+    font-size: 16px !important;
+    }   
+    .logo__white,
+    .products__between,
+    .mobile--hide { 
+    display: none!important; 
+    } 
+    .menu {
+    display: block;
+    }
+    .menu tr,
+    .menu td,
+    .menu tbody {
+    display: block;
+    }
+    .menu__links {
+    height: 25px!important;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 30px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 30px!important;
+    height: 30px!important;
+    }
+    .menu__border {
+    font-size: 2.5px!important;
+    height: 2.5px!important;
+    line-height: 2.5px!important;
+    }
+    #bodyTable {
+    width: 100%!important;
+    }
+    .products__unit {
+    float: left; 
+    width: 48%; 
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big,.produit__unit--quote {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    .title--line {
+    width: 5%;
+    }
+    .title--txt {
+    width: 90%;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    width: 80%;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;  
+    }
+    .footer__wrapper img { 
+    margin: 0 auto;
+    } 
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    } 
+    .footer__rss td {
+    float: left;  
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 30px!important;  
+    width: auto;  
+    }
+    .bigOffert__col{
+    display:block;
+    width:100%;
+    }
+    .quote__semence {
+    display: block;
+    width: 100%!important;
+    max-width: 100%!important;
+    text-align: left;
+    }
+    .quote__semence {
+        margin: 5px auto;
+    }
+
+    .quote__semence td {
+        width: 90%!important;
+        margin: 0 auto;
+        display: block;
+    }
+    }
+    .footer__col td { 
+        font-size: 12px!important;
+    }
+
+  != "<!--[if gte mso 10]>"
+  style.
+    table, p, span, div, table, tr, td, th, a { 
+    mso-style-priority:99;  font-family:"Arial","sans-serif"; 
+    }
+  != "<![endif]-->" 
+block preheader  
+  include ./mixins/preheader.pug
+  +preheader('agrico', "Le vent souffle ce Weekend")
+ 
+   
+block content    
+  include ./mixins/title--simple.pug
+  include ./mixins/title.pug      
+  include ./mixins/produit_3.pug  
+  include ./mixins/produit_2.pug
+  include ./mixins/produit_3__buse.pug 
+  include ./mixins/produit_3__prix.pug 
+  include ./mixins/produit_3__btnOnly.pug 
+  include ./mixins/produit_4.pug  
+  include ./mixins/banner.pug 
+  include ./mixins/bannerNext.pug 
+  include ./mixins/btn.pug      
+  include ./mixins/quote.pug
+  include ./mixins/produit_3__imgBtn.pug      
+  include ./mixins/produit_3__dechaumeur.pug
+  include ./mixins/produit_3__details.pug
+  include ./mixins/produit__quote.pug
+  include ./mixins/link.pug
+
+
+
+  +banner(" semences/pc920 ", "https://www.agriconomie.com/media/pub/img/newsletter/banners/S17_2018_cipan.jpg", "jusqu'à -14% cipan -fourragères")
+ 
+ 
+
+  tr  
+    td &nbsp;
+  +produit__3__imgBtn([
+  {'name': "Solution azotée N39 <br> Liquide <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'pieces-agricoles/tracteur/filtration/pc2883/john-deere-b320',
+      'alt' : 'John Derre',
+      'img' : 'https://www.agriconomie.com/media/pub/img/marques/new/john-deere-130.jpg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }, 
+
+  {'name': "10-4-0 <br> Bouchon <br/> &nbsp;", 
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'pieces-agricoles/tracteur/filtration/pc2883/new-holland-b356',
+      'alt' : "case ih",
+      'img' : 'https://www.agriconomie.com/media/pub/img/marques/new/new-holland-130.jpg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "85"},
+     'new': { "entier" : "1", "dec" : "59"}
+     }
+       }, 
+
+  {'name': "Urée 46 Granulé <br> Granulé <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'pieces-agricoles/tracteur/filtration/pc2883/case-ih-b1066',
+      'alt' : 'Urée 46 Granulé - Granulé',
+      'img' : 'https://www.agriconomie.com/media/pub/img/marques/new/case-ih-130.jpg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }
+ 
+
+  ])
+
+
+  tr
+    td &nbsp;
+  +produit__3__imgBtn([
+    {'name': "L'équipement <br> du moissonneur <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-20%' ,
+     'link' : 'pieces-agricoles/tracteur/filtration/pc2883/massey-ferguson-b594',
+      'alt' : "Massey Ferguson",
+      'img' : 'https://www.agriconomie.com/media/pub/img/marques/new/massey-ferguson-130.jpg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Pressol <br> - 450 L <br> - 60 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "51"},  
+     'new': { "entier" : "1", "dec" : "30"}
+     }
+       },
+
+         {'name': "Carton 24 <br> graisse 400g <br/> &nbsp;", 
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'pieces-agricoles/tracteur/filtration/pc2883/claas-b276',
+      'alt' : "Claas/Renault",
+      'img' : 'https://www.agriconomie.com/media/pub/img/marques/new/claas-130.jpg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "85"},
+     'new': { "entier" : "1", "dec" : "59"}
+     }
+       }, 
+
+  {'name': "Sachets <br>et Big Bag <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'pieces-agricoles/tracteur/filtration/pc2883/fendt-b293',
+      'alt' : 'Fendt',
+      'img' : 'https://www.agriconomie.com/media/pub/img/marques/new/fendt-130.jpg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }
+ 
+
+  ])
+  tr
+    td &nbsp;
+
+  +banner(" semences/pc920 ", "https://www.agriconomie.com/media/pub/img/newsletter/banners/S17_2018_cipan.jpg", "jusqu'à -14% cipan -fourragères")
+
+
+
+  tr
+    td &nbsp;
+  +produit__3__imgBtn([
+
+    {'name': "Set de 2 phares <br> travail LED 1000 Lumen <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : "pieces-agricoles/tracteur/filtration/pc2883/deutz-fahr-b281",
+      'alt' : "Deutz-fahr",
+      'img' : 'https://www.agriconomie.com/media/pub/img/marques/new/deutz-fahr-130.jpg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Pressol <br> - 450 L <br> - 60 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "51"},  
+     'new': { "entier" : "1", "dec" : "30"}
+     }
+       },
+
+         {'name': "Matrix 430 TEEJET <br> avec antenne <br/> &nbsp;", 
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'https://www.agriconomie.com/pieces-agricoles/tracteur/filtration/pc2883/valtra-valmet-b1289',
+      'alt' : "Valtra / Valmet",
+      'img' : 'https://www.agriconomie.com/media/pub/img/marques/new/valtra-valmet-130.jpg', 
+     'btn' : "Voir les filtres",
+     'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+          'price': {
+     'old': { "entier" : "1", "dec" : "85"},
+     'new': { "entier" : "1", "dec" : "59"}
+     }
+       }, 
+
+  {'name': "Dent d'andaineur <br>et de faneuse <br> &nbsp;", 
+   'promo__title': "big",
+    'promo__value': 'Découvrir nos huiles' ,
+     'link' : 'pieces-agricoles/fenaison/dent-andaineur---faneuse/pc3223',
+      'alt' : "Dent d'andaineur / faneuse",
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/huile-moteur-lukoil.jpg', 
+     'btn' : "Voir les prix",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "23"},
+     'new': { "entier" : "1", "dec" : "06"}
+     }
+     }
+
+  ])
+
+  tr
+    td &nbsp;
+
+  tr
+    td.products__btn( align="center" width='100%', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+      table( border='0', cellspacing='0', cellpadding='0', width='80%', style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+        tr
+          td(align='center', width='100%', style=' border-collapse: collapse; mso-line-height-rule: exactly;')
+            != "<!--[if mso]>"
+            v:roundrect(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:w='urn:schemas-microsoft-com:office:word', href!="https://www.agriconomie.com/pieces-agricoles/tracteur/filtration/pc2883" + utm , style='height:30px;v-text-anchor:middle;width:500px;', arcsize='5%', strokecolor='#f9c222', fillcolor='#f9c222')
+              w:anchorlock
+                center(style='color:#fff;font-family:Helvetica, Arial,sans-serif;font-size:14px;') Voir plus de marques
+            != "<![endif]-->"
+            a(href!="/" + utm, style=' font-family:Arial,Helvetica,sans-serif;background-color: #f9c222; border: 1px solid #f9c222; border-radius: 3px; color: black; display: inline-block; font-family: sans-serif; font-size: 14px; line-height: 30px; text-align: center; text-decoration: none; width: 100%; -webkit-text-size-adjust: none; mso-hide: all; font-weight: bold;') Retrouvez l'enquête de satisfaction
+
+  tr
+    td &nbsp;
+
+
+block footer__expert
+  include ./mixins/footer__expert.pug 
+  +footer__expert('arthur')
+
+
+block sources 
+  include ./mixins/sources.pug 
+  +sources('agrico') 

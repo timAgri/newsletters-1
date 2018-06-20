@@ -1,0 +1,514 @@
+extends layout/layout.pug
+
+block utm
+  - var meta =  Data.meta._utmActu;  
+  - var type = 'elevage';  
+  - var lang = 'fr';    
+  
+
+block style
+  link(rel='stylesheet', href='css/style.css')
+  style.
+    @media only screen and (max-width: 480px) {
+    .logo__white,
+    .products__between,
+    .mobile--hide { 
+    display: none!important; 
+    }
+    #bodyTable{
+    width: 100%;
+    }
+    .menu__links {
+    height: auto;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 35px!important;
+    }
+
+    .menu__link--promo{
+    width: 100%;
+    
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 35px!important;
+    height: 35px!important;
+    }
+    body {
+    font-size: 16px !important;
+    }
+    .logo {
+    display: none !important;
+    }
+    .logoM {
+    display: block !important;
+    width: 100%;
+    }
+    .actu__wrapper td {
+    display: table;
+    width: 100%;
+    }
+    .actu__stats-img {
+    width: auto;
+    vertical-align: middle;
+    display: block;
+    }
+    .actu__stats-img img {
+    margin: 15px 0;
+    display: inline-block;
+    }
+    .actu__stats-description {
+    height: 50px;
+    line-height: 25px;
+    }
+    .tableReassurances__body {
+    position: relative; 
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block; 
+    text-align: center;
+    }
+    .footer__wrapper img {
+    margin: 0 auto;
+    }
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    }
+    .footer__rss td {
+    float: left;
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 40px!important;
+    width: auto;
+    }
+    .products__unit {
+    float: left;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+          .title--line {
+      width: 5%;
+      }
+      .title--txt {
+      width: 90%;
+      }
+
+
+
+
+      .chapiteau__title, .chapiteau__stats, .col_semences, .quote__semence{
+      display:block;
+      width:100%;
+      margin-bottom: 25px;
+      }
+    } 
+    * { 
+    font-family: Helvetica, Arial, sans-serif;
+    }
+    .footer__col td{
+    font-size: 12px!important;
+    }
+  != "<!--[if gte mso 10]>"
+  style.
+    table, p, span, div, table, tr, td, th, a { 
+    mso-style-priority:99;  font-family:"Arial","sans-serif"; 
+    }
+  != "<![endif]-->"     
+
+
+block phraseAccroche
+  |  sdfyerzy
+
+block header
+  include mixins/header.pug   
+  +header('bertrand')
+
+
+
+block push
+  include mixins/title.pug
+  include mixins/title--simple.pug
+  include mixins/produit_3.pug
+  include mixins/produit_4.pug
+  include mixins/banner.pug
+  tr
+    td &nbsp;
+
+  tr
+    td(align="center" width="100%" )
+      table(width="95%")
+        tr
+          td.chapiteau__title(width="75%")
+            table(style="border-left: 5px solid #ffc70c;" width="100%")
+              tr
+                td(width="100%")
+                  table(width="95%" align="center")
+                    tr
+                      td(style="line-height: 18px; font-size: 16px; font-weight: bold;") 
+                        | DEBUT DE LA MORTE SAISON PRIX DE LANCEMENT
+                    tr
+                      td(style="line-height:18px; font-size:18px; height:18px;") &nbsp;
+                    tr
+                      td.data_txt--title(style="color :#4a5669;")  SPECIAL NOUVELLE AQUITAINE
+                    tr
+                      td(style="line-height:9px; font-size:9px; height:9px;") &nbsp;
+                    tr
+                      td.data_txt--title(style="color :#4a5669;") Présentation de notre gamme de semences :
+
+          td.chapiteau__stats(width="25%" align="center")
+            table(width="100%" style="border: 5px solid #ffc70c;")
+              tr
+                td(width="100%")
+                  table(width="100%"  )
+                    tr
+                      td        &nbsp;
+                    tr
+                      td(width="50%" align="center" style="line-height: 24px;" )
+                        span(style="font-weight: bold; font-size:30px; display:block; color: #ffc70c;") 54
+                        | cipans
+
+                      td(width="50%" align="center" style="line-height: 24px;")
+                        span(style="font-weight: bold; font-size:30px; display:block; color: #ffc70c;") 79
+                        | cipans
+                    tr
+                      td &nbsp;
+    tr
+      td.mobile--hide  &nbsp;
+    tr
+      td.mobile--hide &nbsp;
+
+    tr
+      td(align="center" )
+        table(width="95%")
+          tr
+            td.col_semences(width="64%" style="vertical-align:top;")
+              table(width="100%")
+                tr
+                  td(align="center")
+                    table(width="100%")
+                      tr
+                        td(align="center")
+                            table(width="100%" style="border: 5px solid #ffc70c;")
+                                tr
+                                  td(align="center" style="font-weight:bold; font-size 24px; line-height:24px;") Bien plus que des semences
+                tr
+                  td &nbsp;
+                tr
+                  td.data_txt--title La qualité des produits avant tout !
+                tr
+                  td.data_txt
+                    | Nos semences sont fournies par les mêmes producteurs et fournisseurs que chez vos opérateurs habituels et proviennent essentiellement de France ou d’UE.
+                    br
+                    br
+                    | Toutes nos semences respectent la réglementation française. La faculté germinative des lots est mesurée et conforme à la réglementation française en vigueur pour les différentes espèces. 
+                    br
+                    br
+                    | Les semences que nous proposons ont été contrôlées pour qu’il n’y ait pas d’apport d’adventices ou de plantes indésirable au moment du semis. Nous veillons à fournir les semences les plus récentes.
+                tr
+                  td &nbsp;
+                tr
+                  td.data_txt--title Nos engagements
+                tr
+                  td.data_txt Nous assurons l’expédition des commandes sous 10jour
+                tr
+                  td.data_txt Remboursement de la différence si l’agriculteur trouve moins cher ailleurs. 
+                tr
+                  td.data_txt Voir le paiement il peut payer par prélèvement par chèque par virement et par carte bleue
+                tr
+                  td &nbsp;
+                tr
+                  td.data_txt--title Faites vos mélanges sur mesure !
+                tr
+                  td.data_txt Appelez nous au 03-52-99-00-00 et demandez Félix l’expert semence.
+
+            td.col_semences.mobile--hide(width="2%" align="center"  style=" vertical-align: top; ")
+
+
+            td.col_semences(width="34%" align="center"  style=" vertical-align: top; ")
+              table(width="100%")
+                tr
+                  td(align="center")
+                    table(width="100%")
+                      tr
+                        td(align="center")
+                            table(width="100%" style="border: 5px solid #ffc70c;")
+                                tr
+                                  td(align="center" style="font-weight:bold; font-size 24px; line-height:24px;") NOS OUTILS et SERVICES
+                tr
+                  td &nbsp;
+                tr
+                  td(align="center")
+                    table(width="95%")
+                      tr
+                        td(align="center")
+                            table(width="100%" style="border: 2px solid #ffc70c;")
+                                tr
+                                  td(align="center")  OUTILS CIPAN
+                      tr
+                        td &nbsp;
+                      tr
+                        td(align="center")
+                          img(src="https://www.agriconomie.com/assets/images/front/static/services/semences.png", alt="")
+                      tr
+                        td &nbsp;
+                      tr
+                        td
+                          table(align="center" width="100%") 
+                            tr
+                              td(align='center', width='50%', style=' border-collapse: collapse; mso-line-height-rule: exactly;')
+                                != "<!--[if mso]>"
+                                v:roundrect(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:w='urn:schemas-microsoft-com:office:word', href="/", style='height:30px;v-text-anchor:middle;width:100px;', arcsize='5%', strokecolor='#52c47d', fillcolor='#52c47d')
+                                  w:anchorlock
+                                    center(style='color:#fff;font-family:Helvetica, Arial,sans-serif;font-size:14px;') Je panache
+                                != "<![endif]-->"
+                                a(href="https://www.agriconomie.com/publi/newsletters?reponse=no", style=' font-family:Arial,Helvetica,sans-serif;background-color: #52c47d; border: 1px solid #52c47d; border-radius: 3px; color: #fff; display: inline-block; font-family: sans-serif; font-size: 14px; line-height: 30px; text-align: center; text-decoration: none; width: 150px; -webkit-text-size-adjust: none; mso-hide: all; font-weight: bold;') Je panache
+                            tr
+                              td(align='center', width='50%', style=' border-collapse: collapse; mso-line-height-rule: exactly;')
+                                a(href="https://www.agriconomie.com/publi/newsletters?reponse=yes", style=' font-family:Arial,Helvetica,sans-serif;border-radius: 3px; text-decoration:underline; color: black; display: inline-block; font-family: sans-serif; font-size: 14px; line-height: 30px; text-align: center;  width: 150px; -webkit-text-size-adjust: none; mso-hide: all; font-weight: bold;') en savoir plus
+
+                tr
+                  td &nbsp;
+                tr
+                  td(align="center")
+                    table(width="95%")
+                      tr
+                        td(align="center")
+                            table(width="100%" style="border: 2px solid #ffc70c;")
+                                tr
+                                  td(align="center") PANACHAGE CIPAN
+                      tr
+                        td &nbsp;
+                      tr
+                        td(align="center")
+                          img(src="https://www.agriconomie.com/assets/images/front/static/services/semences.png", alt="")
+                      tr
+                        td &nbsp;
+                      tr
+                        td
+                          table(align="center" width="100%") 
+                            tr
+                              td(align='center', width='150px', style=' border-collapse: collapse; mso-line-height-rule: exactly;')
+                                != "<!--[if mso]>"
+                                v:roundrect(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:w='urn:schemas-microsoft-com:office:word', href="/", style='height:30px;v-text-anchor:middle;width:200px;', arcsize='5%', strokecolor='#52c47d', fillcolor='#52c47d')
+                                  w:anchorlock
+                                    center(style='color:#fff;font-family:Helvetica, Arial,sans-serif;font-size:14px;') Je panache
+                                != "<![endif]-->"
+                                a(href="https://www.agriconomie.com/publi/newsletters?reponse=no", style=' font-family:Arial,Helvetica,sans-serif;background-color: #52c47d; border: 1px solid #52c47d; border-radius: 3px; color: #fff; display: inline-block; font-family: sans-serif; font-size: 14px; line-height: 30px; text-align: center; text-decoration: none; width: 150px; -webkit-text-size-adjust: none; mso-hide: all; font-weight: bold;') Je panache
+                tr
+                  td &nbsp;
+                tr
+                  td(align="center")
+                    table(width="95%")
+                      tr
+                        td(align="center")
+                          a(href="/" style=' font-family:Arial,Helvetica,sans-serif;border-radius: 3px; text-decoration:underline; color: black; display: inline-block; font-family: sans-serif; font-size: 12px;  text-align: center;   -webkit-text-size-adjust: none; mso-hide: all; font-weight: bold;'  ) Vous êtes agriculteur bio ?
+    tr
+      td.mobile--hide &nbsp;
+
+    tr
+      td(align="center" )
+        table(width="95%")
+          tr
+            td &nbsp;
+
+          +title("Ils nous ont fait confiance")
+
+          tr
+            td &nbsp;
+          tr
+            td
+              table(width="100%" align="center")
+                tr
+                  td.quote__semence(width="33.33%" align="center" style=" border-collapse: collapse; mso-line-height-rule: exactly; border-left: 1px solid #ffc70c;")
+                    table(width="90%" )
+                      tr
+                        td(style="font-weight: bold;") Francoise N (35) 
+                      tr
+                        td(style="font-size: 12px; font-weight: bold; color: #4a5669; ") 15/02/2017
+                      tr
+                        td &nbsp;
+                      tr
+                        td « Site sympatique pour acheter ses semences et engrais »
+                  td.quote__semence(width="33.33%" align="center" style=" border-collapse: collapse; mso-line-height-rule: exactly; border-left: 1px solid #ffc70c;")
+                    table(width="90%" )
+                      tr
+                        td(style="font-weight: bold;") Francoise N (35) 
+                      tr
+                        td(style="font-size: 12px; font-weight: bold; color: #4a5669; ") 15/02/2017
+                      tr
+                        td &nbsp;
+                      tr
+                        td « Site sympatique pour acheter ses semences et engrais »
+                  td.quote__semence(width="33.33%" align="center" style=" border-collapse: collapse; mso-line-height-rule: exactly; border-left: 1px solid #ffc70c;")
+                    table(width="90%" )
+                      tr
+                        td(style="font-weight: bold;") Francoise N (35) 
+                      tr
+                        td(style="font-size: 12px; font-weight: bold; color: #4a5669; ") 15/02/2017
+                      tr
+                        td &nbsp;
+                      tr
+                        td « Site sympatique pour acheter ses semences et engrais »
+    tr
+      td &nbsp;
+    tr
+      td &nbsp;
+    tr
+      td &nbsp;                        
+    +title--simple("Retrouver nos semences populaires en région Nouvelle Aquitaine :")      
+    +title("CIPAN")
+
+    +produit__4([
+    {'name': "Monopropylène glycol<br> pour animaux d'élevage <br> &nbsp;",
+     'promo__title': "none",
+      'promo__value': '-6€' ,
+       'link' : 'nutrition/matiere-premieres-et-additifs/monopropylene-glycol/pc7346',
+      'alt' : "Monopropylène glycol pour animaux d'élevage",
+       'img' : 'https://www.agriconomie.com/media/cache/130x130/27/2a/9187ebd8d3bce03890bd7cfd982d.jpeg',
+       'btn' : 'Voir les produits'  },
+
+         {'name': "Aliments d'allaitement <br> MILKYPRO Exelium 50 <br> &nbsp;",
+     'promo__title': "Jusqu'à",
+      'promo__value': '-5%' ,
+      'link' : "lactigo-tradi-50/p322690",
+       'alt' : "Aliments d'allaitement pour veaux d’élevage MILKYPRO Exelium 50",
+        'img' : 'https://www.agriconomie.com/media/cache/130x130//af/1b/6daacb6d4240813358f588b8e558.jpeg',
+       'btn' : 'Voir les prix'  },
+
+
+         {'name': "Aliments d'allaitement <br> MILKYPRO Exelium 50 <br> &nbsp;",
+     'promo__title': "Jusqu'à",
+      'promo__value': '-5%' ,
+      'link' : "lactigo-tradi-50/p322690",
+       'alt' : "Aliments d'allaitement pour veaux d’élevage MILKYPRO Exelium 50",
+        'img' : 'https://www.agriconomie.com/media/cache/130x130//af/1b/6daacb6d4240813358f588b8e558.jpeg',
+       'btn' : 'Voir les prix'  },
+
+
+
+         {'name': "Aliments d'allaitement <br> MILKYPRO Exelium 50 <br> &nbsp;",
+     'promo__title': "Jusqu'à",
+      'promo__value': '-5%' ,
+      'link' : "lactigo-tradi-50/p322690",
+       'alt' : "Aliments d'allaitement pour veaux d’élevage MILKYPRO Exelium 50",
+        'img' : 'https://www.agriconomie.com/media/cache/130x130//af/1b/6daacb6d4240813358f588b8e558.jpeg',
+       'btn' : 'Voir les prix'  }
+    ])
+
+    tr
+      td &nbsp;
+
+    tr
+      td
+        table(width="95%" align="center")
+          tr
+            td(align="right")
+              a( style="text-decoration: underline; color: black;" href="/") Découvrir toutes nos CIPAN
+    tr
+      td &nbsp;
+    +title("CULTURES FOURRAGERES")
+
+    +produit__4([
+    {'name': "Monopropylène glycol<br> pour animaux d'élevage <br> &nbsp;",
+     'promo__title': "none",
+      'promo__value': '-6€' ,
+       'link' : 'nutrition/matiere-premieres-et-additifs/monopropylene-glycol/pc7346',
+      'alt' : "Monopropylène glycol pour animaux d'élevage",
+       'img' : 'https://www.agriconomie.com/media/cache/130x130/27/2a/9187ebd8d3bce03890bd7cfd982d.jpeg',
+       'btn' : 'Voir les produits'  },
+
+         {'name': "Aliments d'allaitement <br> MILKYPRO Exelium 50 <br> &nbsp;",
+     'promo__title': "Jusqu'à",
+      'promo__value': '-5%' ,
+      'link' : "lactigo-tradi-50/p322690",
+       'alt' : "Aliments d'allaitement pour veaux d’élevage MILKYPRO Exelium 50",
+        'img' : 'https://www.agriconomie.com/media/cache/130x130//af/1b/6daacb6d4240813358f588b8e558.jpeg',
+       'btn' : 'Voir les prix'  },
+
+
+         {'name': "Aliments d'allaitement <br> MILKYPRO Exelium 50 <br> &nbsp;",
+     'promo__title': "Jusqu'à",
+      'promo__value': '-5%' ,
+      'link' : "lactigo-tradi-50/p322690",
+       'alt' : "Aliments d'allaitement pour veaux d’élevage MILKYPRO Exelium 50",
+        'img' : 'https://www.agriconomie.com/media/cache/130x130//af/1b/6daacb6d4240813358f588b8e558.jpeg',
+       'btn' : 'Voir les prix'  },
+
+
+
+
+         {'name': "Aliments d'allaitement <br> MILKYPRO Exelium 50 <br> &nbsp;",
+     'promo__title': "Jusqu'à",
+      'promo__value': '-5%' ,
+      'link' : "lactigo-tradi-50/p322690",
+       'alt' : "Aliments d'allaitement pour veaux d’élevage MILKYPRO Exelium 50",
+        'img' : 'https://www.agriconomie.com/media/cache/130x130//af/1b/6daacb6d4240813358f588b8e558.jpeg',
+       'btn' : 'Voir les prix'  }
+    ])
+    tr
+      td &nbsp;
+
+    tr
+      td
+        table(width="95%" align="center")
+          tr
+            td(align="right")
+              a( style="text-decoration: underline; color: black;" href="/") Découvrir toutes nos cultures fourragères 
+
+
+    tr
+      td &nbsp;
+
+
+block data
+  include mixins/elemMarche.pug
+
+block stat
+  include mixins/elemStat.pug
+
+
+
+block preco
+
+
+block footer
+  include mixins/footer__expert.pug
+  +footer__expert('bertrand') 

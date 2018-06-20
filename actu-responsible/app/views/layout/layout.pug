@@ -1,0 +1,294 @@
+block utm
+if lang == "fr"
+  - var baseUrl = "https://www.agriconomie.com/";
+  - var baseline = "Agriconomie, le site partenaire des agriculteurs français"
+else
+  - var baseUrl = "https://www.agriconomie.be/fr/";
+  - var baseline = "Agriconomie, le site partenaire des agriculteurs belge"
+//- console.log(baseUrl, 'baseUrl')  
+
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    meta(content='text/html; charset=utf-8', http-equiv='Content-Type')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+    title= baseline
+    block style
+  body
+    table#bodyTable(cellpadding='0', width='650', cellspacing='0', border='0', align='center', style='max-width: 650px;')
+      tbody
+        tr
+          td
+            table.headerNL(cellpadding='0', cellspacing='0', width='100%', border='0', align='center')
+              tbody
+                tr
+                  td.headerNL__blank
+                tr
+                  td.headerNL__phraseAccroche(align='center' , style='color:#999999; font-size: 9px;')
+                    block phraseAccroche
+                tr
+                  td.headerNL__linkOnline(align='center')
+                    a.link(href='#HTML_BROWSE_HREF#', style='color:#999999; text-decoration: underline;') Visualiser ce message en ligne
+                tr
+                  td.headerNL__blank
+        tr
+          td
+            table.center(align='center', cellpadding='0', cellspacing='0', width='100%', border='0')
+              tbody
+                tr
+                  td(align='center', width='100%')
+                    a(href= baseUrl + meta, target='_blank')
+                      block header
+        tr
+          td
+            table.menu(cellpadding='0', cellspacing='0', width='100%', border='0', align='center')
+              tbody
+                tr
+                  td
+                    table.menu__links(cellpadding='0', cellspacing='0', width='100%', border='0')
+                      tbody
+                        tr
+                          td.menu__link.menu__link--home(align='center')
+                            a.menu__link--a(href= baseUrl + meta)
+                              img(alt='Accueil', src='https://www.agriconomie.com/media/pub/img/newsletter/header/icon-home.jpg', width='27', height='27', border='0')
+                          td.menu__link(align='center')
+                            a.menu__link--a(href= baseUrl + 'engrais/pc975' + meta) ENGRAIS
+                          if lang == "fr"
+                            td.menu__link(align='center')
+                              a.menu__link--a(href= baseUrl + 'phyto/pc2641' + meta) PHYTOS
+                          td.menu__link(align='center')
+                            a.menu__link--a(href= baseUrl +'semences/pc920' + meta) SEMENCES
+                          td.menu__link(align='center')
+                            a.menu__link--a(href= baseUrl +'pieces-agricoles/pc2876' + meta) PIÈCES
+                          td.menu__link(align='center')
+                            a.menu__link--a(href= baseUrl + 'atelier/pc619' + meta) ATELIER
+                          if lang == "fr"
+                            td.menu__link(align='center')
+                              a.menu__link--a(href= baseUrl + 'elevage/pc392' + meta) ÉLEVAGE
+                          if lang == "be"
+                            td.menu__link(align='center')
+                              a.menu__link--a(href= baseUrl + 'nutrition/pc7283' + meta) NUTRITION                            
+                            td.menu__link(align='center')
+                              a.menu__link--a(href= baseUrl + 'bio/pc2856' + meta) BIO
+                          td.menu__link.menu__link--promo(align='center')
+                            a.menu__link--a(href= baseUrl + 'promotions' + meta) PROMOS
+        tr 
+          td
+            table.tableContent(cellpadding='0', cellspacing='0', border='0', width='100%')
+              tbody
+                tr
+                  td(align='center', width='95%')
+                    table.tableContent__body(width='100%', cellpadding='0', cellspacing='0', border='0')
+                      tbody
+                        block push
+                        tr
+                          td
+                            table.actu__wrapper(width='95%', align='center', cellpadding='0', cellspacing='0', border='0')
+                              tbody
+                                tr
+                                  td &nbsp;
+                                tr
+                                  td.actu__txt(valign='top', width='65%')
+                                    table.data(width='100%', cellpadding='0', cellspacing='0', border='0')
+                                      tbody
+                                        tr
+                                          td(valign='middle')
+                                            table.data(class= type === "engrais" ? "data--engrais" : "data--elevage", align='center', valign='middle', width='100%', cellpadding='0', cellspacing='0', border='0')
+                                              tbody
+                                                tr
+                                                  td(valign='center')
+                                                    center
+                                                      div(style='max-width: 800px; margin: 0 auto;')
+                                                        table(align='center')
+                                                          tr
+                                                            td.data__title( class= type === "engrais" ? "data__title--engrais" : "data__title--elevage" valign='center')
+                                                              | Votre actu des Marchés
+                                        block data
+                                  td(width='5%')  
+                                  td(width='30%', valign='top')
+                                    table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                                      tbody
+                                        tr
+                                          td
+                                            table.data( class= type === "engrais" ? "data__title--engrais" : "data__title--elevage", valign='center', align='center', width='100%', cellpadding='0', cellspacing='0', border='0')
+                                              tbody
+                                                tr
+                                                  td(valign='center')
+                                                    center
+                                                      div(style='max-width: 800px; margin: 0 auto;')
+                                                        table(align='center', style='text-align: center;')
+                                                          tr
+                                                            td.data__title(  class= type === "engrais" ? "data__title--engrais" : "data__title--elevage" valign='center')
+                                                              | Tendance Des marchés
+                                        block stat
+                             
+                        tr
+                          td  
+                        tr
+                          td
+                            table(align='center', cellpadding='0', cellspacing='0', border='0', width='95%')
+                              tbody
+                                
+                                tr
+                                  td(valign='middle')
+                                    table.data(  class= type === "engrais" ? "data--engrais" : "data--elevage" align='center', valign='middle', width='100%', cellpadding='0', cellspacing='0', border='0')
+                                      tbody
+                                        tr
+                                          td(valign='center')
+                                            center
+                                              div
+                                                table(align='center', style='text-align: center;')
+                                                  tr
+                                                    td.data__title( class= type === "engrais" ? "data__title--engrais" : "data__title--elevage" valign='center')
+                                                      if type == "engrais"
+                                                        | Les recommandations de Margaux
+                                                      if type == "elevage"
+                                                        | Les préconisations de Bertrand
+                                tr
+                                  td(width='100%', align='center')
+                                    table(width='80%', cellpadding='0', cellspacing='0', border='0')
+                                      tbody
+                                        block preco
+
+                                block produits                            
+                              
+                                
+        tr
+          td
+            table.tableReassurances(cellpadding='0', cellspacing='0', border='0', width='100%')
+              tbody
+                tr
+                  td(width='95%')
+                    table.tableReassurances__body(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+                      tbody
+                        tr
+                          td(align='center', ;='', valign='center', width='25%')
+                            a(href= baseUrl  + meta, target='_blank')
+                              img.deviceWith(alt='Transparence', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/prix-transparent-responsive.jpg', width='130', height='41', border='0', style='display: block;')
+                          td(align='center', ;='', valign='center', width='25%')
+                            a(href= baseUrl  + meta, target='_blank')
+                              img.deviceWith(alt='Meilleur site', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/prix-fevad-responsive.jpg', width='130', height='41', border='0', style='display: block;')
+                          td(align='center', ;='', valign='center', width='25%')
+                            a(href= baseUrl  + meta, target='_blank')
+                              img.deviceWith(alt='Économies', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/argent-economise-responsive.jpg', width='130', height='41', border='0', style='display: block;')
+                          td(align='center', ;='', valign='center', width='25%')
+                            a(href= baseUrl  + meta, target='_blank')
+                              img.deviceWith(alt='Sécurité', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/paiement-securise-responsive.jpg', width='130', height='41', border='0', style='display: block;')
+        tr
+          td.footer__blank  
+        tr
+          td
+            table.footer.footer--up(cellpadding='0', cellspacing='0', border='0', width='100%')
+              tbody
+                tr
+                  td
+                    table.footer__wrapper(align='center', cellspacing='0', border='0', width='95%')
+                      tbody
+                        tr
+                          td(valign='top', width='47%', align='center')
+                            table.footer__col(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+                              tbody
+                                block footer
+                          td(width='6%')
+                          td(width='47%', align='left')
+                            table.footer__col(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+                              tbody
+                                tr
+                                  td(align='left')
+                                    | Nos experts sont disponibles 
+                                    span.link--orange 7j/7
+                                    |  de 
+                                    span.link--orange 8h à 20h
+                                    br
+                                    |  - Par téléphone : 
+                                    span.link--orange 03 52 99 00 00
+                                    br
+                                    |  - Par mail sur 
+                                    a.link--orange(href=  baseUrl  + 'contact' + meta) contact@agriconomie.com 
+                                    br
+                                    br
+                                    |  Notre service après-vente est joignable
+                                    br
+                                    |  - Par téléphone : 
+                                    a.link--orange(href='tel:0352990002') 03 52 99 00 02
+                tr
+                  td  
+        tr
+          td.separator(height='1')
+        tr.footer__blank
+          td.footer__blank  
+        tr
+          td
+            table.footer.footer--down(cellpadding='0', cellspacing='0', border='0', width='100%', align='center')
+              tbody
+                tr(width='100%')
+                  td
+                    table.footer__wrapper(align='center', cellpadding='0', cellspacing='0', border='0', width='95%')
+                      tbody
+                        tr
+                          td(width='45%', align='center')
+                            table.footer__col(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+                              tbody
+                                tr
+                                  td(align='center')
+                                    img(width='70', src='https://www.agriconomie.com/media/image/newsletters/inl_58580e0193932.png', alt='FEVAD', style='width:70px;')
+                                    br
+                                    | Meilleur site e-commerce 2016
+                                  p(style='text-align:center;')
+                          td(width='10%')
+                          td(width='45%', align='center', valign='center')
+                            table.footer__col(width='100%', align='center', cellpadding='0', cellspacing='0', border='0')
+                              tbody
+                                tr
+                                  td(align='center')
+                                    table.footer__rss(align='center', cellpadding='0', cellspacing='0', border='0', width='100%')
+                                      tbody
+                                        tr
+                                          td(width='25%', align='center')
+                                            a(style='text-decoration:none', href='https://twitter.com/agriconomie', target='_blank')
+                                              img(height='26', width='26', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/twitter.png', alt='Twitter')
+                                          td(width='25%', align='center')
+                                            a(style='text-decoration:none', href='https://www.facebook.com/Agriconomie/', target='_blank')
+                                              img(height='26', width='26', alt='Facebook', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/facebook.png')
+                                          td(width='25%', align='center')
+                                            a(style='text-decoration:none', href='https://fr.linkedin.com/company/agriconomie-france', target='_blank')
+                                              img(height='26', width='26', alt='LinkedIn', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/linkedin.png')
+                                          td(width='25%', align='center')
+                                            a(style='text-decoration:none', href='https://www.youtube.com/channel/UCo0QMlZUcF-WBP3C9koTLJw', target='_blank')
+                                              img(height='26', width='26', alt='Youtube', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/youtube.png')
+                                tr
+                                  td   
+                                tr
+                                  td(align='center')
+                                    table(align='center', cellpadding='0', cellspacing='0', border='0')
+                                      tbody
+                                        tr
+                                          td(width='12.5%')  
+                                          td(width='75%', align='center') Rejoignez notre communauté et suivez notre expertise
+                                          td(width='12.5%')  
+                tr
+                  td  
+        tr
+          td   
+        tr
+          td
+            table(width='95%', style='font-family: Helvetica, Arial, sans-serif; font-size: 9px; color: rgb(153, 153, 153);', align='center', cellpadding='0', cellspacing='0', border='0')
+              tbody
+                tr
+                  td(style='line-height: 12px;', align='center')
+                    | Agriconomie.com - 11 route nationale 4, 51320 Coole RCS CHALONS-EN-CHAMPAGNE : B 799 365 176
+                tr
+                  td(style='line-height: 12px;', align='center')
+                    | Vous recevez cet email car vous êtes inscrit sur notre liste de diffusion. Suivez ce 
+                    a(href='#UNSUBSCRIBE_HREF#', style="text-decoration: underline; color: rgb(153, 153, 153);" target='_blank') lien
+                    |  pour vous désinscrire de cette liste de diffusion.
+                tr
+                  td(style='line-height: 12px;', align='center')
+                    | Conformément à la loi Informatique et Liberté du 6 janvier 1978, vous disposez d’un droit de suppression des données vous concernant.
+                tr
+                  td(align='center')
+                    a(href=  baseUrl  + 'conditions-generales-utilisation' + meta, target='_blank', style='color: rgb(153, 153, 153); text-decoration :underline;') CGU
+                    |  - 
+                    a(href=  baseUrl  + 'conditions-generales-vente' + meta, target='_blank', style='color: rgb(153, 153, 153); text-decoration :underline;') CGV
+                    |  - 
+                    a(href=  baseUrl  + 'mentions-legales' + meta, target='_blank', style='color: rgb(153, 153, 153); text-decoration : underline;') Mentions légales

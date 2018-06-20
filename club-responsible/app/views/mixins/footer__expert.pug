@@ -1,0 +1,38 @@
+mixin footer__expert(expert)
+  case expert
+    when 'arthur'
+      tr
+        td(align='right')
+          a(href='https://www.agriconomie.com/publi/nos-experts' + meta, target='_blank')
+            img(alt='arthur', src='https://www.agriconomie.com/media/pub//img/newsletter/experts/arthur.png', width='80', height='80', border='0', style='display: block;')
+        td(width='15')  
+        td(align='left')
+          | "Je suis à votre disposition pour toute demande d'informations sur la gamme pièces."
+          br
+          br
+          a.link--orange(href='https://www.agriconomie.com/publi/nos-experts' + meta)  Arthur
+          | , Expert Pièces
+    when 'margaux'
+      tr
+        td(align='right')
+          a(href='https://www.agriconomie.com/publi/nos-experts' + meta, target='_blank')
+            img(alt='margaux', src='https://www.agriconomie.com/media/pub/img/newsletter/footer/margaux.png', width='80', height='80', border='0', style='display: block;')
+        td(width='15')  
+        td(align='left')
+          | "Je suis à votre disposition pour toute demande d'informations sur la gamme intrants."
+          br
+          br
+          a.link--orange(href='https://www.agriconomie.com/publi/nos-experts' + meta)  Margaux
+          | , Experte intrants
+    when 'bertrand'
+      tr
+        td(align='right')
+          a(href='https://www.agriconomie.com/publi/nos-experts' + meta, target='_blank')
+            img(alt='bertrand', src='https://www.agriconomie.com/media/pub/img/newsletter/experts/bertrand.png', width='80', height='80', border='0', style='display: block;')
+        td(width='15')  
+        td(align='left')
+          | "Je suis à votre disposition pour toute demande d'informations sur la gamme élevage."
+          br
+          br
+          a.link--orange(href='https://www.agriconomie.com/publi/nos-experts' + meta)  Bertrand
+          | , Expert élevage

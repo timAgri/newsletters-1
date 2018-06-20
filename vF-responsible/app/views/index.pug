@@ -1,0 +1,322 @@
+extends layout/layout.pug 
+
+block data 
+  - var meta =  Data.meta._utmVF;   
+  - var lang = 'fr';    
+   
+block style 
+  link(rel='stylesheet', href='css/style.css')
+  style(type='text/css').
+    @media only screen and (max-width: 480px) { 
+    body { 
+    font-size: 16px !important;
+    }   
+    .logo__white,
+    .products__between,
+    .mobile--hide { 
+    display: none!important; 
+    } 
+    .menu {
+    display: block;
+    } 
+    .menu tr,
+    .menu td,
+    .menu tbody {
+    display: block;
+    }
+    .menu__links {
+    height: 25px!important;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 30px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 30px!important;
+    height: 30px!important;
+    }
+    .menu__border {
+    font-size: 2.5px!important;
+    height: 2.5px!important;
+    line-height: 2.5px!important;
+    }
+    #bodyTable {
+    width: 100%!important;
+    }
+    .products__unit {
+    float: left; 
+    width: 48%; 
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big,.produit__unit--quote {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    .title--line {
+    width: 5%;
+    }
+    .title--txt {
+    width: 90%;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    width: 80%;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;  
+    }
+    .footer__wrapper img { 
+    margin: 0 auto;
+    } 
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    } 
+    .footer__rss td {
+    float: left;  
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 30px!important;  
+    width: auto;  
+    }
+    .bigOffert__col{
+    display:block;
+    width:100%;
+    }
+    .quote__semence {
+    display: block;
+    width: 100%!important;
+    max-width: 100%!important;
+    text-align: left;
+    }
+    .quote__semence {
+        margin: 5px auto;
+    }
+
+    .quote__semence td {
+        width: 90%!important; 
+        margin: 0 auto;
+        display: block;
+    }
+    .title--imgTxt-child{
+      display:block;
+    }
+    .blogPush__container--article, .blogPush__container--article table, .blogPush__container--article table tbody,.blogPush__container--article table tbody tr{
+
+    display:block;
+    width: 100%;
+    }
+    .blogPush__container--article-img img, .blogPush__container--article-img{
+
+    display:block;
+    width: 100%;
+    }
+
+
+    }
+    .footer__col td { 
+        font-size: 12px!important;
+    }
+
+  != "<!--[if gte mso 10]>"
+  style.
+    table, p, span, div, table, tr, td, th, a { 
+    mso-style-priority:99;  font-family:"Arial","sans-serif"; 
+    }
+  != "<![endif]-->" 
+block preheader  
+  include ./mixins/preheader.pug
+  +preheader('agrico', "Plus que 2 jours pour en profiter !")
+ 
+   
+block content    
+  include ./mixins/title--simple.pug
+  include ./mixins/title--image.pug   
+  include ./mixins/title.pug      
+  include ./mixins/produit_3.pug  
+  include ./mixins/produit_2.pug
+  include ./mixins/produit_3__buse.pug 
+  include ./mixins/produit_3__prix.pug 
+  include ./mixins/produit_3__btnOnly.pug
+  include ./mixins/produit_3__reste__day.pug
+  include ./mixins/produit_4.pug   
+  include ./mixins/banner.pug 
+  include ./mixins/bannerNext.pug 
+  include ./mixins/btn.pug      
+  include ./mixins/quote.pug
+  include ./mixins/produit_3__imgBtn.pug      
+  include ./mixins/produit_3__dechaumeur.pug 
+  include ./mixins/produit_3__details.pug 
+  include ./mixins/produit__quote.pug
+  include ./mixins/link.pug
+  include ./mixins/title--image-txt.pug
+
+  
+   
+  +banner("publi/pieces-de-moissonneuse-batteuse", "https://www.agriconomie.com/media/pub/img/newsletter//banners/moisson-mailbanner.jpg", "Dernière ligne avant la moisson j'accède aux produits")
+
+  tr
+    td &nbsp;
+  
+  +title("Les indispensables de la moisson")
+ 
+
+
+  +produit__3__prix([ 
+  {'name': "Soufflette long<br> 800 mm EWO <br> &nbsp;",
+      'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : '/souflette-long-800-mm-ewo/p254106',
+      'alt' : "Soufflette long 800 mm EWO",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/61/49/a9c2410ac95791468a4e35f08734.jpeg', 
+     'btn' : "J'en profite",
+          'price': { 
+     'old': { "entier" : "none", "dec" : "93"},
+     'new': { "entier" : "31", "dec" : "90"} 
+     }
+     },
+
+
+      {'name': "Extincteur poudre<br> ABC 6kg NF <br> &nbsp;",
+      'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : '/extincteur-6kg-poudre-abc-nf-neuf-2016-avec-support-metallique/p254076',
+      'alt' : 'Extincteur poudre ABC 6kg NF',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/b6/73/cb1eefa59d2517b67b74ecb42c32.jpeg', 
+     'btn' : "J'en profite",
+     'price': { 
+     'old': { "entier" : "none", "dec" : "14"},
+     'new': { "entier" : "38", "dec" : "06"}
+     }
+     },
+
+
+      {'name': "Sangle d'arrimage <br>crochet 50mm x 12m Rouge <br> &nbsp;",
+      'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : '/sangle-d-arrimage-crochet-50mm-x-12m-rouge-par-2/p201134',
+      'alt' : "Sangle d'arrimage crochet 50mm x 12m Rouge",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/granit/5002000212004030.jpg', 
+     'btn' : "J'en profite",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "none", "dec" : "23"},
+     'new': { "entier" : "13", "dec" : "53"}
+     }
+     }
+ 
+
+  ])
+
+  tr
+    td &nbsp;
+   
+  +title("Nos clients vous recommandent ces engrais")
+
+
+
+
+  +produit__3([
+
+
+  {'name': "Maïs Zn Fertigo Pro <br> Liquide <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'mais-zn-fertigo-pro/p282779',
+      'alt' : "Maïs Zn Fertigo Pro - Liquide",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/dd/33/74702f720a5ee7f85b902be6eaa1.jpeg', 
+     'btn' : "Voir les prix",
+     'price': { 
+     'old': { "entier" : "9", "dec" : "74"},
+     'new': { "entier" : "8", "dec" : "12"}
+     } 
+     },
+ 
+
+
+      {'name': "TSP 45 <br> Granulé <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'tsp-45/p289#_campaign=cat_resultat_produit',
+      'alt' : 'TSP 45 - Granulé',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/e4/f4/ecf0a5d49c4ad3748b78b5084f19.jpg', 
+     'btn' : "Voir les prix",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "00"},
+     'new': { "entier" : "0", "dec" : "83"}
+     }
+     },
+
+
+      {'name': "Spécial P <br> Fertigo Pro <br> &nbsp;",
+      'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'special-p-fertigo-pro/p282769',
+      'alt' : 'Spécial P Fertigo Pro - Liquide',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/f5/d2/54a94b8fd0bc8ee44b05cc13af16.jpeg', 
+     'btn' : "Voir les prix",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "14", "dec" : "21"},
+     'new': { "entier" : "11", "dec" : "84"} 
+     } 
+     }
+ 
+ 
+ 
+  ])
+  
+
+
+
+
+  tr
+    td &nbsp;
+
+
+
+
+
+block footer__expert
+  include ./mixins/footer__expert.pug 
+  +footer__expert('margaux')
+
+
+block sources 
+  include ./mixins/sources.pug 
+  +sources('agrico') 
