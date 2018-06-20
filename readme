@@ -13,7 +13,7 @@ explain of each documents
   1.2 - data this is where you can change global varriable (lang type tracking ....)
   1.3 - scss this is were you change corp css style
   1.4 - views
-    1.4.1- layout : this contain the main layout containing all block
+    1.4.1 - layout : this contain the main layout containing all block
     1.4.2 - all mixins are there (title produit quote .....)
     1.4.3 - parts this contain only include element
     1.4.4 - save here is where i save custom element that i want to reuse after
@@ -22,8 +22,8 @@ explain of each documents
     
 2.build
   2.1 - this is where i is compilate build/index.html in fr to be with the comand gulp be
-  2.2 - this is where the build/index is minified with the command gulp minified
-  2.3 - tis is the result of the compilation of the generation of app/index.html  with css inline
+  2.2 - this is where the build/index is minified with the command : gulp inilinecss
+  2.3 - this is the result of the compilation of the generation of app/index.html  with css inline
   
 3.nodeModule is generate here
 
