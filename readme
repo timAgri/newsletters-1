@@ -1,0 +1,34 @@
+Hello,
+this repectory generate all the newsletters systeme of agriconomie
+
+1.clone this repectory
+2. npm install
+3.in the repectory you want you can launch gulp
+4. browser sync will open in localhost:3000
+
+explain of each documents
+
+1.app
+  1.1  - css this is where the scss is compilate
+  1.2 - data this is where you can change global varriable (lang type tracking ....)
+  1.3 - scss this is were you change corp css style
+  1.4 - views
+    1.4.1- layout : this contain the main layout containing all block
+    1.4.2 - all mixins are there (title produit quote .....)
+    1.4.3 - parts this contain only include element
+    1.4.4 - save here is where i save custom element that i want to reuse after
+    1.4.5 - this index is where you will configurate everything and create you template that
+    1.4.6 - this is the index generate with NO css inline
+    
+2.build
+  2.1 - this is where i is compilate build/index.html in fr to be with the comand gulp be
+  2.2 - this is where the build/index is minified with the command gulp minified
+  2.3 - tis is the result of the compilation of the generation of app/index.html  with css inline
+  
+3.nodeModule is generate here
+
+4.package.json
+  
+  
+  
+
