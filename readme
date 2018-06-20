@@ -1,8 +1,8 @@
 Hello,
-this repectory generate all the newsletters systeme of agriconomie
+this repository will be generate all the newsletters systeme's of agriconomie
 
 1.clone this repectory
-2. npm install
+2.npm install to install all npm dependancies with package.json (install node.js)
 3.in the repectory you want you can launch gulp
 4. browser sync will open in localhost:3000
 
