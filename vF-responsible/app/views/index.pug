@@ -1,9 +1,9 @@
 extends layout/layout.pug 
 
-block data 
-  - var meta =  Data.meta._utmVF;   
-  - var lang = 'fr';    
-   
+block data
+  - var meta =  Data.meta._utmVF;    
+  - var lang = 'fr';  
+  
 block style 
   link(rel='stylesheet', href='css/style.css')
   style(type='text/css').
@@ -18,7 +18,7 @@ block style
     } 
     .menu {
     display: block;
-    } 
+    }
     .menu tr,
     .menu td,
     .menu tbody {
@@ -124,29 +124,14 @@ block style
     text-align: left;
     }
     .quote__semence {
-        margin: 5px auto;
+        margin: 5px auto; 
     }
 
     .quote__semence td {
-        width: 90%!important; 
+        width: 90%!important;
         margin: 0 auto;
         display: block;
     }
-    .title--imgTxt-child{
-      display:block;
-    }
-    .blogPush__container--article, .blogPush__container--article table, .blogPush__container--article table tbody,.blogPush__container--article table tbody tr{
-
-    display:block;
-    width: 100%;
-    }
-    .blogPush__container--article-img img, .blogPush__container--article-img{
-
-    display:block;
-    width: 100%;
-    }
-
-
     }
     .footer__col td { 
         font-size: 12px!important;
@@ -160,156 +145,171 @@ block style
   != "<![endif]-->" 
 block preheader  
   include ./mixins/preheader.pug
-  +preheader('agrico', "Plus que 2 jours pour en profiter !")
+  +preheader('agrico', "Le vent souffle ce Weekend")
  
    
 block content    
   include ./mixins/title--simple.pug
-  include ./mixins/title--image.pug   
   include ./mixins/title.pug      
-  include ./mixins/produit_3.pug  
+  include ./mixins/produit_3.pug
+  include ./mixins/service_3.pug  
   include ./mixins/produit_2.pug
   include ./mixins/produit_3__buse.pug 
-  include ./mixins/produit_3__prix.pug 
-  include ./mixins/produit_3__btnOnly.pug
-  include ./mixins/produit_3__reste__day.pug
-  include ./mixins/produit_4.pug   
+  include ./mixins/produit_3__prix.pug
+  include ./mixins/produit_4.pug  
   include ./mixins/banner.pug 
   include ./mixins/bannerNext.pug 
-  include ./mixins/btn.pug      
+  include ./mixins/btn.pug     
   include ./mixins/quote.pug
-  include ./mixins/produit_3__imgBtn.pug      
-  include ./mixins/produit_3__dechaumeur.pug 
-  include ./mixins/produit_3__details.pug 
+  include ./mixins/produit_3__btnOnly.pug      
+  include ./mixins/produit_3__dechaumeur.pug
+  include ./mixins/produit_3__details.pug
   include ./mixins/produit__quote.pug
   include ./mixins/link.pug
-  include ./mixins/title--image-txt.pug
-
-  
-   
-  +banner("publi/pieces-de-moissonneuse-batteuse", "https://www.agriconomie.com/media/pub/img/newsletter//banners/moisson-mailbanner.jpg", "Dernière ligne avant la moisson j'accède aux produits")
-
-  tr
-    td &nbsp;
-  
-  +title("Les indispensables de la moisson")
- 
 
 
-  +produit__3__prix([ 
-  {'name': "Soufflette long<br> 800 mm EWO <br> &nbsp;",
-      'promo__title': "none",
-    'promo__value': '-14%' ,
-     'link' : '/souflette-long-800-mm-ewo/p254106',
-      'alt' : "Soufflette long 800 mm EWO",
-      'img' : 'https://www.agriconomie.com/media/cache/130x130/61/49/a9c2410ac95791468a4e35f08734.jpeg', 
-     'btn' : "J'en profite",
-          'price': { 
-     'old': { "entier" : "none", "dec" : "93"},
-     'new': { "entier" : "31", "dec" : "90"} 
-     }
-     },
-
-
-      {'name': "Extincteur poudre<br> ABC 6kg NF <br> &nbsp;",
-      'promo__title': "none",
-    'promo__value': '-14%' ,
-     'link' : '/extincteur-6kg-poudre-abc-nf-neuf-2016-avec-support-metallique/p254076',
-      'alt' : 'Extincteur poudre ABC 6kg NF',
-      'img' : 'https://www.agriconomie.com/media/cache/130x130/b6/73/cb1eefa59d2517b67b74ecb42c32.jpeg', 
-     'btn' : "J'en profite",
-     'price': { 
-     'old': { "entier" : "none", "dec" : "14"},
-     'new': { "entier" : "38", "dec" : "06"}
-     }
-     },
-
-
-      {'name': "Sangle d'arrimage <br>crochet 50mm x 12m Rouge <br> &nbsp;",
-      'promo__title': "none",
-    'promo__value': '-14%' ,
-     'link' : '/sangle-d-arrimage-crochet-50mm-x-12m-rouge-par-2/p201134',
-      'alt' : "Sangle d'arrimage crochet 50mm x 12m Rouge",
-      'img' : 'https://www.agriconomie.com/media/cache/130x130/granit/5002000212004030.jpg', 
-     'btn' : "J'en profite",
-     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
-     'price': { 
-     'old': { "entier" : "none", "dec" : "23"},
-     'new': { "entier" : "13", "dec" : "53"}
-     }
-     }
- 
-
-  ])
+  +banner(
+     "voucher/AMENDEMENTS50?redirect=/engrais/amendements/pc976&reset=1",
+      "https://www.agriconomie.com/media/pub/img/newsletter/club/s09_2017/bon-achat-50.jpg",
+      "Bon d'achat de 50€ activer le bon !!!"
+   )
 
   tr
     td &nbsp;
-   
-  +title("Nos clients vous recommandent ces engrais")
-
-
-
-
+  +title("Besoin d'une pièce en urgence <br> Nous avons ce qu'il vous faut")
+  tr
+    td &nbsp;
+    
   +produit__3([
+   {'name': "Chaîne<br> &nbsp; <br> &nbsp;",
+    'promo__title': "none",
+     'promo__value': '-10%' ,
+      'link' : 'pieces-agricoles/pieces-en-livraison-rapide/pc7654/chaine-s366',
+       'alt' : 'Chaîne',
+       'img' : 'https://www.agriconomie.com/media/cache/130x130//64/6a/ff5257fc78f7d70bc42a8d68fbc3.jpeg', 
+      'btn' : "Voir les produits",
+      'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+      'price': { 
+      'old': { "entier" : "1", "dec" : "23"},
+      'new': { "entier" : "1", "dec" : "06"}
+      }
+      }, 
 
+   {'name': "Contre batteur<br>&nbsp; <br/> &nbsp;", 
+    'promo__title': "none",
+     'promo__value': '-14%' ,
+      'link' : 'pieces-agricoles/pieces-en-livraison-rapide/pc7654/contre-batteur-s7706',
+       'alt' : "Contre batteur",
+       'img' : 'https://www.agriconomie.com/media/cache/130x130/d6/a2/013a86c66cc24e61bf201cf5cd5d.jpg',  
+      'btn' : "Voir les produits",
+      'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+           'price': {
+      'old': { "entier" : "1", "dec" : "85"},
+      'new': { "entier" : "1", "dec" : "59"}
+      } 
+        }, 
 
-  {'name': "Maïs Zn Fertigo Pro <br> Liquide <br> &nbsp;",
-   'promo__title': "none",
-    'promo__value': '-14%' ,
-     'link' : 'mais-zn-fertigo-pro/p282779',
-      'alt' : "Maïs Zn Fertigo Pro - Liquide",
-      'img' : 'https://www.agriconomie.com/media/cache/130x130/dd/33/74702f720a5ee7f85b902be6eaa1.jpeg', 
-     'btn' : "Voir les prix",
-     'price': { 
-     'old': { "entier" : "9", "dec" : "74"},
-     'new': { "entier" : "8", "dec" : "12"}
-     } 
-     },
+   {'name': "Courroie <br> &nbsp; <br> &nbsp;",
+    'promo__title': "none",
+     'promo__value': '-14%' ,
+      'link' : 'pieces-agricoles/pieces-en-livraison-rapide/pc7654/courroie-s514',
+       'alt' : 'Courroie',
+       'img' : 'https://www.agriconomie.com/media/cache/130x130/64/c5/9fef9aeb60fb822881400a1f456a.jpg', 
+      'btn' : "Voir les produits",
+      'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+      'price': { 
+      'old': { "entier" : "1", "dec" : "23"},
+      'new': { "entier" : "1", "dec" : "06"}
+      } 
+      }
  
 
+   ])
 
-      {'name': "TSP 45 <br> Granulé <br> &nbsp;",
-   'promo__title': "none",
-    'promo__value': '-14%' ,
-     'link' : 'tsp-45/p289#_campaign=cat_resultat_produit',
-      'alt' : 'TSP 45 - Granulé',
-      'img' : 'https://www.agriconomie.com/media/cache/130x130/e4/f4/ecf0a5d49c4ad3748b78b5084f19.jpg', 
-     'btn' : "Voir les prix",
-     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
-     'price': { 
-     'old': { "entier" : "1", "dec" : "00"},
-     'new': { "entier" : "0", "dec" : "83"}
-     }
-     },
-
-
-      {'name': "Spécial P <br> Fertigo Pro <br> &nbsp;",
-      'promo__title': "none",
-    'promo__value': '-14%' ,
-     'link' : 'special-p-fertigo-pro/p282769',
-      'alt' : 'Spécial P Fertigo Pro - Liquide',
-      'img' : 'https://www.agriconomie.com/media/cache/130x130/f5/d2/54a94b8fd0bc8ee44b05cc13af16.jpeg', 
-     'btn' : "Voir les prix",
-     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
-     'price': { 
-     'old': { "entier" : "14", "dec" : "21"},
-     'new': { "entier" : "11", "dec" : "84"} 
-     } 
-     }
- 
- 
- 
-  ])
-  
-
-
+  tr
+    td &nbsp;
+  +title("Les produits du moment")
 
 
   tr
     td &nbsp;
+    
+  +produit__3([
+   {'name': "Pignon  <br> &nbsp; <br> &nbsp;",
+    'promo__title': "none",
+     'promo__value': '-10%' ,
+      'link' : 'pieces-agricoles/pieces-en-livraison-rapide/pc7654/pignon-s1172',
+       'alt' : 'Pignon',
+       'img' : 'https://www.agriconomie.com/media/cache/130x130/f9/75/e4469144daf1e3138c690981c416.jpg', 
+      'btn' : "Voir les produits",
+      'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+      'price': { 
+      'old': { "entier" : "1", "dec" : "23"},
+      'new': { "entier" : "1", "dec" : "06"}
+      }
+      }, 
 
+   {'name': "Section <br> &nbsp; <br/> &nbsp;", 
+    'promo__title': "none",
+     'promo__value': '-14%' ,
+      'link' : 'pieces-agricoles/pieces-en-livraison-rapide/pc7654/section-s1510',
+       'alt' : "Section",
+       'img' : 'https://www.agriconomie.com/media/cache/130x130/71/ec/39ce974a8ec3d621796e59352ad7.jpg',  
+      'btn' : "Voir les produits",
+      'cara' : '- Kingspan <br> - 430 L <br> - 50 L/min <br> - capot verrouillage',
+           'price': {
+      'old': { "entier" : "1", "dec" : "85"},
+      'new': { "entier" : "1", "dec" : "59"}
+      }
+        }, 
 
+   {'name': "Pièces en <br> livraison rapide <br> &nbsp;",
+    'promo__title': "none",
+     'promo__value': '-14%' ,
+      'link' : 'pieces-agricoles/pieces-en-livraison-rapide/pc7654',
+       'alt' : 'Pièces en livraison rapide',
+       'img' : 'https://www.agriconomie.com/media/cache/130x130//4b/92/923b24647af7b8961ddbeee70f93.jpeg', 
+      'btn' : "Voir les produits",
+      'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+      'price': { 
+      'old': { "entier" : "1", "dec" : "23"},
+      'new': { "entier" : "1", "dec" : "06"}
+      }
+      } 
+ 
 
+   ])
+  tr
+    td &nbsp;
+  +title("Nos services dédiés")
+
+  +service__3([
+   {'title': "CLub by Agrico",
+   'txt': "  Devenez membre d'une <strong>communauté d'agriculteurs</strong> ayant accès à des <strong>avantages</strong> qui leur sont spécialement dédiés.",
+      'link' : 'publi/le-club',
+       'alt' : 'CLub by Agrico',
+       'img' : 'https://www.agriconomie.com/media/pub/img/newhomepage/services5.jpg', 
+      'btn' : "Voir le service",
+      },      
+ 
+   {'title': "Panachage Engrais",
+   'txt': " Mélangez de <strong>2 à 4 engrais dans un même camion</strong> et réduisez vos coûts logistique.<br>&nbsp;<br>&nbsp;",
+      'link' : 'engrais-panachage',
+       'alt' : 'Pignon',
+       'img' : 'https://www.agriconomie.com/media/pub/img/newhomepage/services1.jpg', 
+      'btn' : "Voir le service", 
+      },   
+
+   {'title': "COUVERT",
+   'txt': "CLub by Agrico<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;",
+      'link' : 'panachage-cipan',
+       'alt' : 'Pignon',
+       'img' : 'https://www.agriconomie.com/media/cache/130x130/f9/75/e4469144daf1e3138c690981c416.jpg', 
+      'btn' : "Voir le service",
+      }
+ 
+
+   ])
 
 
 block footer__expert

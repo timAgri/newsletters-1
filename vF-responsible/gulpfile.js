@@ -5,7 +5,6 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     htmlmin = require('gulp-htmlmin'),
     reload = browserSync.reload,
-    pug = require('gulp-pug'),
     data = require('gulp-data');
 
 
@@ -50,8 +49,8 @@ gulp.task('sass', function() {
 
 
 gulp.task('watch', function() {
-    gulp.watch('./app/scss/*.scss', ['sass', 'inilinecss', reload]);
-    gulp.watch('./app/views/**/*.pug', ['pug','inilinecss', reload]);
+    gulp.watch('./app/scss/*.scss', ['sass', 'inilinecss']);
+    gulp.watch('./app/views/**/*.pug', ['pug','inilinecss']);
 });
 
 

@@ -1,10 +1,10 @@
 extends layout/layout.pug
  
 block utm 
-  - var meta =  Data.meta._utmTerrenet;   
+  - var meta =  Data.meta._utmActuFr;   
   - var type = 'elevage';     
-  - var lang = 'fr';        
-     
+  - var lang = 'fr';           
+      
  
 block style
   link(rel='stylesheet', href='css/style.css') 
@@ -13,12 +13,12 @@ block style
     .logo__white,
     .products__between,
     .mobile--hide {
-    display: none!important;
+    display: none!important; 
     }
     #bodyTable {
     width: 100%;
     }
-    .menu__links {
+    .menu__links { 
     height: auto;
     }
     .menu__link {
@@ -53,7 +53,7 @@ block style
     display: block;
     }
     .actu__stats-img img {
-    margin: 15px 0;
+    margin: 15px 0; 
     display: inline-block;
     }
     .actu__stats-description {
@@ -112,26 +112,12 @@ block style
     width: 80%!important;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
     }
     .products__unit--double {
     /*container margin-left-right: 1%*/
     width: 98%;
     display: block;
-    }
-    .tableau__3 tr td,
-    .tableau__3 tbody,
-    .tableau__3 tr,
-    .tableau__3 table {
-    width: 100%!important;
-    display: block!important;
-    }
-    .tableau__3 td {
-    line-height: 24px!important;
-    font-size: 12px!important;
-    }
-    .tableau__3 .data--elevage {
-    line-height: 50px!important;
     }
     }
     * {
@@ -147,262 +133,172 @@ block phraseAccroche
 block header
   include mixins/header.pug
   +header('bertrand')
-
+ 
+ 
 block data
   include mixins/elemMarche.pug
-  //- +elemMarche('Azotés :', "Les prix en Urée ont été annoncés pour des livraison pendant l’été et il semblerait que la hausse en 2 mois soit de plus de 40€/t. Les acteurs ne prennent aucun risque et ne s’engagent pas sur des prix. Cette hausse a été très brutale et nous attendons toujours une tendance de prix. <br><br> En solution azotée le marché est haussier entraîné par l'urée, la parité ainsi que l’offre et la demande. <br><br> Le cours de l’ammonitrate est également haussier. Les volumes disponibles seront faibles. ")
-  //- +elemMarche('Phosphore et Potasse :', "Les premiers prix en DAP ont été publiés pour des livraisons cet été avec une hausse de 10 à 20€/t en fonction du départ. <br><br> La hausse du TSP se poursuit avec une influence forte de la parité euro dollar. La faible disponibilité du produit pourra également avoir un rôle et entraîner une hausse.")
+  +elemMarche('Soja  :', "Le marché est tendu en ce début de semaine. Une légère baisse a eu lieu puisque les dynamiques haussières ont été trop brutales. La parité, le risque climatique ainsi que les arbitrages entre les huiles et les tourteaux apportent de l'instabilité sur les tendances de prix.")
+  +elemMarche('Colza :', "Le colza est également dans une dynamique incertaine puisque le soja (en Argentine) n’affiche pas de dynamique et qu’il aura probablement une influence le prix du tourteau.")
+  +elemMarche('Blé / Maïs :', "En céréales, la parité, les couvertures des fonds d’investissements et le weather market influencent le marché à la hausse. Il faudra attendre un peu avant de confirmer cette tendance haussière.")
 
 block stat
   include mixins/elemStat.pug
-  //- +elemStat('Azotés',
-  //-  'À la hausse' ,
-  //-    'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
-  //-       'engrais/engrais-azote/pc979' + meta,
-  //-   'À la Hausse')
-  //- +elemStat('Potasse',
-  //-   'À la hausse' , 
-  //-    'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
-  //-        'engrais/autres-engrais/engrais-potassique/pc3428' + meta,
-  //-    'À la hausse')
-  //- +elemStat('Phosphore',
-  //-  'À la hausse' , 
-  //-  'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
-  //-  'engrais/autres-engrais/engrais-phosphate/pc3426' + meta,
-  //-   'À la Hausse')
+  +elemStat('Tourteau de soja',
+   'Incertain' ,
+     'https://www.agriconomie.com/media/pub/img/newsletter/icons/attention.jpg',
+        'nutrition/matiere-premieres-et-additifs/tourteaux/pc7313',
+    'Incertain')
+  +elemStat('Tourteau de colza',
+    'Stable' , 
 
+     'https://www.agriconomie.com/media/pub/img/newsletter/icons/stable.jpeg',
+         'tourteau-colza/p255288',
+     'Stable')
+  +elemStat('Céréales',
+   'Hausse' , 
+   'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
+   'nutrition/matiere-premieres-et-additifs/co-produits-de-cereales/pc7325',
+    'Hausse')
 
 block preco
-  include mixins/title.pug
-  //- tr
-  //-   td.data__blank
 
   //- tr
-  //-   td L’optimisation des traitements est un levier important dans l’atteinte des objectifs culturaux.
+  //-   td.data__blank
+  //- tr
+  //-   td(align='center')
+  //-     a.link__actu(href!="https://www.agriconomie.com/elevage/batiments/tapis---matelas/pc3455" + meta ) Profitez de notre offre
+  //-     | sur les matelas et tapis en caoutchouc.
+  //- tr
+  //-   td.data__blank &nbsp;
+  //- tr
+  //-   td(align='center')
+  //-     | Le marché est stable. Profitez en pour vous couvrir en profitant de notre 
+  //-     a.link__actu(href!="https://www.agriconomie.com/nutrition/matiere-premieres-et-additifs/tourteaux/pc7313" + meta) remise sur 4 camions.
   //- tr
   //-   td.data__blank
   //- tr
-  //-   td Pour ce faire,  ECO PH est un engrais foliaire spécifique 3 en 1.
+  //-   td(align='center')
+  //-     | L’offre sur les seaux à lécher est toujours d'actualité. 
+  //-     a.link__actu(href!="https://www.agriconomie.com/nutrition/nutrition-bovins/seaux-et-blocs-a-lecher/pc7355" + meta) Venez en profiter dès maintenant.
   //- tr
   //-   td.data__blank
   //- tr
-  //-   td Polyvalent, il va s’adapter aux eaux dures à pH élevé, et permettre d’optimiser la qualité de traitement, et ce même dans des conditions extrêmes de pH et de dureté.
-  //- tr
-  //-   td.data__blank
-  //- tr
-  //-   td ECO PH est LA solution clef pour optimiser en toute tranquillité pH + Dureté + Hygroscopie. Ces caractéristiques en font un partenaire synergique pour vos traitement. 
-  //- tr
-  //-   td.data__blank
-  //- tr
-  //-   td Dose conseillée à partir de 1 %
-  //- tr
-  //-   td.data__blank
-  //- +title('Les préconisations de Margaux')
-  //- tr
-  //-   td 
-  //-     |- Venez découvrir nos semences et nos mélanges de couverts ainsi que nos offres spéciales colza 
-  //-     a.link__actu(href!="https://www.agriconomie.com/melange-colza-fix-quatro-gflv/p282904" + meta) fix trio GLF 
-  //-     | et  
-  //-     a.link__actu(href!="https://www.agriconomie.com/melange-colza-fix-trio-glf/p282902" + meta ) fix quatro GLFV
-  //- tr
-  //-   td.data__blank
-  //- tr
-  //-   td 
-  //-     | - Il n'est pas trop tard pour venir couvrir vos besoins en 
-  //-     a.link__actu(href!="https://www.agriconomie.com/search?hierarchicalMenu%5Bcategories.lvl0%5D=Engrais&query=engrais%20organique&page=2&configure%5BhitsPerPage%5D=24&" + meta ) engrais organiques 
-  //-     | pour apporter de l’humus et éléments fertilisants.
-  //- tr
-  //-   td.data__blank
-  //- tr
-  //-   td 
-  //-     |- Suite aux nombreuses précipitations des derniers jours, apportez de 
-  //-     a.link__actu(href!="https://www.agriconomie.com/soufre-n/p265436" + meta ) l'azote et du soufre
-  //-     | , ou un engrais complet 
-  //-     a.link__actu(href!="https://www.agriconomie.com/agri-forcenpk/p333370" + meta ) NPK
-  //-     |  par voie foliaire pour complémenter les besoins de vos cultures.
+  //-   td.data_txt(align='left')
+  //-     b.data_txt--title  Des animaux bien réhydratés
+  //-     br
+  //-     br
+  //-     | En cette période estivale, les fortes chaleurs sollicitent les animaux qui sortent de leur zone de confort thermique. Pour rappel, celle de la vache est comprise entre -13°C et +27 °C.
+  //-     br
+  //-     br
+  //-     |La consommation d’eau dans les bâtiments est rarement mesurée en production bovine et encore moins en pâturage. Et pourtant la vache laitière consomme environ 100 litres/ jour à raison de 3 litres d’eau par litre de lait produit. En cas de stress thermique, la consommation journalière augmente de 30 %.
 
+  //-     br
+  //-     br
+  //-     |Le taux de MS de la ration est un facteur qui impact la consommation d’eau qui sera plus faible au pâturage par rapport à une ration hivernale.
+  //-     br
+  //-     br
+  //-     | Le matériel doit être adapté : 1 bac de 200 Litres pour 20 VL.
+  //-     a.link__actu(href!="https://www.agriconomie.com/bac-niveau-constant-biglac-90l-stabulation-tonne-a-eau/p187536" + meta) Prévoir des abreuvoirs de 70 L 
+  //-     | minimum en sortie de traite (lieu privilégier de consommation d’eau) et 
+  //-     a.link__actu(href!="https://www.agriconomie.com/abreuvoir-100-0120-298597/p298597" + meta) un bol 
+  //-     | pour 7 VL
+  //-     br
+  //-     br
+  //-     | Pour éviter la concurrence il faut au moins 3 points d’eau différents dans les bâtiments. La vache consomme 20 litres d’eau par minute il faudra donc prévoir un débit minimum de 
+  //-     a.link__actu(href!="https://www.agriconomie.com/abreuvoir-a-soupage-130-0500-298609/p298609" + meta) 30 litres/mn
+  //-     | pour un abreuvoir 2 postes.
+  //-     br 
+  //-     br
+  //-     | Les abreuvoirs doivent être propre (nettoyage 1 fois/semaine).
+  //-     br
+  //-     br
+  //-     | Au 
+  //-     a.link__actu(href!="https://www.agriconomie.com/bac-a-eau-eco-1100-litres-280589/p280589" + meta) pâturage
+  //-     | il faut prévoir une capacité de 1000 à 1500 Litres pour 100 VL.
+
+
+  tr
+     td  &nbsp;
 
 block produits
   include parts/product__space.pug
   include mixins/produit_3.pug
   include mixins/produit_4.pug
-  include mixins/title.pug
-  include mixins/banner.pug
-  
+  include mixins/title.pug 
+  +produit__4([
 
-   
-  +banner("publi/milkypro-parrainage", "https://www.agriconomie.com/media/pub/img/newsletter//banners/s25-2018-100-gamme-nutri.jpg", "Milky pro Parrainez et économisez 50€ HT sur votre prochaine commande")
-
-  tr
-    td &nbsp; 
-
-  +title("Comment bénéficier de cette offre ?")
-
-  tr
-    td(width="100%")
-      table(width="75%" align="center")
-        tr
-          td Je vous ai préparé une offre pour vos approvisionnements en nutrition animale
-        tr
-          td &nbsp;
-        tr
-          td Pour bénéficier de cette remise, il vous suffit de cliquer ici ou de renseigner le code promo :
-        tr
-          td &nbsp;
-        tr
-          td(width="100%")
-            a(style="text-decoration:none; color:black;" href!="https://www.agriconomie.com/voucher/NUTRITION100" + meta )
-              table(border="0" width="40%" align="center"  style="background: #ffc70c;" )
-                tr
-                  td(height="10" style="font-size:5px; line-height:5px;") &nbsp;
-                tr
-                  td( align="center" )
-                    b(style="font-size:20px;") NUTRITION100
-                tr
-                  td(height="10" style="font-size:5px; line-height:5px;") &nbsp;
-        tr
-          td &nbsp;
-        tr
-          td lors de l'étape 4 de votre commande dans le champ "Code promo" situé sur le côté gauche.
-        tr
-          td &nbsp;
-        tr
-          td Cette remise s'applique donc sur vos achats de tourteaux, aliments d'allaitements, aliments minérals, solutions nutritionnelles, matières premières minérales...
-        tr
-          td &nbsp;
-        tr
-          td 
-            | Ce code est valable du 
-            b 21 juin 2018 au 31 juillet 2018 
-            | sur tous les produits portant la mention "Expédié par Agriconomie" ou par l'icône 
-            span(style="color: #ffc70c; font-weight: bold;") A 
-            | (utilisable une seule fois), pour toute commande supérieure 1500€ HT d'achat sur la gamme Nutrition animale.
-
-        tr
-          td &nbsp;
-
-        tr
-          td 
-           | N'hésitez pas à me contacter au 
-           b(style="font-size:16px;") 03.52.99.00.13 
-           | pour toute question. 
+  {'name': "Chlorure de potasse <br> Granulé <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-10€/T' ,
+     'link' : 'chlorure-de-potasse/p6',
+    'alt' : "Chlorure de potasse - Granulé",
+     'img' : 'https://www.agriconomie.com/media/cache/130x130/28/d6/d75d736a07986d8ec1b7b1294b01.jpg',
+     'btn' : 'Voir les prix'  },
 
 
+  {'name': '9-23-0 + 25SO3 <br> Bulk compacté <br> &nbsp;',
+   'promo__title': 'none',
+    'promo__value': '-10%' ,
+     'link' : '9-23-0-25so3/p340869'
+     , 'alt' : '9-23-0 +25SO3 - Bulk compacté',
+      'img' : 'https://www.agriconomie.com/media/cache/240x230//4f/5e/2f434099978c9dd4be25194dcd5e.jpeg', 
+     'btn' : 'Voir les prix'  },
 
 
-  //- +produit__3([ 
+  {'name': "ATS Liquide <br> (13N -64SO3) <br> &nbsp;",
+   'promo__title': 'none', 
+    'promo__value': '-25%' ,
+    'link' : 'soufre-thiosulfate-d-ammonium/p265452',
+     'alt' : "Soufre - thiosulfate d'ammonium (13N -64SO3) - Liquide",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/f1/11/e4a46a620ba41aa8711848c66f24.jpg',
+     'btn' : 'Voir les prix'  },
 
+       {'name': "Cuivre Fertigo Pro <br> Liquide <br> &nbsp;",
+   'promo__title': "Jusuq'à",
+    'promo__value': '-16%' ,
+    'link' : 'cuivre-fertigo-pro/p282777',
+     'alt' : "Cuivre Fertigo Pro - Liquide",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/83/15/2893be81e0e03d58fcc6d483d31e.jpeg',
+     'btn' : 'Voir les prix'  }
+  ])
 
-  //-           {'name': "MILKYPRO  <br> Exelium 50 <br> &nbsp;",
-  //-  'promo__title': "Jusqu'à",
+  +title("Nos produits du moment")
+ 
+  //- include parts/product__space.pug
+  //- +produit__4([
+  //- {'name': 'Patentkali® <br> Granulé <br> &nbsp;',
+  //-  'promo__title': "none",
   //-   'promo__value': '-2€/T' ,
-  //-    'link' : 'lactigo-tradi-50/p322690',
-  //-   'alt' : "MILKYPRO Exelium 50", 
-  //-    'img' : 'https://www.agriconomie.com/media/cache/130x130//c8/6d/4f7ee08abaf191e7855e10d191b1.jpeg',
-  //-    'btn' : 'Voir le produit'  },
-
-
-  //-      {'name': "MILKYPRO <br> SUPER 60 <br> &nbsp;",
-  //-  'promo__title': "Jusqu'à",
-  //-   'promo__value': '-2€/T' ,
-  //-    'link' : 'milkypro-super-60/p335269#_campaign=cat_resultat_produit',
-  //-   'alt' : "MILKYPRO SUPER 60", 
-  //-    'img' : 'https://www.agriconomie.com/media/cache/130x130//45/63/ac896910fb9b1e0949822d6a92b6.jpeg',
-  //-    'btn' : 'Voir le produit'  },
-
-
-  //- {'name': "T8-23 REPRO <br>SANTE Semoule <br> &nbsp;",
+  //-    'link' : 'patentkali-r/p229398',
+  //-     'alt' : 'Patentkali® - Granulé',
+  //-     'img' : 'https://www.agriconomie.com/media/cache/130x130//13/a1/c65230178ae1a4796ce59d40f1a1.jpeg', 
+  //-    'btn' : 'Voir les prix'  },
+ 
+  //- {'name': "Chaux vive 95% <br> Criblé <br> &nbsp;",
   //-  'promo__title': "none",
-  //-   'promo__value': ' -10%' ,
-  //-    'link' : '8-23-repro-sante-semoule-sac/p318118?variant=395806',
-  //-   'alt' : "8-23 REPRO SANTE Semoule", 
-  //-    'img' : 'https://www.agriconomie.com/media/cache/130x130//61/10/c00f9bece620bfef204151421800.jpeg',
-  //-    'btn' : 'Voir le produit'  }
+  //-   'promo__value': '-10%' ,
+  //-    'link' : 'chaux-vive-95/p226448',
+  //-   'alt' : "Chaux vive 95% - Criblé",
+  //-    'img' : 'https://www.agriconomie.com/media/cache/240x230//05/ce/618d3f68e4bd1c7174e45d5e0f2f.jpeg',
+  //-    'btn' : 'Voir les prix'  },
 
-
-
-
-  //- ])
-
-
-
-  //- tr
-  //-   td &nbsp;
-
-  //- +produit__3([ 
-  //- {'name': "Tourteau <br>de colza <br> &nbsp;",
+  //- {'name': "Panachez votre<br> camion d'engrais <br> &nbsp;",
   //-  'promo__title': "none",
-  //-   'promo__value': '-5%' ,
-  //-    'link' : 'engrais/pc975',
-  //-    'alt' : "Tourteau de colza",
-  //-    'img' : 'https://www.agriconomie.com/media/cache/130x130/9e/4c/4b66f26de270d82120ae385ce8da.jpeg',
-  //-    'btn' : 'Voir les prix'  }, 
+  //-   'promo__value': '-5€' ,
+  //-   'link' : 'engrais-panachage' ,
+  //-    'alt' : "Panachez votre camion d'engrais",
+  //-     'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/panachage-camion.jpg',
+  //-    'btn' : 'Je panache'  }, 
 
-
-
-  //-      {'name': "Tourteau de soja<br> 49% GM <br> &nbsp;",
-  //-  'promo__title': "none",
-  //-   'promo__value': '-6€/T' ,
-  //-    'link' : "tourteau-soja-49/p255309#_campaign=cat_resultat_produit",
-  //-    'alt' : "Tourteau de soja 49% GM",
-  //-    'img' : 'https://www.agriconomie.com/media/cache/130x130/9a/b0/089aebd0b80f004edbfa0ceb6263.jpeg',
-  //-    'btn' : 'Voir les prix'  }, 
-
-
-  //-      {'name': "Propylène glycol <br>précurseurs de glucose <br> &nbsp;",
-  //-  'promo__title': "none",
-  //-   'promo__value': '-6€/T' ,
-  //-    'link' : 'propylene-glycol-tres-appetent-et-concentre-propitonic/p273140',
-  //-   'alt' : "Propylène glycol et précurseurs de glucose très appétents - PropiTonic", 
-  //-    'img' : 'https://www.agriconomie.com/media/cache/130x130/27/2a/9187ebd8d3bce03890bd7cfd982d.jpeg',
+  //-      {'name': "Compost (fientes / lisier) <br> 2-2-2 - Pulvérulent <br> &nbsp;",
+  //-  'promo__title': 'none',
+  //-   'promo__value': '-25%' ,
+  //-   'link' : '2-2-2/p251717',
+  //-    'alt' : "Compost (fientes / lisier) 2-2-2 - Pulvérulent",
+  //-     'img' : 'https://www.agriconomie.com/media/cache/130x130/cd/2a/3e1bb9cf86fa7e68ad20361afdf6.jpeg',
   //-    'btn' : 'Voir les prix'  }
-
-
-
   //- ])
 
-  //- tr
-  //-   td &nbsp;
-
-  //- +produit__3([ 
-
-
-
-  //-      {'name': "Bicarbonate <br> de Sodium <br> &nbsp;",
-  //-  'promo__title': "none",
-  //-   'promo__value': '-6€/T' ,
-  //-    'link' : "bicarbonate-de-sodium/p315127",
-  //-    'alt' : "Bicarbonate de Sodium",
-  //-    'img' : 'https://www.agriconomie.com/media/cache/130x130/c8/97/799205543bdd881aefe644c64a69.jpeg',
-  //-    'btn' : 'Voir le produit'  }, 
-
-
-  //- {'name': "Minéral Premium <br>5/22-23 avec levures <br> &nbsp;",
-  //-  'promo__title': "none",
-  //-   'promo__value': '-5%' ,
-  //-    'link' : 'agriconomie-premium-22-5-avec-levures/p338200',
-  //-    'alt' : "Minéral Premium 5/22-23 avec levures",
-  //-    'img' : 'https://www.agriconomie.com/media/cache/130x130//1f/22/6634a59984801cbd4593d804b05f.jpeg',
-  //-    'btn' : 'Voir le produit'  }, 
-
-
-
-
-  //-      {'name': " Lithothamne <br> &nbsp; <br> &nbsp;",
-  //-  'promo__title': "none",
-  //-   'promo__value': '-6€/T' ,
-  //-    'link' : 'litho-medium/p315136',
-  //-   'alt' : "Lithothamne", 
-  //-    'img' : 'https://www.agriconomie.com/media/cache/130x130/d8/f0/0b9ad369368d93be45880847cc80.jpeg',
-  //-    'btn' : 'Voir le produit'  }
-
-
-
-  //- ]) 
-
-
-  tr
-    td &nbsp;
 
 
 block footer

@@ -4,9 +4,7 @@ block meta
   - var utm = Data.meta._utmClub
 
 block phraseAccroche
-  | Phytosanitaires : commandez aujourd'hui, soyez livré au plus tard dans 72h 
-
-
+  | Phytosanitaires : commandez aujourd'hui, soyez livré au plus tard dans 72h
 block clubInfo  
   tr 
     td.club__info--wrapper(align='center')
@@ -20,80 +18,6 @@ block clubInfo  
 block promo
   include mixins/promoClub.pug
   include mixins/banner.pug
-  +banner('test', 'https://www.agriconomie.com/media/image/newsletters/inl_5ac4c55d87227.jpeg' , 'test')
-  tr
-    td(height="5" style="font-size:5px; line-height:5px;") &nbsp;  
-  tr
-    td(align="center") du 5 au 10 Avril 2018
-  tr
-    td &nbsp;
-  tr
-    td(align="center")
-      table(width="80%" align="center")
-        tbody
-          tr
-            td(style="font-size: 16px; line-height:16px;") 
-              | Nous vous avons préparé une 
-              b(style="font-weight:bold") vente privée spéciale phytosanitaires.
-          tr
-            td &nbsp;
-          tr
-            td 
-              | Des 
-              b(style="font-weight:bold") supers avantages vous attendent : 
-          tr
-            td &nbsp;
-          tr
-            td
-              |- Plus de 
-              b(style="font-weight:bold") 130 produits disponibles
-          tr
-            td
-              |- Livraison sous 
-              b(style="font-weight:bold") 3 jours
-          tr
-            td  
-              |- Accés au Club by Agrico 
-              b(style="font-weight:bold") pendant 5 jours 
-              | ( 
-              a(style="font-size:11px; text-decoration: underline; color:#ffc653; font-weight:bold;" href= "https://www.agriconomie.com/publi/le-club" )  Qu'est ce que le Club ?
-              |  )
 
-          tr
-            td &nbsp;
-          tr
-            td et une autre surprise vous attends en saisissant 
-              b(style="font-weight:bold") ce code 
-              | sur la page suivante :
-  tr
-    td &nbsp;
-
-  tr
-    td(align="center")
-      table(width="200" align="center")
-        tbody
-          tr
-            td(style="background: #ffc653; color:black; text-transform:uppercase; font-weight:bold; font-size:18px; line-height:24px; " align="center") VP-PHYTO-2018
-
-  tr
-    td &nbsp;
-  tr
-    td &nbsp;
-
-  tr
-    td(align="center")
-      table(width="50%" align="center")
-        tr
-          td.products__btn(align='center', width='100%', style='border-collapse: collapse; mso-line-height-rule: exactly;')
-            table(border='0', cellspacing='0', cellpadding='0', align='center', width='100%', style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
-              tr
-                td(align='center', width='100%', style=' border-collapse: collapse; mso-line-height-rule: exactly;')
-                  != "<!--[if mso]>"
-                  v:roundrect(xmlns:v='urn:schemas-microsoft-com:vml', xmlns:w='urn:schemas-microsoft-com:office:word', href="https://preprod.agriconomie.com/publi/vente-privee-phytosanitaires", style='height:30px;v-text-anchor:middle;width:200px;', arcsize='5%', strokecolor='#52c47d', fillcolor='#52c47d')
-                    w:anchorlock
-                      center(style='color:#fff;font-family:Helvetica, Arial,sans-serif;font-size:14px;') J'en profite
-                  != "<![endif]-->"
-                  a(href="https://preprod.agriconomie.com/publi/vente-privee-phytosanitaires", style=' font-family:Arial,Helvetica,sans-serif;background-color: #52c47d; border: 1px solid #52c47d; border-radius: 3px; color: #fff; display: inline-block; font-family: sans-serif; font-size: 14px; line-height: 30px; text-align: center; text-decoration: none; width: 95%; -webkit-text-size-adjust: none; mso-hide: all; font-weight: bold;') J'en profite !
-
-  //- +promoClub('soufre-thiosulfate-d-ammonium/p265452',
-  //-  "<tr><td>&nbsp;</td></tr><tr><td align='center' style='border-collapse: collapse; font-size: 20px; line-height: 24px; font-weight: bold;'class='club__promo_description--title'>Offre spéciale</td></tr><tr><td style='border-collapse: collapse; line-height: 10px; font-size: 10px;'>&nbsp;</td></tr><tr><td align='center' style='border-collapse: collapse;  font-size: 14px; line-height: 16px;'>réapprovisionnement <br> sur les herbicides : -2%</td></tr><tr><td style='border-collapse: collapse; line-height: 10px; font-size: 10px;'>&nbsp;</td></tr> <tr><td style='border-collapse: collapse;'>&nbsp;</td></tr>" , "https://www.agriconomie.com/media/pub/img/newsletter/club/S11-2018_crea_azote-soufre.jpg", "soufre thiosulfate d'ammonium", "Voir le produit")
+  +promoClub('soufre-thiosulfate-d-ammonium/p265452',
+   "<tr><td>&nbsp;</td></tr><tr><td align='center' style='border-collapse: collapse; font-size: 20px; line-height: 24px; font-weight: bold;'class='club__promo_description--title'>Groupama, acteur historique de la prévention au côté des agriculteurs</td></tr><tr><td style='border-collapse: collapse; line-height: 10px; font-size: 10px;'>&nbsp;</td></tr><tr><td align='center' style='border-collapse: collapse;  font-size: 14px; line-height: 16px;'>Tracteurs neufs ou anciens, matériels attelés de dernière génération ou tous autres matériels agricoles : tous sont indispensables au bon fonctionnement de votre exploitation agricole et représentent des investissements lourds. Ils se doivent d’être bien protégés et en toutes circonstances. Cette protection s’étend aux utilisateur de vos engins agricoles pendant la conduite et la manipulation.</td></tr><tr><td style='border-collapse: collapse; line-height: 10px; font-size: 10px;'>&nbsp;</td></tr> <tr><td style='border-collapse: collapse;'>&nbsp;</td></tr>" , "https://www.agriconomie.com/media/pub/img/newsletter/club/S11-2018_crea_azote-soufre.jpg", "soufre thiosulfate d'ammonium", "Voir le produit")

@@ -5,7 +5,6 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     htmlmin = require('gulp-htmlmin'),
     reload = browserSync.reload,
-    pug = require('gulp-pug'),
     data = require('gulp-data'),
  replace = require('gulp-replace');
 

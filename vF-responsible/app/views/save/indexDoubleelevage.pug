@@ -1,0 +1,426 @@
+extends layout/layout.pug 
+
+block data 
+  - var meta =  Data.meta._utmVF;   
+  - var lang = 'fr';    
+   
+block style 
+  link(rel='stylesheet', href='css/style.css')
+  style(type='text/css').
+    @media only screen and (max-width: 480px) { 
+    body { 
+    font-size: 16px !important;
+    }   
+    .logo__white,
+    .products__between,
+    .mobile--hide { 
+    display: none!important; 
+    } 
+    .menu {
+    display: block;
+    } 
+    .menu tr,
+    .menu td,
+    .menu tbody {
+    display: block;
+    }
+    .menu__links {
+    height: 25px!important;
+    }
+    .menu__link {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 30px!important;
+    }
+    .menu__link--a {
+    display: block;
+    font-size: 12px;
+    line-height: 30px!important;
+    height: 30px!important;
+    }
+    .menu__border {
+    font-size: 2.5px!important;
+    height: 2.5px!important;
+    line-height: 2.5px!important;
+    }
+    #bodyTable {
+    width: 100%!important;
+    }
+    .products__unit {
+    float: left; 
+    width: 48%; 
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .products__unit--big,.produit__unit--quote {
+    float: none;
+    display: block;
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    }
+    .products__unit--double {
+    /*container margin-left-right: 1%*/
+    width: 98%;
+    display: block;
+    }
+    .title--line {
+    width: 5%;
+    }
+    .title--txt {
+    width: 90%;
+    }
+    .tableReassurances__body {
+    position: relative;
+    }
+    .tableReassurances__body td {
+    float: left;
+    width: 50%;
+    display: block;
+    }
+    .tableReassurances__body td img {
+    height: 50px!important;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    }
+    .footer__wrapper {
+    position: relative;
+    width: 80%;
+    }
+    .footer__wrapper td {
+    width: 100%;
+    display: block;
+    text-align: center;  
+    }
+    .footer__wrapper img { 
+    margin: 0 auto;
+    } 
+    .footer__rss {
+    position: relative;
+    margin-top: 20px;
+    } 
+    .footer__rss td {
+    float: left;  
+    width: 25%;
+    display: block;
+    }
+    .footer__rss img {
+    height: 30px!important;  
+    width: auto;  
+    }
+    .bigOffert__col{
+    display:block;
+    width:100%;
+    }
+    .quote__semence {
+    display: block;
+    width: 100%!important;
+    max-width: 100%!important;
+    text-align: left;
+    }
+    .quote__semence {
+        margin: 5px auto;
+    }
+
+    .quote__semence td {
+        width: 90%!important; 
+        margin: 0 auto;
+        display: block;
+    }
+    .title--imgTxt-child{
+      display:block;
+    }
+    .blogPush__container--article, .blogPush__container--article table, .blogPush__container--article table tbody,.blogPush__container--article table tbody tr{
+
+    display:block;
+    width: 100%;
+    }
+    .blogPush__container--article-img img, .blogPush__container--article-img{
+
+    display:block;
+    width: 100%;
+    }
+    .bigTable, .bigTable tbody, .bigTable tr, .bigTable td{
+        display:block;
+    width: 100%!important;
+    }
+
+
+    }
+    .footer__col td { 
+        font-size: 12px!important;
+    }
+
+  != "<!--[if gte mso 10]>"
+  style.
+    table, p, span, div, table, tr, td, th, a { 
+    mso-style-priority:99;  font-family:"Arial","sans-serif"; 
+    }
+  != "<![endif]-->" 
+block preheader  
+  include ./mixins/preheader.pug
+  +preheader('agrico', "Une sélection de produits par notre expert pièces à découvrir dès maintenant !")
+ 
+   
+block content    
+  include ./mixins/title--simple.pug
+  include ./mixins/title--image.pug   
+  include ./mixins/title.pug      
+  include ./mixins/produit_2.pug
+  include ./mixins/produit_3.pug    
+  include ./mixins/produit_2.pug
+  include ./mixins/produit_3__buse.pug 
+  include ./mixins/produit_3__prix.pug 
+  include ./mixins/produit_3__btnOnly.pug
+  include ./mixins/produit_3__reste__day.pug
+  include ./mixins/produit_4.pug   
+  include ./mixins/banner.pug 
+  include ./mixins/bannerNext.pug 
+  include ./mixins/btn.pug      
+  include ./mixins/quote.pug
+  include ./mixins/produit_3__imgBtn.pug      
+  include ./mixins/produit_3__dechaumeur.pug 
+  include ./mixins/produit_3__details.pug 
+  include ./mixins/produit__quote.pug
+  include ./mixins/link.pug
+  include ./mixins/title--image-txt.pug
+
+
+
+  tr
+    td &nbsp;
+   
+  +title("Pour vos tracteurs...")
+
+
+
+
+  +produit__4([
+
+
+  {'name': "Filtre pour<br> tracteur agricole <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'pieces-agricoles/tracteur/filtration/pc2883',
+      'alt' : "Filtre pour tracteur agricole",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/hifi/SN_327.jpg', 
+     'btn' : "Voir les produits",
+     'price': { 
+     'old': { "entier" : "9", "dec" : "74"},
+     'new': { "entier" : "8", "dec" : "12"}
+     } 
+     },
+ 
+
+
+      {'name': "Pièces d'attelage et <br> remorque pour tracteur <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'pieces-agricoles/tracteur/attelage---relevage/pc2902',
+      'alt' : "Pièces d'attelage et remorque pour tracteur",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/595ca10324672.jpeg', 
+     'btn' : "Voir les produits",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "00"},
+     'new': { "entier" : "0", "dec" : "83"}
+     }
+     },
+
+
+      {'name': "Vitre de cabine <br> pour tracteur <br> &nbsp;",
+      'promo__title': "none",
+    'promo__value': '-10%' ,
+     'link' : 'pieces-agricoles/tracteur/cabine/vitre/pc5841',
+      'alt' : 'Vitre de cabine <br> pour tracteur',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/96/99/64e2808ea50b08b8670ec054b25c.jpg', 
+     'btn' : "Voir les produits",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "14", "dec" : "21"},
+     'new': { "entier" : "11", "dec" : "84"} 
+     } 
+     },
+
+
+      {'name': "Signalisation et éclairage<br> pour tracteur <br> &nbsp;",
+      'promo__title': "none",
+    'promo__value': '-10%' ,
+     'link' : 'pieces-agricoles/tracteur/signalisation---eclairage/pc2891',
+      'alt' : 'Signalisation et éclairage pour tracteur',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/595ca61b12df2.jpeg', 
+     'btn' : "Voir les produits",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "14", "dec" : "21"},
+     'new': { "entier" : "11", "dec" : "84"} 
+     } 
+     }
+ 
+ 
+ 
+  ])
+
+
+  tr
+
+    td &nbsp;
+
+  +title("Pour vos outils...")
+
+
+
+  +produit__4([
+
+
+  {'name': "Pièces pour broyeur et débroussailleuse <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'huile-hydraulique-agricole-lukoil-geyser-m46/p322532',
+      'alt' : "Pièces pour broyeur et débroussailleuse",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/47/b8/38ece9afe83032f8b3e319de1a70.jpg', 
+     'btn' : "Voir les produits",
+     'price': { 
+     'old': { "entier" : "9", "dec" : "74"},
+     'new': { "entier" : "8", "dec" : "12"}
+     } 
+     },
+ 
+
+
+      {'name': "Pièces d'usures<br> pour décompacteur <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-14%' ,
+     'link' : 'pieces-agricoles/travail-du-sol/decompacteur/pc2984',
+      'alt' : "Pièces d'usures pour décompacteur",
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/jpf/bdu-400.jpg', 
+     'btn' : "Voir les produits",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "1", "dec" : "00"},
+     'new': { "entier" : "0", "dec" : "83"}
+     }
+     },
+
+
+      {'name': "Couteau et porte <br> couteau de faucheuse <br> &nbsp;",
+      'promo__title': "none",
+    'promo__value': '-10%' ,
+     'link' : 'pieces-agricoles/fenaison/couteau-et-porte-couteau/pc3235',
+      'alt' : 'Couteau et porte couteau de faucheuse',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130/21/78/54840d5809a3596249c50107c978.jpg', 
+     'btn' : "Voir les produits",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "14", "dec" : "21"},
+     'new': { "entier" : "11", "dec" : "84"} 
+     } 
+     },
+
+
+      {'name': "Pièces déchaumeur <br> et cultivateur <br> &nbsp;",
+      'promo__title': "none",
+    'promo__value': '-10%' ,
+     'link' : 'pieces-agricoles/travail-du-sol/dechaumeur---cultivateur/pc2981',
+      'alt' : 'Pièces déchaumeur et cultivateur',
+      'img' : 'https://www.agriconomie.com/media/cache/130x130//a8/3f/257d22a1205749bff9431a3c2ee5.jpeg', 
+     'btn' : "Voir les produits",
+     'cara' : '- Duraplas <br> - 400 L <br> - 40 L/min <br> - sans capot' ,
+     'price': { 
+     'old': { "entier" : "14", "dec" : "21"},
+     'new': { "entier" : "11", "dec" : "84"} 
+     } 
+     }
+  ])
+
+
+  tr
+    td &nbsp;
+
+
+  +banner("elevage/conservation-des-recoltes/sacherie--and--big-bag/pc7592", "https://www.agriconomie.com/media/pub/img/newsletter//banners/moisson-mailbanner.jpg", "Big bag (pour stocker vos récoltes, fourrages et réaliser vos semences fermières)")
+
+  tr
+    td &nbsp;
+
+
+  tr
+    td
+      table.bigTable(width="100%" align="center" cellpadding="0" cellspacing="0" border="0" )
+        tr
+          td(width="49%")
+            table(width="100%" align="center" cellpadding="0" cellspacing="0" border="0" )
+              +title("Le coin du cérealier")
+              +produit__2([
+              {'name': "Kit caméra de recul <br> tracteur avec écran 7'' <br> &nbsp;",
+               'promo__title': "none",
+                'promo__value': '-14%' ,
+                 'link' : 'kit-camera-de-recul-avec-ecran-7-et-1-camera/p282916',
+                  'alt' : "Kit caméra de recul tracteur avec écran 7'' & 1 caméra",
+                  'img' : 'https://www.agriconomie.com/media/cache/130x130//4e/61/2e1841fbc8a0bf6179b50d60c3d3.jpeg', 
+                 'btn' : "Voir le produit",
+                 'price': { 
+                 'old': { "entier" : "none", "dec" : "74"},
+                 'new': { "entier" : "8", "dec" : "12"}
+                 } 
+                 },
+
+                   {'name': "Casquette de protection ventilée POWER CAP <br> &nbsp;",
+               'promo__title': "PROMO",
+                'promo__value': '-10%' ,
+                 'link' : 'casquette-de-protection-ventilee-power-cap-r-epi/p186638',
+                  'alt' : "Casquette de protection<br> ventilée POWER CAP",
+                  'img' : 'https://www.agriconomie.com/media/cache/130x130//20/2d/fefa51edb3bc3fc5ac0f67a9719b.jpeg', 
+                 'btn' : "Voir le produit",
+                 'price': { 
+                 'old': { "entier" : "none", "dec" : "74"},
+                 'new': { "entier" : "8", "dec" : "12"}
+                 } 
+                 }
+              ])
+          td(width="2%")
+          td(width="49%")
+            table(width="100%" align="center" cellpadding="0" cellspacing="0" border="0" )
+              +title("Le coin de l'éleveur")
+              +produit__2([
+                {'name': "Produit de trempage<br> pour les trayons <br> &nbsp;",
+                 'promo__title': "none",
+                  'promo__value': '-14%' ,
+                   'link' : 'elevage/hygiene/hygiene-des-trayons/pc3456',
+                    'alt' : "Produit de trempage pour les trayons",
+                    'img' : 'https://www.agriconomie.com/media/cache/130x130//ba/d2/23e5b51818fdcd76763179846a38.jpeg', 
+                   'btn' : "Voir les produits",
+                   'price': { 
+                   'old': { "entier" : "none", "dec" : "74"},
+                   'new': { "entier" : "8", "dec" : "12"}
+                   } 
+                   },
+
+                     {'name': "Matériel de piégeage<br> de nuisibles <br> &nbsp;",
+                 'promo__title': "none",
+                  'promo__value': '-14%' ,
+                   'link' : 'elevage/hygiene/pieges-et-repulsifs-nuisibles/pc1558',
+                    'alt' : "Matériel de piégeage de nuisibles",
+                    'img' : 'https://www.agriconomie.com/media/cache/130x130/d1/ca/445396342545f462c70463db04af.jpeg', 
+                   'btn' : "Voir les produits",
+                   'price': { 
+                   'old': { "entier" : "none", "dec" : "74"},
+                   'new': { "entier" : "8", "dec" : "12"}
+                   } 
+                   }
+              ])
+
+
+block footer__expert
+  include ./mixins/footer__expert.pug 
+  +footer__expert('margaux')
+
+
+block sources 
+  include ./mixins/sources.pug 
+  +sources('agrico') 
