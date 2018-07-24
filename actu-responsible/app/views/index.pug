@@ -2,7 +2,7 @@ extends layout/layout.pug
  
 block utm 
   - var meta =  Data.meta._utmActuFr;   
-  - var type = 'elevage';     
+  - var type = 'engrais';     
   - var lang = 'fr';           
       
  
@@ -119,188 +119,169 @@ block style
     width: 98%;
     display: block;
     }
+    .blogPush__container--article, .blogPush__container--article table, .blogPush__container--article table tbody,.blogPush__container--article table tbody tr{
+    display:block;
+    width: 100%;
+    }
+    .blogPush__container--article-img img, .blogPush__container--article-img{
+    display:block;
+    width: 100%;
+    }
     }
     * {
     font-family: Helvetica, Arial, sans-serif;
     }
     .footer__col td {
-    font-size: 12px!important;
+    font-size: 12px!important; 
     }
 
 block phraseAccroche
-  | Nouvelle campagne disponible
+  | Nouvelle campagne disponible 
 
 block header
   include mixins/header.pug
-  +header('bertrand')
+  +header('margaux')
  
  
 block data
   include mixins/elemMarche.pug
-  +elemMarche('Soja  :', "Le marché est tendu en ce début de semaine. Une légère baisse a eu lieu puisque les dynamiques haussières ont été trop brutales. La parité, le risque climatique ainsi que les arbitrages entre les huiles et les tourteaux apportent de l'instabilité sur les tendances de prix.")
-  +elemMarche('Colza :', "Le colza est également dans une dynamique incertaine puisque le soja (en Argentine) n’affiche pas de dynamique et qu’il aura probablement une influence le prix du tourteau.")
-  +elemMarche('Blé / Maïs :', "En céréales, la parité, les couvertures des fonds d’investissements et le weather market influencent le marché à la hausse. Il faudra attendre un peu avant de confirmer cette tendance haussière.")
+  +elemMarche('Azotés :', "Campagne en cours : <a class='link__actu' href='https://www.agriconomie.com/solution-azotee-n39-2/p2?utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018'>La solution azotée</a> est plus accessible aujourd'hui avec la baisse de l'euro. Le prix s'est amélioré de 2€/t pour des livraisons au printemps. Nouvelle Campagne : Comme annoncé la semaine dernière, le prix de l'azote liquide pour la nouvelle campagne a perdu près de 6€/t en fin de semaine. <br><br> En <a class='link__actu' href='https://www.agriconomie.com/uree/p287?utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018'> urée</a>, le prix risque fortement de monter puisque la Chine ne devrait pas exporter (ce qui va diminuer l'offre) et le Brésil passera aux achats fin Mars, début Avril, ce qui devrait orienter le marché à la hausse. ")
+  +elemMarche('Potasse :', "Les prix augmentent légèrement cette semaine. Des hausses pourraient avoir lieu dans les semaines à venir avec des tensions sur la disponibilité du produit.")
+  +elemMarche('Phosphore :', "Le prix du <a class='link__actu' href='https://www.agriconomie.com/18-46-0/p7?utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018'>DAP</a> venant du Maroc est en hausse puisque le prix de l'acide a augmenté de 110$/t la semaine dernière. Cette hausse est d'environ 15€/t. Cependant, la parité permet de maintenir le prix au même niveau que la semaine passée. ")
 
 block stat
   include mixins/elemStat.pug
-  +elemStat('Tourteau de soja',
-   'Incertain' ,
-     'https://www.agriconomie.com/media/pub/img/newsletter/icons/attention.jpg',
-        'nutrition/matiere-premieres-et-additifs/tourteaux/pc7313',
-    'Incertain')
-  +elemStat('Tourteau de colza',
-    'Stable' , 
-
-     'https://www.agriconomie.com/media/pub/img/newsletter/icons/stable.jpeg',
-         'tourteau-colza/p255288',
-     'Stable')
-  +elemStat('Céréales',
-   'Hausse' , 
+  +elemStat('Azotés',
+   'À la baisse' ,
+     'https://www.agriconomie.com/media/pub/img/newsletter/icons/baisse.jpeg',
+        'https://www.agriconomie.com/engrais/engrais-azote/pc979' + meta,
+    'À la baisse')
+  +elemStat('Potasse',
+    'À la hausse' , 
+     'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
+         'https://www.agriconomie.com/engrais/autres-engrais/engrais-potassique/pc3428' + meta,
+     'À la hausse')
+  +elemStat('Phosphore',
+   'À la hausse' , 
    'https://www.agriconomie.com/media/pub/img/newsletter/icons/hausse.jpeg',
-   'nutrition/matiere-premieres-et-additifs/co-produits-de-cereales/pc7325',
-    'Hausse')
+   'https://www.agriconomie.com/engrais/autres-engrais/engrais-phosphate/pc3426' + meta,
+    'À la Hausse')
 
 block preco
 
-  //- tr
-  //-   td.data__blank
-  //- tr
-  //-   td(align='center')
-  //-     a.link__actu(href!="https://www.agriconomie.com/elevage/batiments/tapis---matelas/pc3455" + meta ) Profitez de notre offre
-  //-     | sur les matelas et tapis en caoutchouc.
-  //- tr
-  //-   td.data__blank &nbsp;
-  //- tr
-  //-   td(align='center')
-  //-     | Le marché est stable. Profitez en pour vous couvrir en profitant de notre 
-  //-     a.link__actu(href!="https://www.agriconomie.com/nutrition/matiere-premieres-et-additifs/tourteaux/pc7313" + meta) remise sur 4 camions.
-  //- tr
-  //-   td.data__blank
-  //- tr
-  //-   td(align='center')
-  //-     | L’offre sur les seaux à lécher est toujours d'actualité. 
-  //-     a.link__actu(href!="https://www.agriconomie.com/nutrition/nutrition-bovins/seaux-et-blocs-a-lecher/pc7355" + meta) Venez en profiter dès maintenant.
-  //- tr
-  //-   td.data__blank
-  //- tr
-  //-   td.data_txt(align='left')
-  //-     b.data_txt--title  Des animaux bien réhydratés
-  //-     br
-  //-     br
-  //-     | En cette période estivale, les fortes chaleurs sollicitent les animaux qui sortent de leur zone de confort thermique. Pour rappel, celle de la vache est comprise entre -13°C et +27 °C.
-  //-     br
-  //-     br
-  //-     |La consommation d’eau dans les bâtiments est rarement mesurée en production bovine et encore moins en pâturage. Et pourtant la vache laitière consomme environ 100 litres/ jour à raison de 3 litres d’eau par litre de lait produit. En cas de stress thermique, la consommation journalière augmente de 30 %.
-
-  //-     br
-  //-     br
-  //-     |Le taux de MS de la ration est un facteur qui impact la consommation d’eau qui sera plus faible au pâturage par rapport à une ration hivernale.
-  //-     br
-  //-     br
-  //-     | Le matériel doit être adapté : 1 bac de 200 Litres pour 20 VL.
-  //-     a.link__actu(href!="https://www.agriconomie.com/bac-niveau-constant-biglac-90l-stabulation-tonne-a-eau/p187536" + meta) Prévoir des abreuvoirs de 70 L 
-  //-     | minimum en sortie de traite (lieu privilégier de consommation d’eau) et 
-  //-     a.link__actu(href!="https://www.agriconomie.com/abreuvoir-100-0120-298597/p298597" + meta) un bol 
-  //-     | pour 7 VL
-  //-     br
-  //-     br
-  //-     | Pour éviter la concurrence il faut au moins 3 points d’eau différents dans les bâtiments. La vache consomme 20 litres d’eau par minute il faudra donc prévoir un débit minimum de 
-  //-     a.link__actu(href!="https://www.agriconomie.com/abreuvoir-a-soupage-130-0500-298609/p298609" + meta) 30 litres/mn
-  //-     | pour un abreuvoir 2 postes.
-  //-     br 
-  //-     br
-  //-     | Les abreuvoirs doivent être propre (nettoyage 1 fois/semaine).
-  //-     br
-  //-     br
-  //-     | Au 
-  //-     a.link__actu(href!="https://www.agriconomie.com/bac-a-eau-eco-1100-litres-280589/p280589" + meta) pâturage
-  //-     | il faut prévoir une capacité de 1000 à 1500 Litres pour 100 VL.
-
+  tr
+    td.data__blank
+  tr
+    td(align='center')
+      | Nous avons mis en place 
+      a.link__actu(href!="https://www.agriconomie.com/elevage/batiments/tapis---matelas/pc3455" + meta ) une livraison rapide 
+      | afin de vous couvrir au meilleur moment suivant votre programme de fertilisation.
 
   tr
-     td  &nbsp;
+    td.data__blank &nbsp;
+  tr
+    td(align='center')
+      | L'un de nos fournisseur souhaitait nous remercier et nous a proposer 
+      a.link__actu(href!="https://www.agriconomie.com/query/search?c=&s=complexe_equilibre&utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018") une remise sur l'ensemble de ses produits de 2€/T
+      |.  Nous avons décidé de l'impacter directement sur votre prix d'achat.
+      
+  tr
+    td.data__blank
+  tr
+    td(align='center')
+      | Venez vite découvrir nos nouveaux engrais NP : 
+      a.link__actu(href!="https://www.agriconomie.com/14-48-0/p226274" + meta) le 14-48 liquide
+      |  et 
+      a.link__actu(href!="https://www.agriconomie.com/micro-10-45/p323041" + meta) le micro 10-45
+  tr
+    td.data__blank
+  tr
+    td(align='center')
+      | Les prix pour la solution azotée en nouvelle campagne sont disponibles. Venez les découvrir en 
+      a.link__actu(href!="https://www.agriconomie.com/solution-azotee-n39-2/p2" + meta) cliquant ici
+      | .
+  tr
+    td.data__blank
 
 block produits
   include parts/product__space.pug
   include mixins/produit_3.pug
+  include parts/product__space.pug
   include mixins/produit_4.pug
   include mixins/title.pug 
-  +produit__4([
-
-  {'name': "Chlorure de potasse <br> Granulé <br> &nbsp;",
-   'promo__title': "none",
-    'promo__value': '-10€/T' ,
-     'link' : 'chlorure-de-potasse/p6',
-    'alt' : "Chlorure de potasse - Granulé",
-     'img' : 'https://www.agriconomie.com/media/cache/130x130/28/d6/d75d736a07986d8ec1b7b1294b01.jpg',
-     'btn' : 'Voir les prix'  },
-
-
-  {'name': '9-23-0 + 25SO3 <br> Bulk compacté <br> &nbsp;',
+  include mixins/banner.pug 
+  include mixins/articlesBlog.pug 
+  +produit__3([
+  {'name': 'Solution azotée N39 <br> Liquide <br> &nbsp;',
    'promo__title': 'none',
     'promo__value': '-10%' ,
-     'link' : '9-23-0-25so3/p340869'
-     , 'alt' : '9-23-0 +25SO3 - Bulk compacté',
-      'img' : 'https://www.agriconomie.com/media/cache/240x230//4f/5e/2f434099978c9dd4be25194dcd5e.jpeg', 
-     'btn' : 'Voir les prix'  },
+     'link' : 'https://www.agriconomie.com/solution-azotee-n39-2/p2' + meta
+     , 'alt' : 'Solution azotée N39 - Liquide',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/solution-azotee.jpg', 
+     'btn' : 'Voir le produit'  },
 
+  {'name': "14-48-0 <br> Liquide <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-10€/T' ,
+     'link' : 'https://www.agriconomie.com/14-48-0/p226274' + meta,
+    'alt' : "14-48-0 - Liquide",
+     'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/solution-azotee-14-48.jpg',
+     'btn' : 'Voir le produit'  },
 
-  {'name': "ATS Liquide <br> (13N -64SO3) <br> &nbsp;",
-   'promo__title': 'none', 
+  {'name': 'Micro 10-45 Fertigo Pro <br> Microgranulé <br> &nbsp;',
+   'promo__title': 'none',
     'promo__value': '-25%' ,
-    'link' : 'soufre-thiosulfate-d-ammonium/p265452',
-     'alt' : "Soufre - thiosulfate d'ammonium (13N -64SO3) - Liquide",
-      'img' : 'https://www.agriconomie.com/media/cache/130x130/f1/11/e4a46a620ba41aa8711848c66f24.jpg',
-     'btn' : 'Voir les prix'  },
-
-       {'name': "Cuivre Fertigo Pro <br> Liquide <br> &nbsp;",
-   'promo__title': "Jusuq'à",
-    'promo__value': '-16%' ,
-    'link' : 'cuivre-fertigo-pro/p282777',
-     'alt' : "Cuivre Fertigo Pro - Liquide",
-      'img' : 'https://www.agriconomie.com/media/cache/130x130/83/15/2893be81e0e03d58fcc6d483d31e.jpeg',
-     'btn' : 'Voir les prix'  }
+    'link' : 'https://www.agriconomie.com/micro-10-45/p323041' + meta,
+     'alt' : 'Micro 10-45 Fertigo Pro - Microgranulé',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/micro-10-45-fertigo-pro-microgranule.jpg',
+     'btn' : 'Voir le produit'  }
   ])
+  include parts/product__space.pug
+  +produit__3([
+  {'name': 'complexe equilibre <br> &nbsp; <br> &nbsp;',
+   'promo__title': "PROMO",
+    'promo__value': '-2€/T' ,
+     'link' : 'https://www.agriconomie.com/query/search?c=&s=complexe_equilibre&utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018',
+      'alt' : 'complexe équilibré',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/npk.jpg', 
+     'btn' : 'Voir les produits'  },
 
-  +title("Nos produits du moment")
+  {'name': "NATEC <br> &nbsp; <br> &nbsp;",
+   'promo__title': "none",
+    'promo__value': '-10%' ,
+     'link' : 'https://www.agriconomie.com/natec-r26/p331145',
+    'alt' : "NATEC R26 - Granulé",
+     'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/natect-r-26-granule.jpg',
+     'btn' : 'Voir le produit'  },
+
+  {'name': 'azoté soufré <br> &nbsp; <br> &nbsp;',
+   'promo__title': "Jusqu'à",
+    'promo__value': '-5€' ,
+    'link' : 'engrais-azote/azote-soufre/pc981',
+     'alt' : 'Azoté soufré',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/azote-soufre.jpg',
+     'btn' : 'Voir le produit'  }
+  ])
+  tr
+    td &nbsp;
+  
  
-  //- include parts/product__space.pug
-  //- +produit__4([
-  //- {'name': 'Patentkali® <br> Granulé <br> &nbsp;',
-  //-  'promo__title': "none",
-  //-   'promo__value': '-2€/T' ,
-  //-    'link' : 'patentkali-r/p229398',
-  //-     'alt' : 'Patentkali® - Granulé',
-  //-     'img' : 'https://www.agriconomie.com/media/cache/130x130//13/a1/c65230178ae1a4796ce59d40f1a1.jpeg', 
-  //-    'btn' : 'Voir les prix'  },
- 
-  //- {'name': "Chaux vive 95% <br> Criblé <br> &nbsp;",
-  //-  'promo__title': "none",
-  //-   'promo__value': '-10%' ,
-  //-    'link' : 'chaux-vive-95/p226448',
-  //-   'alt' : "Chaux vive 95% - Criblé",
-  //-    'img' : 'https://www.agriconomie.com/media/cache/240x230//05/ce/618d3f68e4bd1c7174e45d5e0f2f.jpeg',
-  //-    'btn' : 'Voir les prix'  },
+  +articlesBlog([
+  {'title': 'Caméra de surveillance : Gain – assurance ? Comment ça marche ?',
+   
+     'link' : 'https://www.agriconomie.com/query/search?c=&s=complexe_equilibre',
+      'alt' : 'complexe équilibré',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/npk.jpg'  },
 
-  //- {'name': "Panachez votre<br> camion d'engrais <br> &nbsp;",
-  //-  'promo__title': "none",
-  //-   'promo__value': '-5€' ,
-  //-   'link' : 'engrais-panachage' ,
-  //-    'alt' : "Panachez votre camion d'engrais",
-  //-     'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/panachage-camion.jpg',
-  //-    'btn' : 'Je panache'  }, 
-
-  //-      {'name': "Compost (fientes / lisier) <br> 2-2-2 - Pulvérulent <br> &nbsp;",
-  //-  'promo__title': 'none',
-  //-   'promo__value': '-25%' ,
-  //-   'link' : '2-2-2/p251717',
-  //-    'alt' : "Compost (fientes / lisier) 2-2-2 - Pulvérulent",
-  //-     'img' : 'https://www.agriconomie.com/media/cache/130x130/cd/2a/3e1bb9cf86fa7e68ad20361afdf6.jpeg',
-  //-    'btn' : 'Voir les prix'  }
-  //- ])
+  {'title': 'Caméra de surveillance : Gain – assurance ? Comment ça marche ?',
+   
+     'link' : 'https://www.agriconomie.com/query/search?c=&s=complexe_equilibre&utm_source=grliste&utm_medium=email&utm_campaign=actu-elevage-S05-2018',
+      'alt' : 'complexe équilibré',
+      'img' : 'https://www.agriconomie.com/media/pub/img/newsletter/products/npk.jpg' }
+  ])
 
 
 
 block footer
   include mixins/footer__expert.pug
-  +footer__expert('bertrand')
+  +footer__expert('margaux')

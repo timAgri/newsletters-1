@@ -1,0 +1,55 @@
+mixin articlesBlog(data)
+  tr
+      td(width='100%', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+        table.title(align='center', width='100%', style='border-collapse: collapse; color: #4a5669; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+          tr
+            td.title--line(width='5%', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+              p(style='background-color: #ffc70c; display: block; font-size: 5px; height: 5px; line-height: 5px; margin: 0; margin-bottom: 0;')  
+            td(style='border-collapse: collapse; mso-line-height-rule: exactly;')
+              table.title--imgTxt-container(align='center', width='90%', style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+                tr
+                  td.title--imgTxt-child(align='center', style='border-collapse: collapse; font-size: 18px; font-weight: bold; mso-line-height-rule: exactly;') Nos derniers dossiers techniques
+                  td.title--imgTxt-child(align='center', style='border-collapse: collapse; mso-line-height-rule: exactly;')  
+                  td.title--imgTxt-child(align='center', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+                    img(height='34', width='200', src='https://www.agriconomie.com/media/pub/img/newsletter/banners/agriconotes_news2.png', border='0', style='-ms-interpolation-mode: bicubic; border: 0 none; display: block; line-height: 100%; max-width: 100%; outline: none; text-decoration: none; width: auto;', alt='Agriconotes')
+            td.title--line(width='5%', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+              p(style='background-color: #ffc70c; display: block; font-size: 5px; height: 5px; line-height: 5px; margin: 0; margin-bottom: 0;')  
+  tr
+    td(style='border-collapse: collapse; mso-line-height-rule: exactly;')  
+  
+  tr
+    td(style='border-collapse: collapse; mso-line-height-rule: exactly;')
+      table.blogPush__container(align='center', width='95%', style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+        tr
+          td.blogPush__container--article(width='48%', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+            a(href!= data[0].link + meta, style='text-decoration: none;')
+              table(style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+                tr
+                  td.blogPush__container--article-img(align='left', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+                    img(src= data[0].img, width='100%', height='183', border='0', style='-ms-interpolation-mode: bicubic; border: 0 none; display: block; line-height: 100%; outline: none; text-decoration: none; width: 100%;', alt='Ferobide : Economiser vos coûts en pièce d’usure')
+                tr
+                  td(align='left', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+                    table(style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+                      tr
+                        td(width='37', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+                          img(src='https://www.agriconomie.com/media/pub/img/newsletter/icons/arrow.png', width='50', border='0', style='-ms-interpolation-mode: bicubic; border: 0 none; display: block; line-height: 100%; max-width: 100%; outline: none; text-decoration: none; width: auto;', alt='test')
+                        td(style='border-collapse: collapse; mso-line-height-rule: exactly;')  
+                        td(align='left', style='border-collapse: collapse; color: black; font-weight: bold; mso-line-height-rule: exactly; text-decoration: none;')= data[0].title
+          td.blogPush__container--article(width='1%', style='border-collapse: collapse; mso-line-height-rule: exactly;')  
+          td.blogPush__container--article(width='48%', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+            a(href!=  data[0].link + meta, style='text-decoration: none;')
+              table(style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+                tr
+                  td.blogPush__container--article-img(align='left', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+                    img(src=data[1].img, width='100%', height='183', border='0', style='-ms-interpolation-mode: bicubic; border: 0 none; display: block; line-height: 100%; outline: none; text-decoration: none; width: 100%;', alt='Ferobide : Economiser vos coûts en pièce d’usure')
+                tr
+                  td(align='left', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+                    table(style='border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;')
+                      tr
+                        td(width='37', style='border-collapse: collapse; mso-line-height-rule: exactly;')
+                          img(src='https://www.agriconomie.com/media/pub/img/newsletter/icons/arrow.png', width='50', border='0', style='-ms-interpolation-mode: bicubic; border: 0 none; display: block; line-height: 100%; max-width: 100%; outline: none; text-decoration: none; width: auto;', alt='test')
+                        td(style='border-collapse: collapse; mso-line-height-rule: exactly;')  
+                        td(align='left', style='border-collapse: collapse; color: black; font-weight: bold; mso-line-height-rule: exactly; text-decoration: none;')= data[1].title
+
+
+  

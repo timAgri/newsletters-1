@@ -2,12 +2,12 @@
     "Data": 
     {
         "meta":
-        {
+        { 
             "_utmClub": "?utm_source=grliste&utm_medium=email&utm_campaign=club-by-agrico-S39-2017",
             "_utmVF": "?utm_source=grliste&utm_medium=email&utm_campaign=remboursement-S39-2017",
             "_utmActuBe": "?utm_source=grliste&utm_medium=email&utm_campaign=actu-engrais-be-S26-2018",
-            "_utmActuFr": "?utm_source=grliste&utm_medium=email&utm_campaign=actu-engrais-S29-2018",
-            "_utmTerrenet": "?utm_source=terrenet&utm_medium=email&utm_campaign=elevage-S25-2018",
+            "_utmActuFr": "?utm_source=grliste&utm_medium=email&utm_campaign=actu-engrais-S30-2018",
+            "_utmTerrenet": "?utm_source=terrenet&utm_medium=email&utm_campaign=elevage-S29-2018",
             "tracking": "?utm_source=grliste&utm_medium=email&utm_campaign=actu-S42-2017",
             "owner": "agriconomie" 
         },
